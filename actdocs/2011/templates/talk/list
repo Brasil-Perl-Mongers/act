@@ -1,0 +1,69 @@
+[% WRAPPER ui title = title %]
+<div class="content" align="center">
+
+<h2>Lista de Palestras</h2>
+<hr size="1" />
+
+<h3>A submissão de palestras está encerrada. Obrigado a todos por suas submissões!</h3>
+
+<p>Veja abaixo a lista completa
+de palestras aprovadas, ou <a href="[% make_uri('schedule') %]">clique aqui
+para ver a grade completa</a>
+</p>
+
+<div align="center">
+<p>
+ [% IF talks_total == 0 %]
+ {{No talk was submitted yet.}}
+ [% ELSE %]
+ {{Submitted talks:}} [% talks_total %]<br />
+ {{Accepted talks:}} [% talks_accepted %]
+ [% END %]
+</p>
+[% IF global.request.user.is_talks_admin || global.request.user.has_talk %]
+<p>
+ {{Accepted talks are shown in bold type.}}
+</p>
+[% END %]
+[% IF global.request.user.is_talks_admin %]
+<p>
+ {{Total duration of accepted talks:}}
+ [% talks_duration div 60 %] {{hours}}
+ [% talks_duration % 60 %] {{minutes}}
+ <br />
+ {{Accepted lightning talks:}}
+ [% talks_lightning %]
+</p>
+[% END %]
+</div>
+
+[% IF !tag AND tagcloud %]
+  <h2>{{Tags}}</h2>
+  [% tagcloud %]
+  <br />
+[% END %]
+
+[% IF global.request.user.is_talks_admin %]
+<form method="POST" action="[% global.request.r.uri %]">
+[% END %]
+[% IF tracks.size != 0;
+     FOREACH tr = tracks;
+       IF tr.talks.size;
+          PROCESS talk/talk_list talks = tr.talks;
+       END;
+     END;
+  ELSE;    
+    PROCESS talk/talk_list talks = talks;
+  END %]
+[% IF global.request.user.is_talks_admin %]
+<br />
+ [% IF talks_total != 0 %]
+<input type="submit" name="ok" value="{{Update}}" />
+ [% END %]
+</form>
+[% END %]
+
+</div>
+[% END %]
+
+

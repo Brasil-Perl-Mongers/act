@@ -1,0 +1,7 @@
+[% WRAPPER ui title = loc("Event removed") %]
+
+<p>
+ [% loc('The event has been removed.', title) %]
+</p>
+
+[% END %]

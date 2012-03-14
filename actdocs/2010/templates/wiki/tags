@@ -1,0 +1,27 @@
+[% IF tag; title = loc("Wiki pages tagged <tag>", tag);
+   ELSE;   title = loc("Wiki tags");
+   END;
+   WRAPPER ui title = title %]
+
+[% IF tag AND nodes.size %]
+     <h2>[% tag %]</h2>
+     [% PROCESS wiki/list %]
+[% END %]
+
+[% IF !tag AND tagcloud %]
+  <h2>{{Tags}}</h2>
+  [% tagcloud %]
+[% END %]
+
+<hr />
+<p>
+<a href="[% make_uri('wiki') %]">{{Home}}</a>
+|
+[% IF tagcloud %]
+<a href="[% make_uri('wiki', 'action', 'tags') %]">{{Tags}}</a>
+|
+[% END %]
+<a href="[% make_uri('wiki', 'action', 'recent') %]">{{Recent changes}}</a>
+</p>
+
+[% END %]

@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt">
+
+<head>
+<title>YAPC::Brasil &mdash; [% title %]</title>
+<!-- Document Metadata -->
+<meta http-equiv="Content-Language" content="pt" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<!-- Atom news feed -->
+<link rel="alternate" type="application/atom+xml" title="Perl: Solução e Integração de Negócios"
+      href="http://www.yapcbrasil.org.br:8080/2010/atom/pt.xml" />
+
+<!-- CSS Stylesheets -->
+<link rel="stylesheet" href="/2010/mk2/css/style.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="/2010/mk2/css/blueprint/print.css" type="text/css" media="print">
+<link rel="stylesheet" href="/2010/mk2/css/yapcbrasil2010.css" type="text/css" media="print">
+<link rel="stylesheet" type="text/css" href="/css/schedule.css" />
+
+<!-- JavaScript sugar -->
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/act.js"></script>
+
+<!-- Favorite icon -->
+<link rel="shortcut icon" type="image/png" href="imgs/favicon.ico" />
+</head>
+
+<body>
+<div id="container">
+  <div id="header">
+    <h1><a href="http://www.yapcbrasil.org.br"><span>YAPC::Brasil 2010</span></a></h1>
+    <strong>25 a 31 de outubro Hotel Sonata de Iracema, Fortaleza, Ceará</strong>
+    <!--a href="http://www.estantevirtual.com.br" style="display:block; position: relative; top: 270px; left: 160px;"><img border="0" src="/2010/sponsors/estantevirtual-menor.png" alt="Patrocinador Platina: Estante Virtual"></a-->
+    <h2 height="80px;">Perl: Solução e Integração de Negócios</h2>
+  </div><!-- end id="header" -->
+  <div id="menu-top">
+    <a id="mt-twitter" href="http://twitter.com/yapcbrasil" target="_blank"><span>Twitter</span></a>
+    <a id="mt-cal" href="http://www.yapcbrasil.org.br/2010/timetable.ics"><span>Calendário</span></a>
+    <a id="mt-feed" href="http://www.yapcbrasil.org.br/2010/atom/pt.xml"><span>Feed</span></a>
+  </div><!-- end id="menu-top" -->
+  <div id="menu">
+  [% PROCESS menu %]
+  </div><!-- end id="menu" -->
+  <div id="content">
+  [% content %]
+  </div><!-- end id="content" -->
+  <div id="extra">
+  <h4>Patrocinador Platina</h4>
+  <a href="http://www.estantevirtual.com.br"><img border="0" src="/2010/sponsors/EVslogan.png" alt="Patrocinador Platina: Estante Virtual"></a>
+  <h4>Patrocinadores</h4>
+  [% PROCESS yapcbrasil/sponsors %]
+  <hr/>
+  <h4>Apoio</h4>
+  [% PROCESS yapcbrasil/apoio %]
+<br/><br/>
+<div id="twtr-search-widget"></div>
+<script src="http://widgets.twimg.com/j/1/widget.js"></script>
+<link href="http://widgets.twimg.com/j/1/widget.css" type="text/css" rel="stylesheet">
+<script>
+new TWTR.Widget({
+  search: '\"yapcbrasil\" OR \"yapc::brasil\" OR \"yapc brasil\" OR @yapcbrasil OR #yapcbrasil OR #yapcbrasil2010',
+  id: 'twtr-search-widget',
+  loop: true,
+  title: '<center>YAPC::Brasil 2010 no Twitter<center>',
+  subject: '',
+  width: 190,
+  height: 350,
+  features: {
+    hashtags: false,
+    timestamp: true,
+    avatars: true,
+    fullscreen: false
+  },
+  theme: {
+    shell: {
+      background: '#ffffea',
+      color: '#000000'
+    },
+    tweets: {
+      background: '#ffffea',
+      color: '#444443',
+      links: '#1985b5'
+    }
+  }
+}).render().start();
+</script>
+  </div><!-- end id="extra" -->
+  <div id="footer">
+    <div id="footer-content">
+      Powered by <a href="http://act.mongueurs.net/" target="_blank">Act</a>, Designed by <a href="http://colivre.coop.br/" target="_blank">COLIVRE</a>, Hosting por <a href="http://www.aviva.org.br/" target="_blank">Instituto Aviva</a>
+    </div><!-- end id="footer-content" -->
+  </div><!-- end id="footer" -->
+</div><!-- end id="container" -->
+</body>
+</html>
+

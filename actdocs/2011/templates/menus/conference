@@ -1,0 +1,23 @@
+[% WRAPPER menus/section %]
+Confer&ecirc;ncia
+[% END %]
+[% WRAPPER menus/item %]
+<a href="http://www.yapcbrasil.org.br/2011/inscricao.html">Inscri&ccedil;&atilde;o</a>
+[% END %]
+[% WRAPPER menus/item %]
+<a href="http://www.yapcbrasil.org.br/2011/local.html">Local</a>
+[% END %]
+[% WRAPPER menus/item %]
+<a href="/2011/minicurso.html">Mini-Curso</a>
+[% END %]
+[% WRAPPER menus/item %]
+<a href="[% make_uri('news') %]">{{News}}</a>
+[% END %]
+[% IF global.request.user.is_news_admin %]
+[% WRAPPER menus/item %]
+<a href="[% make_uri('newsadmin') %]">{{News Administration}}</a>
+[% END %]
+[% END %]
+[% WRAPPER menus/item %]
+<a href="[% make_uri('wiki') %]">Wiki</a>
+[% END %]

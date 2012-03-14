@@ -1,0 +1,150 @@
+body {
+    font: normal 12px/1.6em Arial, Helvetica, sans-serif;
+    color: #2a3845;
+    margin: 0;
+    padding: 0;
+    background: #323070 url(/2009/images/fundo.png);
+}
+
+#content {
+   margin-top: 40px;
+}
+
+p {
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+a:visited, a:link {
+    color: #a43b55;
+    text-decoration: underline;
+    background: none;
+}
+
+a:hover {
+    color: #a43b55;
+    text-decoration: none;
+    background: none;
+}
+
+h1 {
+    color: #7a2e40;
+    margin: 0px 0px 10px 0px;
+    padding-bottom: 10px;
+    font: normal 17px Georgia, serif;
+    border-bottom: 1px solid #efece7;
+}
+
+h2 {
+    color: #7a2e40;
+    margin: 20px 0 10px;
+    padding-bottom: 10px;
+    font: normal 17px Georgia, serif;
+    border-bottom: 1px solid #efece7;
+}
+
+h3 {
+    color: #7a2e40;
+    margin-top: 20px;
+    font: bold 14px Arial, Helvetica, sans-serif;
+}
+
+ul {
+    padding: 0;
+    margin: 0 0 0 17px;
+    list-style: square url(/2009/images/bullet.gif);
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 776px;
+    border-left: 4px solid #4240a2; /* #f0e9eb; */
+    border-right: 4px solid #4f4da4; /* #f0e9eb; */
+    background: #fff;
+}
+
+#header {
+    margin: 0 1px 10px 1px;
+    padding-top: 10px;
+    background: #fff no-repeat;
+    height: 226px;
+}
+
+#header img {
+    float: left;
+    margin-left: 4px;
+}
+
+#header h1, #header h2, #header h3 {
+   border-bottom: 0;
+   padding-left: 230px;
+}
+
+#header h1 {
+   margin-top: 20px;
+   font-size: 40px;
+   font-weight: bold;
+}
+
+#header h2 {
+   font-size: 26px;
+   margin-bottom: 30px;
+}
+
+#header h3 {
+  font-size: 22px;
+  font-style: italic;
+  margin: 0;
+}
+
+#footer {
+    background: #f7f7f7;
+    border-top: 1px solid #f0e9eb;
+    padding: 10px 15px;
+    clear: both;
+}
+
+.sidebar {
+	float: right;
+    width: 218px;
+    margin: 0 auto;
+    padding: 10px 25px;
+    background: url(/2009/images/shadow.jpg) no-repeat top;
+}
+
+img {
+    border: none;
+}
+
+#menu {
+   float:left;
+/*   background: #2b5ab8 url(/2009/images/menu.png) repeat-y;
+   border-bottom: 2px #aaa solid;
+   border-right: 2px #aaa solid; */
+   margin-right: 20px;
+   width: 140px;
+}
+
+#menu li {
+    list-style: none;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+#menu h2 {
+    background: #fff url(/2009/images/menu.png) no-repeat;
+    height: 32px;
+    padding-left: 10px;
+    line-height: 32px;
+    color: #ddd;
+}
+
+#menu h2 a {
+   color: #ddd;
+}
+
+.heading {
+   font-size: 120%;
+   font-weight: bold;
+   width: 610px;
+}

@@ -1,0 +1,1 @@
+[% global.conference.name %] - {{Payment confirmation}}

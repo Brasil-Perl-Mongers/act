@@ -1,0 +1,5 @@
+[% WRAPPER menus/section %]
+<a href="[% make_uri('talks') %]">
+ {{Presentations}}
+</a>
+[% END %]

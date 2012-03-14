@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="[% global.request.language %]" xml:lang="[% global.request.language %]">
+
+<head>
+<!-- Document Metadata -->
+<meta http-equiv="Content-Language" content="[% global.request.language %]" />
+<!-- OpenId -->
+[% IF openid %]
+<link rel="openid.server" href="[% global.request.base_url %][% make_uri('openid') %]" />
+[% END %]
+<!-- Atom news feed -->
+<link rel="alternate" type="application/atom+xml" title="[% global.conference.name %]"
+      href="[% global.request.base_url %][% make_uri_info( 'atom', global.request.language ) %].xml" />
+[%- IF title -%]<title>[% title  %]</title>[%- END -%]
+
+<!-- CSS Stylesheets -->
+<link rel="stylesheet" href="/2010/mk2/css/blueprint/screen.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="/2010/mk2/css/blueprint/print.css" type="text/css" media="print">
+<!–[if IE]>
+  <link rel="stylesheet" href="/2010/mk2/css/blueprint/ie.css" type="text/css" media="screen, projection">
+<![endif]–>
+<link rel="stylesheet" href="/2010/mk2/css/yapcbrasil2010.css" type="text/css" media="screen, projection, print">
+
+<link rel="stylesheet" type="text/css" href="/css/schedule.css" />
+
+<!-- JavaScript sugar -->
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/act.js"></script>
+
+<!-- Favorite icon -->
+<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+</head>
+
+<body>
+  <div class="container"> 
+ 
+     <div id="logo" class="span-24"> 
+      <a href="http://www.yapcbrasil.org.br/2010/"> 
+        <img src="/2010/images/logo-laranja.png" />
+        <h1>YAPC::Brasil 2010</h1> 
+       <span>25 a 31 de outubro</span>
+       <span>Hotel Sonata de Iracema, 
+       Fortaleza, Cear&aacute;</span> 
+      </a> 
+     </div> 
+
+  <div id="topmenu" class="span-24">
+	[% PROCESS yapcbrasil2010/topmenu %]
+  </div>
+
+<div id="wrapper">
+
+  <div id="header" class="span-24">
+    <div id="rightbox">
+      <ul>
+        <li><a href="http://twitter.com/yapcbrasil" title="yapcbrasil no twitter"><img src="/2009/images/twitter.png" alt="@yapcbrasil" /></a></li>
+        <li><a href="/2010/timetable.ics" title="Programação iCal"><img src="/2009/images/ical.png" alt="iCal" /></a></li>
+        <li><a href="/2010/atom/pt.xml" title="Notícias (RSS)"><img src="/2009/images/feed.png" alt="feed atom" /></a></li>
+      </ul>
+    </div>
+
+    [%- IF title -%]<h2>[% title %]</h2>[%- END -%]
+  </div>
+  <div id="menu" class="span-5 first">
+    [% PROCESS menu %]
+  </div>
+
+  <div id="content" class="span-19 last">
+    [% content %]
+  </div>
+
+  <div id="footer" class="span-24">
+                                Powered by <a href="http://act.mongueurs.net/">Act</a> ,
+                                Hosting por <a href="http://www.aviva.org.br/">Instituto Aviva</a>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5170131-3");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+</body>
+</html>

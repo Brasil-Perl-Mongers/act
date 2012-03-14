@@ -1,0 +1,146 @@
+html,body {
+  margin:0 auto;
+  padding:0;
+  height:100%; /* needed for container min-height */
+  background:#111;
+  font-family:arial,sans-serif;
+  font-size:small;
+  color:#222;
+}
+
+
+div#wrapper {
+  position:relative; /* needed for footer positioning*/
+  margin:0 auto; /* center, not in IE5 */
+  width:907px;
+  background:#f0f0f0;
+  border: 1px solid #666;
+  
+  height:auto !important; /* real browsers */
+  height:100%; /* IE6: treaded as min-height*/
+
+  min-height:100%; /* real browsers */
+}
+
+div#header {
+  padding:0em;
+}
+
+div#header a {
+  text-decoration: none;
+  border: 0px;
+  color: inherit;
+}
+
+div#header img {
+  border: 0px;
+}
+div#content {
+  padding:1em 1em 225px; /* bottom padding for footer */
+  margin-left: 160px;
+  min-height: 250px;
+}
+
+#menu {
+	float: left;
+	font-size: 100%;
+	width: 150px;
+  padding: 4px;
+  background: #e7e7e7;
+  min-height: 453px;
+  padding: 0 0 225px 6px; /* bottom padding for footer */
+}
+
+#menu h2 {
+	font-size: 110%;
+}
+
+#menu li {
+    margin-left: 1em;
+    list-style-type: none;
+}
+
+#menu li:hover {
+  background: #eee;
+}
+
+#menu a {
+  text-decoration: none;
+  color: inherit;
+}
+
+div#footer {
+  position:relative;
+  clear:both;
+  width:100%;
+  bottom:0; /* stick to bottom */
+  background:#000;
+  color: #eee;
+  border-top:10px #fc0 solid;
+  text-align: right;
+  font-size: 80%;
+  height: 201px;
+}
+
+#footmenu {
+  padding-top: 30px;
+  margin-bottom: 136px;
+  text-align: center;
+}
+
+#footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#footer .powered { padding-right: 4px; }
+
+.track {
+  border: 1px #a44 dashed;
+  background-color: #dedede;
+  width: 600px;
+  margin-top:20px;
+  padding: 5px;
+  line-height: 110%;
+  font-size: 105%;
+}
+
+.content {
+  text-align: left;
+}
+
+.borderedlist {
+  margin:0;
+  padding: 0; 
+}
+
+#goto-lang li a {
+  color: #888888;
+  font-size: 90%;
+}
+
+.investimento td {
+   width: 200px;
+   text-align: center;
+}
+
+ul.detalhes {
+ list-style: none outside none;
+ display: block;
+ font-weight: bold;
+}
+
+.palestrante {
+   height: 140px;
+   display:block;
+}
+
+.palestrante img {
+   width: 100px;
+   margin-right: 5px;
+   float:left;
+}
+
+table#programa td {
+  border-bottom: 1px #ccc solid;
+}

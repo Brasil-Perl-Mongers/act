@@ -1,0 +1,6 @@
+[% WRAPPER ui title = loc('Schedule') %]
+
+<!-- The schedule table -->
+[% PROCESS core/talk/schedule %]
+
+[% END %]

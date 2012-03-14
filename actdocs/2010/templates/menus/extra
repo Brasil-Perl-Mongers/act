@@ -1,0 +1,13 @@
+<h2></h2>
+[% WRAPPER menus/section %]
+<a href="[% make_uri('banners.html') %]">Banners (Espalhe!)</a>
+[% END %]
+
+[% WRAPPER menus/section %]
+<a href="[% make_uri('chat.html') %]">Live Chat!</a>
+[% END %]
+
+[% WRAPPER menus/section %]
+<a href="[% make_uri('contato.html') %]">Contato</a>
+[% END %]
+

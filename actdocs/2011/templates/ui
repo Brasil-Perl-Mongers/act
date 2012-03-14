@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="[% global.request.language %]" xml:lang="[% global.request.language %]">
+
+<head>
+<!-- Document Metadata -->
+<meta http-equiv="Content-Language" content="[% global.request.language %]" />
+<!-- OpenId -->
+[% IF openid %]
+<link rel="openid.server" href="[% global.request.base_url %][% make_uri('openid') %]" />
+[% END %]
+<!-- Atom news feed -->
+<link rel="alternate" type="application/atom+xml" title="[% global.conference.name %]"
+      href="[% global.request.base_url %][% make_uri_info( 'atom', global.request.language ) %].xml" />
+[%- IF title -%]<title>[% title  %]</title>[%- END -%]
+
+<!-- CSS Stylesheets -->
+<link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'style.css?1') %]" />
+<link rel="stylesheet" type="text/css" href="/css/schedule.css" />
+
+<!-- JavaScript sugar -->
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/act.js"></script>
+
+<!-- Favorite icon -->
+<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+</head>
+
+<body>
+[%- IF 0 AND title -%]<h1>[% title  %]</h1>[%- END -%]
+
+<div id="wrapper">
+
+  <div id="header">
+    <a href="/2011/" title="Yet Another Perl Conference - Brasil 2011"><img src="/2011/images/logo.png" /></a>
+  </div>
+
+  <div id="menu">
+    [% PROCESS menu %]
+
+	[% BLOCK hide_sponsors %]
+<br><br><br>
+	<div style="text-align: center; width: 100%; background-color: #FFFFFF; float: right; margin: 0 0 10px 10px; padding: 0 0 0 0">
+		  <h4>Patrocinador Platina</h4>
+		  <a href="http://www.estantevirtual.com.br"><img style="width: 140px; height: auto" border="0" src="/2011/images/EV_2011.jpg" alt="Patrocinador: Estante Virtual"></a>
+		  <h4>Patrocinador Prata</h4>
+<a href="http://www.aware.com.br"><img style="width: 120px; height: auto" src="/2009/sponsors/aware.png" alt="Aware" /></a>
+<br><br>
+		  <h4>Apoio</h4>
+<a  href="http://www.aviva.org.br/" target="_blank"><img style="width: 120px; height: auto"   src="/2009/sponsors/aviva.jpg" alt="Instituto Aviva" /></a>
+
+
+
+	</div>
+	[% END %]
+
+
+  </div>
+
+  <div id="content">
+    [% content %]
+  </div>
+  <div id="footer">
+    <div id="footmenu">
+      <a href="/2011" title="Início">Início</a>
+      &nbsp;|&nbsp;
+      <a href="/2011/schedule" title="Programação">Palestras</a>
+      &nbsp;|&nbsp;
+      <a href="/2011/minicurso.html" title="Mini-Curso">Mini-Curso</a>
+      &nbsp;|&nbsp;
+      <a href="/2011/inscricao.html" title="Inscrição">Inscrição</a>
+      &nbsp;|&nbsp;
+      <a href="/2011/local.html" title="Local">Local</a>
+    </div>
+    <span class="powered">Powered by <a href="http://act.mongueurs.net/">Act</a></span>
+  </div>
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5170131-3");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+</body>
+</html>

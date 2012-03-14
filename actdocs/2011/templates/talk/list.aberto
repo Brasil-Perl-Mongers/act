@@ -1,0 +1,129 @@
+[% WRAPPER ui title = title %]
+<div class="content" align="center">
+
+<h2>Submeta Sua Palestra!</h2>
+<hr size="1" />
+
+<p>
+ Participa um projeto em Perl e quer compartilhar? Criou ou usa um módulo bacana no CPAN? Utiliza
+ ferramentas Perl (ou perl como ferramenta!) em seu dia a dia? Apresente no YAPC::Brasil!
+</p>
+
+[% IF global.config.talks_submissions_open OR global.request.user.is_talks_admin %]
+   <a href="[% make_uri('newtalk') %]">
+    {{Submit a talk proposal}}
+   </a>
+[% END %]
+
+<p>
+ No momento estamos aceitando palestras de 20 e 40 minutos. Você pode enquadrar sua palestra em qualquer uma das
+ <i>tracks</i> do evento:
+</p>
+
+<div class="track">
+ <strong>Desenvolvimento</strong> - palestras focadas na linguagem de programação Perl, incluindo técnicas,
+ módulos no CPAN, paradigmas, algoritmos, padrões de design e melhores práticas.
+</div>
+
+<div class="track">
+ <strong>Administração de Sistemas</strong> - palestras com dicas e truques para usar perl como ferramenta
+ para sysadmins, soluções pragmáticas, aplicativos e tutoriais.
+</div>
+
+<div class="track">
+ <strong>Ecossistema</strong> - linguagens, técnicas, ferramentas e tecnologias auxiliares, tais como
+ jQuery, CSS3, HTML5, SQL e Firebug.
+</div>
+
+<p>
+ Submeta quantas palestras quiser! Palestras aceitas serão exibidas logo abaixo, então fique atento!
+</p>
+
+[% IF global.config.talks_submissions_open OR global.request.user.is_talks_admin %]
+   <a href="[% make_uri('newtalk') %]">
+    {{Submit a talk proposal}}
+   </a>
+[% END %]
+
+<p align="center">
+ {{Submitted talks:}} [% talks_total %]
+</p>
+
+[% IF global.request.user.is_talks_admin %]
+<div align="center">
+<p>
+ [% IF talks_total == 0 %]
+ {{No talk was submitted yet.}}
+ [% ELSE %]
+ {{Submitted talks:}} [% talks_total %]<br />
+ {{Accepted talks:}} [% talks_accepted %]
+ [% END %]
+</p>
+[% IF global.request.user.is_talks_admin || global.request.user.has_talk %]
+<p>
+ {{Accepted talks are shown in bold type.}}
+</p>
+[% END %]
+[% IF global.request.user.is_talks_admin %]
+<p>
+ {{Total duration of accepted talks:}}
+ [% talks_duration div 60 %] {{hours}}
+ [% talks_duration % 60 %] {{minutes}}
+ <br />
+ {{Accepted lightning talks:}}
+ [% talks_lightning %]
+</p>
+[% END %]
+</div>
+
+[% IF !tag AND tagcloud %]
+  <h2>{{Tags}}</h2>
+  [% tagcloud %]
+  <br />
+[% END %]
+
+[% IF tracks.size;
+     first = 0;
+     FOREACH tr = tracks;
+       NEXT UNLESS tr.track_id AND tr.talks.size;
+       UNLESS first;
+         first = 1 %]
+         <h2>{{Tracks}}</h2>
+         <ul>
+       [% END %]
+       <li><a href="#[% tr.track_id %]">[% tr.title %]</a></li>
+     [% END; IF first %]</ul>[% END %]
+[% END %]
+[% IF global.request.user.is_talks_admin %]
+<form method="POST" action="[% global.request.r.uri %]">
+[% END %]
+[% IF tracks.size != 0;
+     FOREACH tr = tracks;
+       IF tr.talks.size;
+         IF tr.track_id %]
+           <a name="[% tr.track_id %]" ><h2>[% tr.title %]</h2></a>
+           <p>[% tr.description %]</p>
+           [% PROCESS talk/talk_list talks = tr.talks;
+         ELSE %] 
+           <h2>{{No track}}</h2>
+          [% PROCESS talk/talk_list talks = tr.talks;
+         END;
+       END;
+     END;
+  ELSE;    
+    PROCESS talk/talk_list talks = talks;
+  END %]
+[% IF global.request.user.is_talks_admin %]
+<br />
+ [% IF talks_total != 0 %]
+<input type="submit" name="ok" value="{{Update}}" />
+ [% END %]
+</form>
+[% END %]
+
+[% END %]
+
+</div>
+[% END %]
+
+

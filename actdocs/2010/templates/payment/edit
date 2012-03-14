@@ -1,0 +1,58 @@
+[% WRAPPER ui title = loc('Payment') %]
+<div align="center">
+<form method="POST" action="[% global.request.r.uri %]">
+<input type="hidden" name="user_id" value="[% user.user_id %]" />
+<table border="0" cellspacing="0" cellpadding="4">
+[% IF order_id %]
+<input type="hidden" name="order_id" value="[% order_id %]" />
+<tr>
+ <td colspan="3">{{Editing payment}} <strong>[% order_id %]</strong></td>
+</tr>
+[% END %]
+<tr>
+ <td>{{User}}</td>
+ <td colspan="2"><a href="[% make_uri_info('user', user.user_id) %]"><strong>[% user.last_name %] [% user.first_name %]</strong></a></td>
+</tr>
+<tr>
+ <td>{{Payment means}}</td>
+ <td colspan="2">
+  <select name="means">
+    [% FOREACH m = allmeans.keys %]
+        <option value="[% m %]"[% ' selected="selected"' IF m == fields.means %]>[% allmeans.$m %]</option>
+    [% END %]
+  </select>
+ </td>
+</tr>
+[% FOREACH p IN productlist %]
+    [% NEXT IF p == 'registration' AND user.has_paid %]
+    <tr>
+        <td align="right"><input type="checkbox" name="product-[% p %]"[% ' checked="checked"' IF fields.products.$p.checked %] /></td>
+        <td>[% products.$p.name %]</td>
+  [% IF products.$p.prices.size == 1 %]
+        <td>[% products.$p.prices.0.amount %] [% currency %]</td>
+    </tr>
+  [% ELSE %]
+        <td></td>
+    </tr>
+    [% FOREACH i IN products.$p.prices %]
+    <tr>
+        <td></td>
+        <td><input type="radio" name="price-[% p %]" value="[% i.price_id %]"[% ' checked="checked"' IF fields.products.$p.prices.${i.price_id} %] />
+            [% i.name %]</td>
+        <td>[% i.amount %] [% currency %]</td>
+    </tr>
+    [% END %]
+  [% END %]
+    <tr>
+        <td></td>
+        <td>&nbsp;{{or}}&nbsp;<input type="text" name="amount-[% p %]" value="[% fields.amount.$p %]" size="6" />&nbsp;[% currency %]</td>
+        <td></td>
+    </tr>
+[% END %]
+</tr>
+</table>
+<br />
+<input type="submit" name="ok" value="{{Update}}" />
+</form>
+</div>
+[% END %]

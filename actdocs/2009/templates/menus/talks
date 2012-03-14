@@ -1,0 +1,13 @@
+<!-- talks menu -->
+[% PROCESS menus/talks_head %]
+
+[% WRAPPER menus/leftbox_ul %]
+  [% WRAPPER menus/item %]
+    <a href="[% make_uri('favtalks') %]">
+      {{Favorite Talks}}
+    </a>
+  [% END %]
+  [% PROCESS menus/talks_body %]
+[% END %]
+
+

@@ -1,0 +1,16 @@
+[% WRAPPER ui title = loc("News") %]
+
+[% IF news.size %]
+ <div class="actnewsbox">
+ [% FOREACH n = news %]
+ <p><h2><a href="[% n.link %]">[% n.title %]</a></h2>
+    <em>[% date_format(n.datetime, 'datetime_short') %] {{by}} [% user_info(n.user) %]</em>
+    <br />
+   [% texts.${loop.index} %]
+ </p>
+ [% END %]
+ </div>
+[% ELSE %]
+<p>{{No news yet!}}</p>
+[% END %]
+[% END %]

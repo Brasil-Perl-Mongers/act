@@ -1,0 +1,8 @@
+[% WRAPPER ui title = loc('Registration') %]
+
+[% PROCESS core/user/register %]
+
+<span style="text: #f00; font-weight:bold">Atenção!</span>Após o cadastro, lembre-se de fazer a inscrição e efetuar o pagamento para garantir sua vaga!
+<p>Palestrantes estão isentos da taxa de inscrição</p>
+
+[% END %]

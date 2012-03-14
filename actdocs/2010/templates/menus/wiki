@@ -1,0 +1,4 @@
+[% WRAPPER menus/section %]
+<a href="[% make_uri('wiki') %]">Sobre Fortaleza</a>
+<a href="http://www.yapcbrasil.org.br/2010/wiki?node=ContatosHoteis">Hospedagem</a>
+[% END %]

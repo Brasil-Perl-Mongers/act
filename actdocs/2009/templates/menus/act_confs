@@ -1,0 +1,10 @@
+[% IF global.conferences.present.merge( global.conferences.future ).size %]
+  [% WRAPPER menus/section %]
+    <a href="http://act.mongueurs.net/conferences.html">{{Other conferences}}</a>
+  [% END %]
+  [% WRAPPER menus/leftbox_ul %]
+    [% FOREACH c = global.conferences.present.merge( global.conferences.future ) %]
+      [% WRAPPER menus/item %]<a href="[% c.url %]">[% c.name %]</a>[% END %]
+    [% END %]
+  [% END %]
+[% END %]

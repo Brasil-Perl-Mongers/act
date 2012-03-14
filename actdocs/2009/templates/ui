@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="[% global.request.language %]" xml:lang="[% global.request.language %]">
+
+<head>
+<!-- Document Metadata -->
+<meta http-equiv="Content-Language" content="[% global.request.language %]" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!-- OpenId -->
+[% IF openid %]
+<link rel="openid.server" href="[% global.request.base_url %][% make_uri('openid') %]" />
+[% END %]
+<!-- Atom news feed -->
+<link rel="alternate" type="application/atom+xml" title="[% global.conference.name %]"
+      href="[% global.request.base_url %][% make_uri_info( 'atom', global.request.language ) %].xml" />
+[%- IF title -%]<title>[% title  %]</title>[%- END -%]
+
+<!-- CSS Stylesheets -->
+<link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'common.css') %]?foo" />
+<link rel="stylesheet" type="text/css" href="/css/schedule.css" />
+
+<!-- JavaScript sugar -->
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/act.js"></script>
+
+<!-- Favorite icon -->
+<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+
+
+</head>
+
+
+<body>
+
+        <!-- Start Header -->
+        <div id="header">
+                <div class="container">
+                        <h1 id="toplogo"><a href="http://www.yapcbrasil.org.br/2009/" title="YAPC::Brasil 2009"><span>YAPC::Brasil 2009</span></a></h1>
+                        <hr />
+                        <!-- top navigation -->
+                        <ul id="navigation">
+                                <li [% IF nav == 'index' %]class="active"[% END %]><a href="/2009/" title="Início">início</a></li>
+                                <li [% IF nav == 'inscricao' %]class="active"[% END %]><a href="/2009/inscricao.html" title="Inscrição">inscrição</a></li>
+                                <li [% IF nav == 'cfp' %]class="active"[% END %]><a href="/2009/cfp.html" title="Chamada">chamada</a></li>
+                                <li [% IF nav == 'local' %]class="active"[% END %]><a href="/2009/local.html" title="Local">local</a></li>
+                                <li [% IF nav == 'agenda' %]class="active"[% END %]><a href="/2009/talks" title="Agenda">agenda</a></li>
+                                <li [% IF nav == 'banners' %]class="active"[% END %]><a href="/2009/banners.html" title="Espalhe!">espalhe!</a></li>
+                                <li [% IF nav == 'org' %]class="active"[% END %]><a href="/2009/organizacao.html" title="Organização">organização</a></li>
+                                <li [% IF nav == 'contato' %]class="active"[% END %]><a href="/2009/contato.html" title="Imprensa">contato</a></li>
+				<li [% IF nav== 'chat' %]class="active"[% END %]><a href="/2009/chat.html" title="Live Chat">live chat</a></li>
+                        </ul>
+                        <hr />
+                        <!-- banner message and building background -->
+                        <a href="http://www.yapcbrasil.org.br/2009/"><div id="banner"><div><p>30, 31 de outubro</p><p>1 de novembro</p><p>Niter&oacute;i &mdash; RJ</p></div>
+                        </div></a>
+                        <hr />
+                </div>
+        </div>
+        <!-- Start Main Content -->
+        <div id="main" class="container">
+                <!-- left column (products and features) -->
+                <div id="leftcolumn">
+
+			[% PROCESS menu %]
+
+                        <hr />
+                </div>
+                <!-- product sales boxes -->
+		[% IF nav == 'index' %]
+                <div id="rightcolumn">
+
+                        <div class="rightbox_wrapper">
+                                <div class="rightbox"> 
+                                        <img src="images/gold.jpg" alt="Image:product" class="product_image" />
+                                        <div class="product_wrapper">
+                                                <h4>Gold Sponsors</h4>
+						 [% PROCESS yapcbrasil/sponsors_gold %]
+                                        </div>
+                                </div>
+                        </div>  
+			<div class="rightbox_wrapper">
+				<div class="rightbox">
+					<div class="product_wrapper">
+						<h4>Apoio</h4>
+						[% PROCESS yapcbrasil/apoio %]
+					</div>
+				</div>
+			</div>
+			[% IF 0 %]
+                        <div class="rightbox_wrapper">
+                                <div class="rightbox">
+                                        <img src="images/silver.jpg" alt="Image:product" class="product_image" />
+                                        <div class="product_wrapper">
+                                                <h4>Silver Sponsors</h4>
+						 [% PROCESS yapcbrasil/sponsors_silver %]
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="rightbox_wrapper lastbox">
+                                <div class="rightbox">
+                                        <img src="images/bronze.jpg" alt="Image:product" class="product_image" />
+                                        <div class="product_wrapper">
+                                                <h4>Bronze Sponsors</h4>
+						 [% PROCESS yapcbrasil/sponsors_bronze %]
+                                        </div>
+                                </div>
+                        </div>
+			[% END %]
+                        <hr />
+			<a href="/2009/patrocinio.html">Torne-se um Patrocinador!</a>
+
+                        <div class="rightbox_wrapper">
+                                <div class="rightbox"> 
+
+<div id="twtr-search-widget"></div>
+<script src="http://widgets.twimg.com/j/1/widget.js"></script>
+<link href="http://widgets.twimg.com/j/1/widget.css" type="text/css" rel="stylesheet">
+<script>
+new TWTR.Widget({
+  search: '\"yapcbrasil\" OR \"yapc::brasil\" OR \"yapc brasil\" OR @yapcbrasil OR #yapcbrasil OR #yapcbrasil09',
+  id: 'twtr-search-widget',
+  loop: true,
+  title: 'YAPC::Brasil 2009 no Twitter',
+  subject: '',
+  width: 190,
+  height: 350,
+  features: {
+    hashtags: false,
+    timestamp: true,
+    avatars: true,
+    fullscreen: false
+  },
+  theme: {
+    shell: {
+      background: '#ffffff',
+      color: '#000000'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#444443',
+      links: '#1985b5'
+    }
+  }
+}).render().start();
+</script>
+
+				</div>
+                        </div>  
+                </div>
+		[% END %]
+                <!-- main content area -->
+                <div id="center">
+                        <div class="article_wrapper">
+				[% IF 0 %][%- IF title -%]<h2>[% title  %]</h2>[%- END -%][% END %]
+			    [% content %]
+			</div>
+                        <hr />
+                </div>
+
+        </div>
+        <!-- Start Bottom Information -->
+        <div id="bottominfo">
+                <div class="container">
+                        <!-- bottom left information -->
+                        <div class="bottomcolumn">
+                                <h3>{{Users}}</h3>
+                                <ul class="borderedlist iconlist">
+[% WRAPPER menus/item %]
+<a href="[% make_uri('search') %]">
+ {{Search}}
+</a>
+[% END %]
+[% WRAPPER menus/item %]
+<a href="[% make_uri('stats') %]">
+ {{Statistics}}
+</a>
+[% END %]
+[% IF global.request.user.is_users_admin %]
+[% WRAPPER menus/item %]
+<a href="[% make_uri('export') %]">
+ {{CSV export}}
+</a>
+[% END %]
+[% WRAPPER menus/item %]
+<a href="[% make_uri('create') %]">
+ {{Register a new user}}
+</a>
+[% END %]
+[% END %]
+
+                                </ul>
+                        </div>
+                        <!-- bottom center information -->
+                        <div class="bottomcolumn">
+                                <h3>Acompanhe!</h3>
+                                <ul class="borderedlist iconlist">
+                                        <li><a href="http://twitter.com/yapcbrasil" title="yapcbrasil no twitter"><img src="/2009/images/twitter.png" /> twitter.com/yapcbrasil</a></li>
+                                        <li><a href="/2009/timetable.ics" title="Programação"><img src="/2009/images/ical.png" /> Programação (ical)</a></li>
+                                        <li><a href="/2009/atom/pt.xml" title="Notícias (RSS)"><img src="/2009/images/feed.png" /> Notícias (RSS)</a></li>
+                                </ul>
+                        </div>
+                        <!-- bottom right information -->
+                        <div class="bottomcolumn bottomright">
+                                <h3>Newsletter</h3>
+                                <p>Receba por email as informações do evento.</p>
+                                <form action="#">
+                                        <input type="text" name="email" class="enewsbox" />
+                                        <input type="button" class="button" value="Submit" />
+                                </form>
+                        </div>
+                        <hr />
+                </div>
+        </div>
+        <!-- Start Footer -->
+        <div id="footer">
+                <div class="container">
+                        <ul id="footer_navigation">
+                                <li>Powered by <a href="http://act.mongueurs.net/">Act</a></li>
+                                <li>Hosting por <a href="http://www.aviva.org.br/">Instituto Aviva</a></li>
+                                <li>Conduzido com carinho e profissionalismo para a Comunidade Brasileira de Perl!</li>
+                        </ul>
+                </div>
+        </div>
+
+
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5170131-3");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+</body>
+</html>

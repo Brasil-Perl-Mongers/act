@@ -1,0 +1,103 @@
+@font-face { font-family: Mentone; src: url("mentone.otf"); }
+.wide { font-family: mentone, corbel, sans-serif;  width: 100%; margin: 0 auto; overflow: hidden; display: block; }
+.container { font-family: mentone, corbel, sans-serif;  width: 950px; margin: 0 auto; overflow: hidden; display: block; }
+
+
+html, body { margin: 0; padding: 0; border: 0; font-weight: inherit; font-style: inherit; font-size: 90%; font-family: inherit; vertical-align: baseline; }
+
+div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, pre, a, abbr, acronym, address, code, del, dfn, em, img, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr { margin: 0; padding: 0; border: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; }
+
+blockquote, q { margin: 0; padding: 0; border: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; quotes: "" ""; }
+blockquote:before, q:before, blockquote:after, q:after { content: ""; }
+
+th, td, caption { margin: 0; padding: 0; border: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; text-align: left; font-weight: normal; vertical-align: middle; }
+
+table { margin: 0; padding: 0; border: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; border-collapse: separate; border-spacing: 0; vertical-align: middle; }
+
+.investimento { width: 400px }
+
+a img { border: none; }
+
+h1 { font-weight: normal; color: #333; font-size: 2.5em; line-height: 1; margin-bottom: 0.5em; margin-top: 0.3em}
+h1 img { margin: 0; }
+
+h2 { font-weight: normal; color: #333; font-size: 1.5em; margin-bottom: 0.75em; }
+
+h3 { font-weight: normal; color: #333; font-size: 1.2em; line-height: 1; margin-bottom: 1em; }
+
+h4 { font-weight: normal; color: #333; font-size: 1.0em; line-height: 1.25; margin-bottom: 1.25em; }
+
+h5 { font-weight: normal; color: #333; font-size: 1em; font-weight: bold; margin-bottom: 1.5em; }
+
+h6 { font-weight: normal; color: #333; font-size: 1em; font-weight: bold; }
+
+h2 img, h3 img, h4 img, h5 img, h6 img { margin: 0; }
+
+p { margin: 0 0 1.5em; }
+p img.left { display: inline; float: left; margin: 1.5em 1.5em 1.5em 0; padding: 0; }
+p img.right { display: inline; float: right; margin: 1.5em 0 1.5em 1.5em; padding: 0; }
+
+
+
+hr { margin-top: 20px; margin-bottom: 10px;}
+
+body {  background-color: #ffffea; }
+
+#logo { 
+  height: 186px; 
+  color: #eee; 
+  margin-bottom: 10px ;
+  margin-top: 10px ;
+  background: #5184B0 url('../images/fortaleza.png') no-repeat right bottom;
+}
+
+#logo h1 { 
+  color: #eee; 
+  margin: 5px 0 15px 0;
+}
+
+#logo span {
+  display: block;
+  font: 20px bold tahoma, sans-serif;
+}
+#logo img {
+  float: left;
+  margin: -5px 10px 0px 10px;
+  vertical-align: top;
+}
+#logo a {
+  color:#eee;
+  text-decoration: none;
+}
+
+a { text-decoration: none; }
+
+#topmenu {
+  text-align: right;
+}
+
+#rightbox {
+  float: right;
+  width: 100px;
+  text-align: right;
+}
+
+#rightbox ul, #rightbox ul li {
+  display: inline;
+  list-style: none;
+  margin: 4px;
+}
+
+#rightcolumn{float: right;width:190px;}
+.sponsors img { margin-top: 20px; width: 150px; height: auto; }
+
+#destaque {
+  border: 2px #99f solid;
+  padding: 6px;
+  background-color: #aaf;
+  margin: 10px 10px 30px 10px;
+  width: 300px;
+  font-size: 1.4em;
+}
+
+

@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="[% global.request.language %]" xml:lang="[% global.request.language %]">
+
+<head>
+<!-- Document Metadata -->
+<meta http-equiv="Content-Language" content="[% global.request.language %]" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!-- OpenId -->
+[% IF openid %]
+<link rel="openid.server" href="[% global.request.base_url %][% make_uri('openid') %]" />
+[% END %]
+<!-- Atom news feed -->
+<link rel="alternate" type="application/atom+xml" title="[% global.conference.name %]"
+      href="[% global.request.base_url %][% make_uri_info( 'atom', global.request.language ) %].xml" />
+[%- IF title -%]<title>[% title  %]</title>[%- END -%]
+
+<!-- CSS Stylesheets -->
+<link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'common.css') %]" />
+<link rel="stylesheet" type="text/css" href="/css/schedule.css" />
+
+<!-- JavaScript sugar -->
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/act.js"></script>
+
+<!-- Favorite icon -->
+<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+
+
+</head>
+
+
+<body>
+
+        <!-- Start Header -->
+        <div id="header">
+                <div class="container">
+                        <h1><a href="http://www.yapcbrasil.org.br/2009/" title="YAPC::Brasil 2009"><span>YAPC::Brasil 2009</span></a></h1>
+                        <hr />
+                        <!-- top navigation -->
+                        <ul id="navigation">
+                                <li class="active"><a href="/2009/" title="Início">Início</a></li>
+                                <li><a href="/2009/local.html" title="Local">Local</a></li>
+                                <li><a href="/2009/agenda.html" title="Agenda">Agenda</a></li>
+                                <li><a href="/2009/banners.html" title="Banners">Banners</a></li>
+                                <li><a href="/2009/press.html" title="Imprensa">Imprensa</a></li>
+                                <li><a href="/2009/contato.html" title="Imprensa">Contato</a></li>
+                        </ul>
+                        <hr />
+                        <!-- banner message and building background -->
+                        <div id="banner">
+                        </div>
+                        <hr />
+                </div>
+        </div>
+        <!-- Start Main Content -->
+        <div id="main" class="container">
+                <!-- left column (products and features) -->
+                <div id="leftcolumn">
+
+			[% PROCESS menu %]
+
+                        <hr />
+                </div>
+                <!-- main content area -->
+                <div id="center">
+                        <div class="article_wrapper">
+				[% IF 0 %][%- IF title -%]<h2>[% title  %]</h2>[%- END -%][% END %]
+			    [% content %]
+			</div>
+                        <hr />
+                </div>
+                <!-- product sales boxes -->
+                <div id="rightcolumn">
+
+                        <div class="rightbox_wrapper">
+                                <div class="rightbox"> 
+                                        <img src="images/gold.jpg" alt="Image:product" class="product_image" />
+                                        <div class="product_wrapper">
+                                                <h4>Gold Sponsors</h4>
+						 [% PROCESS yapcbrasil/sponsors_gold %]
+                                        </div>
+                                </div>
+                        </div>  
+
+                        <div class="rightbox_wrapper">
+                                <div class="rightbox">
+                                        <img src="images/silver.jpg" alt="Image:product" class="product_image" />
+                                        <div class="product_wrapper">
+                                                <h4>Silver Sponsors</h4>
+						 [% PROCESS yapcbrasil/sponsors_silver %]
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="rightbox_wrapper lastbox">
+                                <div class="rightbox">
+                                        <img src="images/bronze.jpg" alt="Image:product" class="product_image" />
+                                        <div class="product_wrapper">
+                                                <h4>Bronze Sponsors</h4>
+						 [% PROCESS yapcbrasil/sponsors_bronze %]
+                                        </div>
+                                </div>
+                        </div>
+                        <hr />
+                </div>
+        </div>
+        <!-- Start Bottom Information -->
+        <div id="bottominfo">
+                <div class="container">
+                        <!-- bottom left information -->
+                        <div class="bottomcolumn">
+                                <h3>{{Users}}</h3>
+                                <ul class="borderedlist iconlist">
+[% WRAPPER menus/item %]
+<a href="[% make_uri('search') %]">
+ {{Search}}
+</a>
+[% END %]
+[% WRAPPER menus/item %]
+<a href="[% make_uri('stats') %]">
+ {{Statistics}}
+</a>
+[% END %]
+[% IF global.request.user.is_users_admin %]
+[% WRAPPER menus/item %]
+<a href="[% make_uri('export') %]">
+ {{CSV export}}
+</a>
+[% END %]
+[% WRAPPER menus/item %]
+<a href="[% make_uri('create') %]">
+ {{Register a new user}}
+</a>
+[% END %]
+[% END %]
+
+                                </ul>
+                        </div>
+                        <!-- bottom center information -->
+                        <div class="bottomcolumn">
+                                <h3>Acompanhe!</h3>
+                                <ul class="borderedlist iconlist">
+                                        <li><a href="http://twitter.com/yapcbrasil" title="yapcbrasil no twitter">twitter.com/yapcbrasil</a></li>
+                                        <li><a href="/2009/timetable.ics" title="Programação">Programação (ical)</a></li>
+                                        <li><a href="/2009/atom/pt.xml" title="Notícias (RSS)">Notícias (RSS)</a></li>
+                                </ul>
+                        </div>
+                        <!-- bottom right information -->
+                        <div class="bottomcolumn bottomright">
+                                <h3>Newsletter</h3>
+                                <p>Receba por email as informações do evento.</p>
+                                <form action="#">
+                                        <input type="text" name="email" class="enewsbox" />
+                                        <input type="button" class="button" value="Submit" />
+                                </form>
+                        </div>
+                        <hr />
+                </div>
+        </div>
+        <!-- Start Footer -->
+        <div id="footer">
+                <div class="container">
+                        <ul id="footer_navigation">
+                                <li>Powered by <a href="http://act.mongueurs.net/">Act</a></li>
+                                <li>Hosting por <a href="http://www.aviva.org.br/">Instituto Aviva</a></li>
+                                <li>Conduzido com carinho e profissionalismo para a Comunidade Brasileira de Perl!</li>
+                        </ul>
+                </div>
+        </div>
+
+
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5170131-3");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+</body>
+</html>
