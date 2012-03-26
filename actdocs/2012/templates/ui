@@ -18,36 +18,75 @@
 <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'style.css') %]" />
 <link rel="stylesheet" type="text/css" href="/css/schedule.css" />
 
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<meta name="description" content="">
+<meta name="keywords" content="">
+
 <!-- JavaScript sugar -->
-<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="[%  make_uri_info('js', 'jquery-1.6.2.min.js') %]" ></script>
 <script type="text/javascript" src="/js/act.js"></script>
 
-<!-- Favorite icon -->
-<link rel="shortcut icon" type="image/png" href="/favicon.png" />
 </head>
 
-<body>
-[%- IF title -%]<h1>[% title  %]</h1>[%- END -%]
-
+<BODY>
 <div id="wrapper">
+	<div id="top">
+    	<div id="logo"><img src="/2012/images/logo.png" border="0" /></div>
+    	<div id="menu">
+        	<ul class="menu">
+            	<li class="item"><a href="/2012">Home</a></li>
+            	<li class="item"><a href="sobre.html">Sobre</a></li>
+            	<li class="item"><a href="palestras.html">Palestras</a></li>
+            	<li class="item"><a href="inscricao.html">Inscrição</a></li>
+            	<li class="item"><a href="local.html">Local</a></li>
+            	<li class="item"><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+    	<div id="social">
+		<a href="https://twitter.com/#!/yapcbrasil" class="twitter"></a>
+                <a href="/2012/atom/pt.xml" class="rss"></a>
+	</div>
+    	<div id="saopaulo"><img src="/2012/images/saopaulo.png" border="0" /></div>
+    	<div id="data">19 e 20 de Outubro</div>
+    </div>
+    
+	<div id="content">
+		<p class="title2">A revolução dos dados</p>
+		<p>
+		</p>
+		
+		[% content %]
+	</div>
 
-  <div id="header">
-    <h1>Our Perl Workshop</h1>
-  </div>
-
-  <div id="menu">
-    [% PROCESS menu %]
-  </div>
-
-  <div id="content">
-    [% content %]
-  </div>
-
-  <div id="footer">
-    Copyright &copy; Us - Powered by <a href="http://act.mongueurs.net/">Act</a>
-  </div>
-
+	<div id="content-side">
+    	<div class="title">Patrocinadores</div>
+        <div class="patrocinador platinum"><img src="/2012/images/patrocinadores/logo-w3c-brasil.jpg" border="0"></div>
+        <div class="clear"></div>
+        
+    </div>
+    
+    <div class="clear"></div>
+    
+	<div id="footer">
+    	<div id="copy">
+        	<img src="images/logo_footer.png" border="0">
+        	<span class="title">YAPC::Brasil</span><br />
+            é um evento realizado pela comunidade brasileira Perl.	
+        </div>
+        <div class="menu">
+            <div id="menu-footer">
+                <a href="sobre.html">Sobre</a><br />
+                <a href="contato.html">Contato</a><br />
+	        <a href="patrocine.html">Como patrocinar ?</a><br />
+            </div>
+            <div id="menu-footer">
+                <a href="palestras.html">Palestras</a><br />
+                <a href="inscricao.html">Inscrição</a><br />
+                <a href="local.html">Local</a><br />
+            </div>
+         </div>
+    </div>
 </div>
-
-</body>
+</BODY>
 </html>
+
