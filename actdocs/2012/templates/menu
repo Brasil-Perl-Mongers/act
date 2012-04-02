@@ -1,11 +1,19 @@
 [% FILTER collapse %]
+<div id="menu-footer">
 [% PROCESS menus/user %]
+</div>
+<div id="menu-footer">
 [% PROCESS menus/users %]
+</div>
+<div id="menu-footer">
 [% PROCESS menus/news %]
 [% PROCESS menus/wiki %]
+</div>
+<div id="menu-footer">
 [% PROCESS menus/talks %]
 [% PROCESS menus/events %]
 [% PROCESS menus/treasurer %]
 [% PROCESS menus/admin %]
 [% PROCESS menus/act_confs %]
+</div>
 [% END %]

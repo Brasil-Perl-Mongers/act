@@ -43,8 +43,14 @@
             </ul>
         </div>
     	<div id="social">
-		<a href="https://twitter.com/#!/yapcbrasil" class="twitter"></a>
-                <a href="/2012/atom/pt.xml" class="rss"></a>
+		[% IF global.request.user %]
+			<a href="/2012/logout" class="social_link">Logout</a>
+		[% ELSE %]
+			<a href="/2012/main" class="social_link">Login</a>
+			<a href="/2012/register" class="social_link">Cadastre-se</a>
+		[% END %]
+		<a href="https://twitter.com/#!/yapcbrasil" class="twitter" target="_blank"></a>
+        <a href="/2012/atom/pt.xml" class="rss"></a>
 	</div>
     	<div id="saopaulo"><img src="/2012/images/saopaulo.png" border="0" /></div>
     	<div id="data">19 e 20 de Outubro</div>
@@ -74,21 +80,8 @@
             é um evento realizado pela comunidade brasileira Perl.	
         </div>
         <div class="menu">
-            <div id="menu-footer">
-                <a href="sobre.html">Sobre</a><br />
-                <a href="contato.html">Contato</a><br />
-	        <a href="patrocine.html">Como patrocinar ?</a><br />
-            </div>
-            <div id="menu-footer">
-                <a href="palestras.html">Palestras</a><br />
-                <a href="inscricao.html">Inscrição</a><br />
-                <a href="local.html">Local</a><br />
-            </div>
-	
-	     <div id="menu-footer">
-		[% PROCESS menu %]
+	     [% PROCESS menu %]
 	     </div>
-         </div>
     </div>
 </div>
 </BODY>
