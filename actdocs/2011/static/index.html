@@ -1,0 +1,112 @@
+[% WRAPPER ui 
+title = global.conference.name 
+hide_sponsors = 1
+%]
+
+<div>
+	<div style="text-align: center; background-color: #FFFFFF; float: right; width: 250px; margin: 0 0 10px 10px; padding: 0 0 0 0">
+		  <h4>Patrocinador Platina</h4>
+		  <a href="http://www.estantevirtual.com.br"><img style="width: 200px; height: auto" border="0" src="/2011/images/EV_2011.jpg" alt="Patrocinador: Estante Virtual"></a>
+		  <h4>Patrocinador Prata</h4>
+<a href="http://www.aware.com.br"><img style="width: 175px; height: auto" src="/2009/sponsors/aware.png" alt="Aware" /></a>
+<br><br>
+		  <h4>Apoio</h4>
+<a  href="http://www.aviva.org.br/" target="_blank"><img style="width: 150px; height: auto"   src="/2009/sponsors/aviva.jpg" alt="Instituto Aviva" /></a>
+
+
+
+	</div>
+<h2>Bem-vindo!</h2>
+
+
+	<p>
+	O YAPC::Brasil é um evento criado para todos os amantes, entusiastas, usuários
+	e curiosos da linguagem <a href="http://perl.org">Perl</a> de programação. Venha
+	conhecer você também o que há de mais moderno e inovador em desenvolvimento de
+	software na linguagem com os programadores mais felizes!
+	</p>
+
+<p>
+ Com ra&iacute;zes nos grupos Perl Mongers do Brasil, a confer&ecirc;ncia
+ celebra a linguagem Perl e foi feita para ser acess&iacute;vel a todos, independente
+ de experi&ecirc;ncia, e ainda assim valiosa mesmo para os programadores mais habilidosos.
+</p>
+
+<ul class="detalhes">
+ <li><a href="http://www.yapcbrasil.org.br/2011/local.html">Centro de Conven&ccedil;&otilde;es Flex Center</a></li>
+ <li>Rio de Janeiro, RJ</li>
+ <li>4, 5 e 6 de novembro, 2011</li>
+</ul>
+
+	<p>
+	Fique atento a atualizações neste espaço, ou acompanhe nosso 
+	<a href="[% global.request.base_url %][% make_uri_info( 'atom', global.request.language ) %].xml">feed</a>!
+	</p>
+</div>
+
+[% news = global.news(3);
+   IF news.size > 2;
+     more = news.pop;
+   END;
+ %]
+
+[% IF news.size %]
+<hr style="border:0; margin-top: 20px; width: 80%; height: 1px; color: #d8d8d8; background-color: #d8d8d8; " />
+<h2>Últimas Notícias</h2>
+	<div style="float: right; width: 250px; margin: 0 0 10px 10px; padding: 0 0 0 0">
+<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'search',
+  search: 'yapcbrasil OR yapc::brasil OR yapcbr OR #yapcbrasil',
+  interval: 30000,
+  title: 'YAPC::Brasil on Twitter',
+  subject: '',
+  width: 'auto',
+  height: 160,
+  theme: {
+    shell: {
+      background: '#e7e7e7',
+      color: '#000000'
+    },
+    tweets: {
+      background: '#e7e7e7',
+      color: '#141414',
+      links: '#1986b5'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: true,
+    live: true,
+    hashtags: false,
+    timestamp: true,
+    avatars: true,
+    toptweets: true,
+    behavior: 'default'
+  }
+}).render().start();
+</script>
+	</div>
+
+[% FOREACH item = news %]
+<div class="news-entry">
+ <h3 class="news-header">
+  <span class="news-date">[% date_format(item.datetime, '%d/%m/%Y') %]</span>
+  <span class="news-title">[% item.title %]</span>
+ </h3>
+ <div class="news-text">
+  [% item.content %]
+ </div>
+</div>
+[% END %]
+[% END %]
+
+[% IF more %]
+<p>
+ <a href="[% make_uri('news') %]" class="news-link">Older announcements</a>
+</p>
+[% END %]
+
+[% END %]

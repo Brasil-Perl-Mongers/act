@@ -1,0 +1,133 @@
+[% WRAPPER ui
+  title = global.conference.name 
+  nav = 'inscricao'
+%]
+
+[% inscricoes_encerradas = 1 %]
+
+<h1>Natureza do Evento</h1>
+<p>As YAPCs (Yet Another Perl Conference) são <strong>eventos sem fins lucrativos organizados pela própria comunidade de usuários de Perl de forma voluntária e não-remunerada.</strong> O valor cobrado pela inscrição é estritamente para a cobertura dos custos de realização do evento. Após a conclusão do mesmo, e publicação da prestação de contas no site, qualquer lucro remanescente será encaminhado para um fundo de subsídio das próximas edições do YAPC e eventos de promoção da linguagem e da comunidade Perl brasileira, de forma análoga ao trabalho realizado pela YAPC::Europe e YAPC::Asia.</p>
+
+<h1>Inscrições</h1>
+
+<p><strong style="color: red">Inscrições on-line encerradas:</strong> inscreva-se presencialmente durante o credenciamento. Quaisquer dúvidas, entre em contato conosco: organizacao@yapcbrasil.org.br.
+</p>
+
+<p>Quem se inscreve no YAPC::Brasil 2011 tem direito a:</p>
+<ul>
+ <li><strong>Dois dias inteiros</strong> de palestras de altíssimo nível</li>
+ <li>Infraestrutura de qualidade em ambiente refrigerado</li>
+ <li>Dois coffee-breaks completos</li>
+ <li>Sorteio de livros e brindes</li>
+</ul>
+
+<p>Aproveite o preço promocional e <strong>inscreva-se também no mini-curso</strong> <a href="http://www.yapcbrasil.org.br/2011/minicurso.html">Effective Perl Programming</a>, ministrado por ninguém menos que brian d foy! <i>As vagas são limitadas!</i></p>
+
+<h2>Normal</h2>
+<table class="investimento">
+<tr>
+ <th>Tipo</th><th>Investimento</th>
+[% UNLESS inscricoes_encerradas %]
+<th>Link</th>
+[% END %]
+</tr>
+<tr>
+ <td>Inscri&ccedil;&atilde;o YAPC</td><td>R$ 50,00</td>
+[% UNLESS inscricoes_encerradas %]
+<td width="50%">
+<!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+<form target="pagseguro" action="https://pagseguro.uol.com.br/v2/checkout/cart.html?action=add" method="post">
+<input type="hidden" name="receiverEmail" value="financeiro@yapcbrasil.org.br" />
+<input type="hidden" name="currency" value="BRL" />
+<input type="hidden" name="itemId" value="1" />
+<input type="hidden" name="itemDescription" value="YAPC::Brasil 2011" />
+<input type="hidden" name="itemQuantity" value="1" />
+<input type="hidden" name="itemAmount" value="50.00" />
+<input type="hidden" name="itemWeight" value="" />
+<input type="hidden" name="itemShippingCost" value="0.00" />
+<input type="image" src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/pagamentos/180x25-pagar.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+</form>
+<!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+</td>
+[% END %]
+</tr>
+<tr>
+ <td>Inscri&ccedil;&atilde;o YAPC + Mini-curso <a href="http://www.yapcbrasil.org.br/2011/minicurso.html">Effective Perl Programming</a></td><td>R$ 80,00</td>
+[% UNLESS inscricoes_encerradas %]
+<td width="50%">
+<!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+<form target="pagseguro" action="https://pagseguro.uol.com.br/v2/checkout/cart.html?action=add" method="post">
+<input type="hidden" name="receiverEmail" value="financeiro@yapcbrasil.org.br" />
+<input type="hidden" name="currency" value="BRL" />
+<input type="hidden" name="itemId" value="2" />
+<input type="hidden" name="itemDescription" value="YAPC::Brasil 2011 + Minicurso Effective Perl" />
+<input type="hidden" name="itemQuantity" value="1" />
+<input type="hidden" name="itemAmount" value="80.00" />
+<input type="hidden" name="itemWeight" value="" />
+<input type="hidden" name="itemShippingCost" value="0.00" />
+<input type="image" src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/pagamentos/180x25-pagar.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+</form>
+<!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+</td>
+[% END %]
+</tr>
+</table>
+<hr />
+<h2>Estudantes</h2>
+<table class="investimento">
+<tr>
+ <th>Tipo</th><th>Investimento</th>
+[% UNLESS inscricoes_encerradas %]
+<th>Link</th>
+[% END %]
+</tr>
+<tr>
+ <td>Inscri&ccedil;&atilde;o YAPC</td><td>R$ 25,00</td>
+[% UNLESS inscricoes_encerradas %]
+<td width="50%">
+<!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+<form target="pagseguro" action="https://pagseguro.uol.com.br/v2/checkout/cart.html?action=add" method="post">
+<input type="hidden" name="receiverEmail" value="financeiro@yapcbrasil.org.br" />
+<input type="hidden" name="currency" value="BRL" />
+<input type="hidden" name="itemId" value="3" />
+<input type="hidden" name="itemDescription" value="ESTUDANTE - YAPC::Brasil 2011" />
+<input type="hidden" name="itemQuantity" value="1" />
+<input type="hidden" name="itemAmount" value="25.00" />
+<input type="hidden" name="itemWeight" value="" />
+<input type="hidden" name="itemShippingCost" value="0.00" />
+<input type="image" src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/pagamentos/180x25-pagar.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+</form>
+<!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+</td>
+[% END %]
+</tr>
+<tr>
+ <td>Inscri&ccedil;&atilde;o YAPC + Mini-curso <a href="http://www.yapcbrasil.org.br/2011/minicurso.html">Effective Perl Programming</a></td><td>R$ 40,00</td>
+[% UNLESS inscricoes_encerradas %]
+<td width="50%">
+<!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+<form target="pagseguro" action="https://pagseguro.uol.com.br/v2/checkout/cart.html?action=add" method="post">
+<input type="hidden" name="receiverEmail" value="financeiro@yapcbrasil.org.br" />
+<input type="hidden" name="currency" value="BRL" />
+<input type="hidden" name="itemId" value="4" />
+<input type="hidden" name="itemDescription" value="ESTUDANTE - YAPC::Brasil 2011 + Minicurso Effective Perl" />
+<input type="hidden" name="itemQuantity" value="1" />
+<input type="hidden" name="itemAmount" value="40.00" />
+<input type="hidden" name="itemWeight" value="" />
+<input type="hidden" name="itemShippingCost" value="0.00" />
+<input type="image" src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/pagamentos/180x25-pagar.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+</form>
+<!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+</td>
+[% END %]
+</tr>
+</table>
+<br />
+<p>Para o desconto de Estudantes é necessário apresentar Carteira expedida por estabelecimento de ensino fundamental, médio, superior ou pela respectiva associação e ou agremiação.  Atenção: caso a data de validade não conste no documento, deverá ser apresentado documento que comprove a matrícula ou frequência no ano letivo em curso. O desconto não se aplica à cursos livres: inglês, informática ou pré-vestibular.</p>
+
+<hr />
+<h2>Descontos para Grupos (5 ou mais pessoas)</h2>
+ <p>Entre em contato com <span style="font-style:italic">organizacao@yapcbrasil.org.br</span> para saber sobre descontos para grupos de estudantes ou empresas.</p>
+<p>Descontos n&atilde;o cumulativos.</p>
+
+[% END %]

@@ -5,8 +5,38 @@
 </t></h1>
 
 <p>
-Bem-vindo ao site oficial do YAPC Brasil 2012.
+Bem-vindo ao site oficial do YAPC::Brasil 2012. O evento acontecer&aacute; nos dias 19 e 20 de outubro, no <a href="/2012/about/general.html">Centro de Conven&ccedil;&otilde;es Frei Caneca, S&atilde;o Paulo, SP</a>. Esperamos voc&ecirc; l&aacute;!
+</p>
+<p>
+No YAPC::Brasil voc&ecirc; participar&aacute; de oficinas, palestras e debates sobre o estado da arte das práticas e tecnologias voltadas para captura, armazenamento, busca, compartilhamento, análise, e visualizaçãe grandes quantidades de dados.
 </p>
 
+[% news = global.news(3);
+   IF news.size > 2;
+     more = news.pop;
+   END;
+ %]
+
+[% IF news.size %]
+
+[% FOREACH item = news %]
+<div class="news-entry">
+ <h3 class="news-header">
+  <span class="news-date">[% date_format(item.datetime, '%d/%m/%Y') %]</span>
+  <span class="news-title">[% item.title %]</span>
+ </h3>
+ <div class="news-text">
+  [% item.content %]
+ </div>
+</div>
+[% END %]
+
+[% IF more %]
+<p>
+ <a href="[% make_uri('news') %]" class="news-link">Older announcements</a>
+</p>
+[% END %]
+
+[% END %]
 
 [% END %]

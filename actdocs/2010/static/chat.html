@@ -1,0 +1,23 @@
+[% WRAPPER ui 
+	title = global.conference.name 
+	nav = 'chat'
+%]
+
+[% USE Math %]
+
+[% nickname_suffix = Math.int(Math.rand(1000)) %]
+
+<p class="heading">
+<strong>Fale ao vivo com outros participantes e palestrantes</strong>
+</p>
+
+<p>A comunidade Perl tradicionalmente utiliza o IRC como principal canal de comunica&ccedil;&atilde;o. Naturalmente, portanto, h&aacute; um canal dedicado apenas ao evento: #yapcbrasil, no servidor irc.perl.org. &Eacute; poss&iacute;vel acess&aacute;-lo por seu cliente de IRC favorito, ou atrav&eacute;s do cliente Mibbit <a href="#mibbit">logo abaixo</a> ou <a href="http://widget.mibbit.com/?settings=0108c986a56dc37476b62c1acdac9abe&server=irc.perl.org&channel=%23yapcbrasil&noServerTab=true&noServerNotices=true&customprompt=Entre%20no%20canal%20%23yapcbrasil%20(irc.perl.org)&nick=visitante_[% nickname_suffix %]" target="_blank">em uma nova janela</a>.</p>
+<p>Lembre-se que as pessoas do canal em geral estão ocupadas com outras atividades e pode levar algum tempo at&eacute; que algu&eacute;m responda à sua mensagem. Mas voc&ecirc; ver&aacute; que a comunidade Perl &eacute; extremamente acolhedora e pronta para ajudar com sua d&uacute;vida, ou apenas bater um bom papo :)</p>
+<p>Ap&oacute;s clicar no bot&atilde;o <em>Connect</em>, voc&ecirc; ver&aacute; o canal #yapcbrasil. O cliente web inicialmente exibe uma mensagem de boas vindas e desse momento em diante voc&ecirc; j&aacute; pode dizer <em>Ol&aacute;</em> simplesmente digitando e apertando a tecla [enter].  </p>
+
+<a name="mibbit"></a>
+<iframe width="700" height="450" scrolling="no" frameborder="0"
+  src="http://widget.mibbit.com/?settings=0108c986a56dc37476b62c1acdac9abe&server=irc.perl.org&channel=%23yapcbrasil&noServerTab=true&noServerNotices=true&customprompt=Entre%20no%20canal%20%23yapcbrasil%20(irc.perl.org)&nick=visitante_[% nickname_suffix %]">
+  </iframe>
+
+[% END %]

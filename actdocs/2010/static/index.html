@@ -1,0 +1,53 @@
+[% WRAPPER ui title = global.conference.name %]
+
+<h1>Perl: Solução e Integração de Negócios</h1>
+<p class="topico">
+Bem vindo ao maior evento de Perl do Brasil!
+</p>
+
+<p>
+Venha conhecer a tecnologia que está por trás de empresas
+como a Amazon e a Booking.com, de portais como a BBC 
+e blogs como o da candidatura de Barak Obama.
+O YAPC::Brasil é o evento mais importante sobre
+Perl no Brasil
+e este ano o evento acontece dos dias
+25 a 31 de outubro em <a href="/2010/wiki">Fortaleza,
+Ceará</a> e tem como
+tema: “Perl: Solução e Integração de Negócios”.
+</p>
+
+<div id="destaque"><a href="/2010/inscricao.html">Faça já a sua inscrição no Evento,
+no mini-curso de Perl para Web e na programação social.</a></div>
+
+
+[% news = global.news(5);
+   IF news.size > 5;
+     more = news.pop;
+   END;
+ %]
+
+[% IF news.size %]
+<br/><br/><br/>
+<h1>Últimas Notícias</h1>
+<br/>
+[% FOREACH item = news %]
+<div class="news-entry">
+ <h3 class="news-header">
+  <span class="news-date">[% date_format(item.datetime, 'date_short') %]</span>
+  <span class="news-title">[% item.title %]</span>
+ </h3>
+ <div class="news-text">
+  [% item.content %]
+ </div>
+</div><br/><br/>
+[% END %]
+[% END %]
+
+[% IF more %]
+<p>
+ <a href="[% make_uri('news') %]" class="news-link">Older announcements</a>
+</p>
+[% END %]
+
+[% END %]

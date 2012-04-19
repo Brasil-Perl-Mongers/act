@@ -1,0 +1,95 @@
+[% WRAPPER ui title = global.conference.name %]
+
+<div id="rightcolumn">
+  <div class="sponsors">
+  <h4>Patrocinadores</h4>
+  [% PROCESS yapcbrasil/sponsors %]
+  <hr />
+  <h4>Apoio</h4>
+  [% PROCESS yapcbrasil/apoio %]
+	<a href="/2010/patrocinio.html">Torne-se um Patrocinador!</a>
+  <hr />
+  </div>
+<div id="twtr-search-widget"></div>
+<script src="http://widgets.twimg.com/j/1/widget.js"></script>
+<link href="http://widgets.twimg.com/j/1/widget.css" type="text/css" rel="stylesheet">
+<script>
+new TWTR.Widget({
+  search: '\"yapcbrasil\" OR \"yapc::brasil\" OR \"yapc brasil\" OR @yapcbrasil OR #yapcbrasil OR #yapcbrasil2010',
+  id: 'twtr-search-widget',
+  loop: true,
+  title: 'YAPC::Brasil 2010 no Twitter',
+  subject: '',
+  width: 190,
+  height: 350,
+  features: {
+    hashtags: false,
+    timestamp: true,
+    avatars: true,
+    fullscreen: false
+  },
+  theme: {
+    shell: {
+      background: '#ffffea',
+      color: '#000000'
+    },
+    tweets: {
+      background: '#ffffea',
+      color: '#444443',
+      links: '#1985b5'
+    }
+  }
+}).render().start();
+</script>
+
+</div>
+
+
+<p class="topico">
+Bem vindo ao maior evento de Perl do Brasil!
+</p>
+
+<p>
+Venha conhecer a tecnologia que está por traz de empresas
+como a Amazon e a Booking.com, de portais como a BBC 
+e blogs como o da candidatura de Barak Obama.
+O YAPC::Brasil é o evento mais importante sobre
+Perl no Brasil
+e este ano o evento acontece dos dias
+25 a 31 de outubro em <a href="/2010/wiki">Fortaleza,
+Ceará</a> e tem como
+tema: “Perl: Solução e Integração de Negócios”.
+</p>
+
+<div id="destaque"><a href="/2010/inscricao.html">Faça já a sua inscrição no Evento,
+no mini-curso de Perl para Web<br>e na programação social.</a></div>
+
+
+[% news = global.news(5);
+   IF news.size > 5;
+     more = news.pop;
+   END;
+ %]
+
+[% IF news.size %]
+<h2>Últimas Notícias</h2>
+[% FOREACH item = news %]
+<div class="news-entry">
+ <h3 class="news-header">
+  <span class="news-date">[% date_format(item.datetime, 'date_short') %]</span>
+  <span class="news-title">[% item.title %]</span>
+ </h3>
+ <div class="news-text">
+  [% item.content %]
+ </div>
+</div>
+[% END %]
+[% END %]
+
+[% IF more %]
+<p>
+ <a href="[% make_uri('news') %]" class="news-link">Older announcements</a>
+</p>
+[% END %]
+
+[% END %]

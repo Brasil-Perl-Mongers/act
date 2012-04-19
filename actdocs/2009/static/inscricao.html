@@ -1,0 +1,76 @@
+[% WRAPPER ui 
+	title = global.conference.name 
+	nav = 'inscricao'
+%]
+
+<h1>Natureza do Evento</h1>
+<p>As YAPCs (Yet Another Perl Conference) são <strong>eventos sem fins lucrativos organizados pela própria comunidade de usuários de Perl de forma voluntária e não-remunerada.</strong> O valor cobrado pela inscrição é estritamente para a cobertura dos custos de realização do evento. Após a conclusão do mesmo, e publicação da prestação de contas no site, qualquer lucro remanescente será encaminhado para um ou mais dos seguintes fins:</p>
+<ul><li>Estabelecimento da YAPC::Brasil enquanto entidade pública de fins não-lucrativos, com a missão de formar um fundo para subsídio das próximas edições do evento, e eventos de promoção da linguagem e da comunidade Perl brasileira, de forma análoga ao trabalho realizado pela YAPC::Europe.</li>
+<li>Doação para a Sociedade Brasileira de Perl, com o intuito de contribuir para o desenvolvimento da linguagem Perl no Brasil.</li>
+</ul>
+
+<h1>Valor da Inscrição</h1>
+<p>Existem duas modalidades de inscrição na YAPC::Brasil 2009:</p>
+<ul>
+<li>Normal: R$ 40,00</li>
+<li>Reduzida (Estudantes): R$20,00</li>
+</ul>
+<br>
+<p>Para Estudantes é necessário apresentar Carteira expedida por estabelecimento de ensino fundamental, médio, superior ou pela respectiva associação e ou agremiação.  Atenção: deverá ser apresentado documento que comprove a matrícula ou freqüência no ano letivo em curso caso a data de validade não conste no documento. Desconto não se aplica à cursos livres: inglês, informática ou pré-vestibular.</p>
+
+
+[% vespera = 1 %]
+[% IF vespera %]
+
+<h1>Forma de Pagamento</h1>
+<h2>Dinheiro</h2>
+
+<p>A partir de Quarta, 28 de Outubro de 2009, o pagamento das inscrições será feito apenas presencialmente, durante o Credenciamento.</p>
+<p><strong>Credenciamento: <BR>
+Dia 30 de Outubro, na Faculdade de Direito, de 10:00 a 12:00</strong><BR>
+Rua Presidente Pedreira, 62
+Ingá, Niterói, RJ<BR>
+<BR>
+<a href="/2009/local.html">Veja o mapa.</a>
+</p>
+
+[% ELSE %]
+<h1>Formas de Pagamento</h1>
+
+<h2>Boleto Bancário</h2>
+
+[% IF global.request.user %]
+<p>Escolha uma opção abaixo para gerar o boleto com seu nome e o número de inscrição:</p>
+
+<ul>
+<li><a href="http://www.aware.com.br/yapc/boleto/index.php?estudante=0&id=[% global.request.user.user_id %]&sacado=[% global.request.user.first_name %] [% global.request.user.last_name %] (Inscri%E7%E3o Normal)">Gerar Boleto para Inscrição Normal: R$ 40,00</a></li>
+<li><a href="http://www.aware.com.br/yapc/boleto/index.php?estudante=1&id=[% global.request.user.user_id %]&sacado=[% global.request.user.first_name %] [% global.request.user.last_name %] (Inscri%E7%E3o Reduzida)">Gerar Boleto para Inscrição Reduzida (Estudantes): R$20,00</a></li>
+</ul>
+
+[% ELSE %]
+<p>Essa forma de pagamento está disponível apenas para usuários cadastrados no sistema. Você pode <a href="[% make_uri('register') %]">criar agora uma conta agora</a>, ou se já tiver criado, <a href="/2009/main">efetuar o login</a>.</p>
+[% END %]
+<BR><BR>
+
+
+<h2>Transferência, DOC ou Depósito</h2>
+<p>Transferência, DOC ou Depósito bancário na conta designada abaixo. Neste caso o comprovante do depósito deve ser enviado, juntamente com o Nome Completo, CPF e telefones de contato do participante, para o endereço indicado acima, ou pelo FAX (021) 2629-5669.<br>
+<p><strong>Aware Tecnologia da Informação LTDA</strong><br>
+CNPJ 06.889.769/0001-99<br>
+Banco Bradesco<br>
+Agência nº 2720<br>
+Conta Corrente nº 0007240-0<br>
+</p>
+<BR><BR>
+<h2>Cheque</h2>
+<p>Cheque cruzado nominal à Aware Tecnologia da Informação LTDA, com o Nome Completo, CPF e telefones de contato do participante no verso, e no valor da inscrição (R$ 40,00 ou R$ 20,00), enviado por carta registrada ou SEDEX para o endereço abaixo:</p>
+<p><strong>Aware Tecnologia da Informação LTDA</strong><br>
+  A/C Thiago Rondon <br>
+  Rua Albino de Moraes, 200, CX. 33<br>
+  Carapicuiba, SP, Brasil<br>
+  Telefone: (011) 3589-0217<br>
+</p>
+
+[% END %]
+
+[% END %]

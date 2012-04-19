@@ -1,0 +1,50 @@
+[% WRAPPER ui 
+	title = global.conference.name 
+	nav = 'index'
+%]
+
+<h1>YAPC::Brasil 2009</h1>
+<p class="indexheading">
+Venha conhecer de perto o que h&aacute; de mais moderno na linguagem de programa&ccedil;&atilde;o mais poderosa e flex&iacute;vel do mercado!
+</p>
+
+<p>
+O YAPC::Brasil (Yet Another Perl Conference::Brasil) convida voc&ecirc; a participar da edi&ccedil;&atilde;o 2009 do maior evento de Perl do Brasil. Nestes 3 dias voc&ecirc; participar&aacute; de palestras, minicursos, hackathons, palestras relâmpago sobre os últimos assuntos e, claro, socializar com a comunidade de monges Perl do Rio e de todo o Brasil!
+</p>
+
+<p>As YAPCs (Yet Another Perl Conference) são <strong>eventos sem fins lucrativos organizados pela própria comunidade de usuários de Perl de forma voluntária e não-remunerada.</strong> O valor cobrado pela inscrição é estritamente para a cobertura dos custos de realização do evento.
+
+
+
+[% news = global.news(7);
+   IF news.size > 2;
+     more = news.pop;
+   END;
+ %]
+
+
+[% IF news.size %]
+<h2>Novidades</h2>
+<p>
+Acompanhe a seguir as &uacute;ltimas not&iacute;cias, ou assine nosso <a href="[% global.request.base_url %][% make_uri_info( 'atom', global.request.language ) %].xml">feed</a>.
+</p>
+[% FOREACH item = news %]
+<div class="news-entry">
+ <h2 class="news-header">
+  <span class="news-title">[% item.title %]</span>
+  <small><span class="news-date" style="font-size: 12px">([% date_format(item.datetime, 'date_short') %])</span></small>
+ </h2>
+ <div class="news-text">
+  [% item.content %]
+ </div>
+</div>
+[% END %]
+[% END %]
+
+[% IF more %]
+<p>
+ <a href="[% make_uri('news') %]" class="news-link">Not&iacute;cias anteriores</a>
+</p>
+[% END %]
+
+[% END %]
