@@ -35,11 +35,11 @@
     	<div id="menu">
         	<ul class="menu">
             	<li class="item"><a href="/2012">Home</a></li>
-            	<li class="item"><a href="sobre.html">Sobre</a></li>
-            	<li class="item"><a href="palestras.html">Palestras</a></li>
-            	<li class="item"><a href="inscricao.html">Inscrição</a></li>
-            	<li class="item"><a href="local.html">Local</a></li>
-            	<li class="item"><a href="contato.html">Contato</a></li>
+            	<li class="item"><a href="/2012/about/index.html">Sobre</a></li>
+            	<li class="item"><a href="/2012/about/tracks.html">Trilhas</a></li>
+            	<li class="item"><a href="/2012/about/general.html">Local</a></li>
+		<li class="item"><a href="/2012/about/sponsorship.html">Patrocine!</a></li>
+            	<li class="item"><a href="/2012/about/expedient.html">Contato</li>
             </ul>
         </div>
     	<div id="social">
@@ -75,7 +75,7 @@
     
 	<div id="footer">
     	<div id="copy">
-        	<img src="images/logo_footer.png" border="0">
+        	<img src="/2012/images/logo_footer.png" border="0">
         	<span class="title">YAPC::Brasil</span><br />
             é um evento realizado pela comunidade brasileira Perl.	
         </div>
