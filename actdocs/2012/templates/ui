@@ -63,8 +63,8 @@
         <div class="patrocinador platinum"><img src="/2012/images/patrocinadores/logo-w3c-brasil.jpg" border="0"></div>
         <div class="clear"></div>
         
-    </div>
-    
+	</div>
+
     <div class="clear"></div>
     
 	<div id="footer">
@@ -84,6 +84,10 @@
                 <a href="inscricao.html">Inscrição</a><br />
                 <a href="local.html">Local</a><br />
             </div>
+	
+	     <div id="menu-footer">
+		[% PROCESS menu %]
+	     </div>
          </div>
     </div>
 </div>
