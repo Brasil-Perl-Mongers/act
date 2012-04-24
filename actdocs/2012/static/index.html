@@ -7,11 +7,11 @@
 
 <p><t>
 <pt>Bem-vindo ao site oficial do YAPC::Brasil 2012. O evento acontecer&aacute; nos dias 19 e 20 de outubro, no <a href="/2012/about/general.html">Centro de Conven&ccedil;&otilde;es Frei Caneca, S&atilde;o Paulo, SP</a>. Esperamos voc&ecirc; l&aacute;!</pt>
-<en>Welcome to the official YAPC::Brasil 2012 website. The event will be held on October 19th and 20th, at the <a href="/2012/about/general.html">Frei Caneca Convention Center, Sao Paulo, SP</a>. We're waiting for you!</en>
+<en>Welcome to the official YAPC::Brasil 2012 website. The event will be held on October 19th and 20th, at the <a href="/2012/about/general.html">Frei Caneca Convention Center, Sao Paulo, SP</a>. We are waiting for you!</en>
 </t></p>
 <p><t>
-<pt>No YAPC::Brasil voc&ecirc; participar&aacute; de oficinas, palestras e debates sobre o estado da arte das práticas e tecnologias voltadas para captura, armazenamento, busca, compartilhamento, análise, e visualizaçãe grandes quantidades de da.</pt>
-<en>At the conference you'll be a part of workshops, talks and debates on state of the art practices and technologies for capture, storage, search, share, analysis and visualization of data.</en>
+<pt>No YAPC::Brasil voc&ecirc; participar&aacute; de oficinas, palestras e debates sobre o estado da arte das práticas e tecnologias voltadas para captura, armazenamento, busca, compartilhamento, análise, e visualizaçãe grandes quantidades de dados.</pt>
+<en>At the conference you'll take part in workshops, talks and debates on state of the art practices and technologies for capture, storage, search, share, analysis and visualization of data.</en>
 </t></p>
 
 [% news = global.news(3);
@@ -25,7 +25,7 @@
 [% FOREACH item = news %]
 <div class="news-entry">
  <h3 class="news-header">
-  <span class="news-date">[% date_format(item.datetime, '%d/%m/%Y') %]</span>
+  <span class="news-date"><t><pt>[% date_format(item.datetime, '%d/%m/%Y') %]i</pt></t></span>
   <span class="news-title">[% item.title %]</span>
  </h3>
  <div class="news-text">
