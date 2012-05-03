@@ -35,11 +35,11 @@
     	<div id="menu">
         	<ul class="menu">
             	<li class="item"><a href="/2012">Home</a></li>
-            	<li class="item"><a href="/2012/about/index.html">Sobre</a></li>
-            	<li class="item"><a href="/2012/about/tracks.html">Trilhas</a></li>
-            	<li class="item"><a href="/2012/about/general.html">Local</a></li>
-		<li class="item"><a href="/2012/about/sponsorship.html">Patrocine!</a></li>
-            	<li class="item"><a href="/2012/about/expedient.html">Contato</li>
+            	<li class="item"><a href="/2012/about/index.html"><t><pt>Sobre</pt><en>About</en></t></a></li>
+            	<li class="item"><a href="/2012/about/tracks.html"><t><pt>Trilhas</pt><en>Tracks</en></t></a></li>
+            	<li class="item"><a href="/2012/about/general.html"><t><pt>Local</pt><en>Venue</en></t></a></li>
+		<li class="item"><a href="/2012/about/sponsorship.html"><t><pt>Patrocine!</pt><en>Be a sponsor!</en></t></a></li>
+            	<li class="item"><a href="/2012/about/expedient.html"><t><pt>Contato</pt><en>Contact</en></t></li>
             </ul>
         </div>
     	<div id="social">
@@ -47,17 +47,17 @@
 			<a href="/2012/logout" class="social_link">Logout</a>
 		[% ELSE %]
 			<a href="/2012/main" class="social_link">Login</a>
-			<a href="/2012/register" class="social_link">Cadastre-se</a>
+			<a href="/2012/register" class="social_link"><t><pt>Cadastre-se</pt><en>Register</en></t></a>
 		[% END %]
 		<a href="https://twitter.com/#!/yapcbrasil" class="twitter" target="_blank"></a>
         <a href="/2012/atom/pt.xml" class="rss"></a>
 	</div>
     	<div id="saopaulo"><img src="/2012/images/saopaulo.png" border="0" /></div>
-    	<div id="data">19 e 20 de Outubro</div>
+    	<div id="data"><t><pt>19 e 20 de Outubro</pt><en>October 19th and 20th</en></t></div>
     </div>
     
 	<div id="content">
-		<p class="title2">A revolução dos dados</p>
+		<p class="title2"><t><pt>A revolução dos dados</pt><en>The revolution of data</en></t></p>
 		<p>
 		</p>
 		
@@ -65,7 +65,7 @@
 	</div>
 
 	<div id="content-side">
-    	<div class="title">Patrocinadores</div>
+    	<div class="title"><t><pt>Patrocinadores</pt><en>Sponsors</en></t></div>
         <div class="patrocinador platinum"><img src="/2012/images/patrocinadores/logo-w3c-brasil.jpg" border="0"></div>
         <div class="clear"></div>
         
@@ -77,7 +77,9 @@
     	<div id="copy">
         	<img src="/2012/images/logo_footer.png" border="0">
         	<span class="title">YAPC::Brasil</span><br />
-            é um evento realizado pela comunidade brasileira Perl.	
+            <t><pt>é um evento realizado pela comunidade brasileira Perl.</pt>
+               <en>is an event organized by the brazilian Perl community</en>
+            </t>
         </div>
         <div class="menu">
 	     [% PROCESS menu %]
