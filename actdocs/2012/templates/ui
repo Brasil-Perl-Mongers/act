@@ -66,7 +66,15 @@
 
 	<div id="content-side">
     	<div class="title"><t><pt>Patrocinadores</pt><en>Sponsors</en></t></div>
-        <div class="patrocinador platinum"><img src="/2012/images/patrocinadores/logo-w3c-brasil.jpg" border="0"></div>
+        <div class="patrocinador platinum">
+            <a href="http://www.w3c.br/" target="_blank"><img src="/2012/images/patrocinadores/logo-w3c-brasil.jpg" border="0"></a>
+        </div>
+        <div class="patrocinador gold">
+            <a href="http://duckduckgo.com/" target="_blank"><img src="/2012/images/patrocinadores/logo-duckduckgo.png" border="0"></a>
+            <div class="clear"></div>
+            <a href="http://www.estantevirtual.com.br" target="_blank"><img src="/2012/images/patrocinadores/logo-ev.png" border="0"></a>
+        </div>
+
         <div class="clear"></div>
         
 	</div>
