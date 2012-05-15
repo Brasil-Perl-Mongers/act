@@ -69,9 +69,10 @@
         <div class="patrocinador platinum">
             <a href="http://www.w3c.br/" target="_blank"><img src="/2012/images/patrocinadores/logo-w3c-brasil.jpg" border="0"></a>
         </div>
-        <div class="patrocinador gold">
+        <div class="patrocinador platinum">
             <a href="http://duckduckgo.com/" target="_blank"><img src="/2012/images/patrocinadores/logo-duckduckgo.png" border="0"></a>
-            <div class="clear"></div>
+	</div>
+        <div class="patrocinador platinum">
             <a href="http://www.estantevirtual.com.br" target="_blank"><img src="/2012/images/patrocinadores/logo-ev.png" border="0"></a>
         </div>
 
