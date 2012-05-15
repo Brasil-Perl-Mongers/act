@@ -71,10 +71,20 @@
         </div>
         <div class="patrocinador platinum">
             <a href="http://duckduckgo.com/" target="_blank"><img src="/2012/images/patrocinadores/logo-duckduckgo.png" border="0"></a>
-	</div>
+		</div>
         <div class="patrocinador platinum">
             <a href="http://www.estantevirtual.com.br" target="_blank"><img src="/2012/images/patrocinadores/logo-ev.png" border="0"></a>
         </div>
+
+        <div class="clear"></div>
+
+    	<div class="title"><t><pt>Apoio</pt><en>Partners</en></t></div>
+        <div class="patrocinador platinum">
+            <a href="http://cgi.br/" target="_blank"><img src="/2012/images/patrocinadores/logo-cgi-nic.jpg" border="0"></a>
+		</div>
+        <div class="patrocinador platinum">
+            <a href="http://oreilly.com/" target="_blank"><img src="/2012/images/patrocinadores/logo-oreilly.jpg" border="0"></a>
+		</div>
 
         <div class="clear"></div>
         
