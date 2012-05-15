@@ -243,29 +243,37 @@ a:hover{
 	width: 300px;
 	height: 145px;
 }
-#content-side .gold img{
+#content-side .gold {
 	width: 145px;
 	height:145px;
 }
-#content-side .silver img{
+#content-side .silver {
 	width: 145px;
 	height: 70px;
 }
-#content-side .bronze img{
+#content-side .bronze {
 	width: 70px;
-	height: 70px;
-	
+	height: 70px;	
 }
 
-#content-side .gold,
-#content-side .silver,
-#content-side .bronze{
-	display:-moz-inline-stack;
-	display:inline-block;
-	zoom:1;
-	*display:inline;
-	float: left;
-	margin-right: 4px;
+#content-side .diamond img {
+	width: 290px;
+}
+
+#content-side .platinum img {
+	width: 290px;
+}
+
+#content-side .gold img {
+	width: 135px;
+}
+
+#content-side .silver img {
+	width: 135px;
+}
+
+#content-side .bronze img {
+	width: 65px;
 }
 
 a.linkmais{
