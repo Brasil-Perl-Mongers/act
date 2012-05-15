@@ -222,28 +222,39 @@ a:hover{
 	font-style: italic;
 }
 
-#content-side .patrocinador{
+#content-side .patrocinador {
+	float: left;
+	overflow: hidden;
 	text-align: center;
 	background-color: #fff;
 	border: 1px solid #d0d0d0;
-	padding: 5px 2px;
-	margin-bottom: 5px;
+	padding: 5px;
+	margin: 5px;
 	border-radius:5px;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
 }
 
+#content-side .diamond {
+	width: 300px;
+	height: 450px;
+}
 #content-side .platinum{
-	
+	width: 300px;
+	height: 145px;
 }
 #content-side .gold img{
-	width: 150px;
+	width: 145px;
+	height:145px;
 }
 #content-side .silver img{
-	width: 100px;
+	width: 145px;
+	height: 70px;
 }
 #content-side .bronze img{
 	width: 70px;
+	height: 70px;
+	
 }
 
 #content-side .gold,
