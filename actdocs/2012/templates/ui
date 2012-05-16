@@ -67,7 +67,7 @@
 	<div id="content-side">
     	<div class="title"><t><pt>Patrocinadores</pt><en>Sponsors</en></t></div>
         <div class="patrocinador diamond">
-            <a href="http://www.w3c.br/" target="_blank"><img src="/2012/images/patrocinadores/logo-w3c-brasil.jpg" border="0"></a>
+            <a href="http://www.w3c.br/" target="_blank"><img style="width: 210px;"src="/2012/images/patrocinadores/logo-w3c-brasil.jpg" border="0"></a>
         </div>
         <div class="patrocinador platinum">
             <a href="http://duckduckgo.com/" target="_blank"><img src="/2012/images/patrocinadores/logo-duckduckgo.png" border="0"></a>
@@ -78,13 +78,25 @@
 
         <div class="clear"></div>
 
+	<div class="patrocinador bronze">
+            <a title="Fila - Sistema de Atendimento"  href="http://www.softwarepublico.gov.br/ver-comunidade?community_id=11809545" target="_blank"><img alt="Fila - Sistema de Atendimento" style="height: 60px; width: 85px;" src="/2012/images/patrocinadores/logo-fila.jpg" border="0"></a>
+	</div>
+
+
+	<div class="clear"></div>
+
     	<div class="title"><t><pt>Apoio</pt><en>Partners</en></t></div>
-        <div class="patrocinador platinum">
-            <a href="http://cgi.br/" target="_blank"><img src="/2012/images/patrocinadores/logo-cgi-nic.jpg" border="0"></a>
+        <div class="patrocinador apoio-left">
+            <a href="http://cgi.br/" target="_blank"><img src="/2012/images/patrocinadores/logo-cgi.jpg" border="0"></a>
 		</div>
-        <div class="patrocinador platinum">
+        <div class="patrocinador apoio-right">
+            <a href="http://nic.br/" target="_blank"><img src="/2012/images/patrocinadores/logo-nic.jpg" border="0"></a>
+		</div>
+
+        <div class="patrocinador apoio-left">
             <a href="http://oreilly.com/" target="_blank"><img src="/2012/images/patrocinadores/logo-oreilly.jpg" border="0"></a>
 		</div>
+        <div class="gap"></div>
 
         <div class="clear"></div>
         
