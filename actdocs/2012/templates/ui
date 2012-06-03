@@ -82,16 +82,16 @@
             <a title="Fila - Sistema de Atendimento"  href="http://www.softwarepublico.gov.br/ver-comunidade?community_id=11809545" target="_blank"><img alt="Fila - Sistema de Atendimento" style="height: 60px; width: 85px;" src="/2012/images/patrocinadores/logo-fila.jpg" border="0"></a>
 	</div>
 
-
 	<div class="clear"></div>
 
     	<div class="title"><t><pt>Apoio</pt><en>Partners</en></t></div>
+
         <div class="patrocinador apoio-left">
             <a href="http://cgi.br/" target="_blank"><img src="/2012/images/patrocinadores/logo-cgi.jpg" border="0"></a>
 		</div>
         <div class="patrocinador apoio-right">
             <a href="http://nic.br/" target="_blank"><img src="/2012/images/patrocinadores/logo-nic.jpg" border="0"></a>
-		</div>
+	</div>
 
         <div class="patrocinador apoio-left">
             <a href="http://oreilly.com/" target="_blank"><img src="/2012/images/patrocinadores/logo-oreilly.jpg" border="0"></a>
@@ -99,6 +99,15 @@
         <div class="gap"></div>
 
         <div class="clear"></div>
+
+	<div> 
+<form method='post' action='https://www.moip.com.br/Process.do'>
+<input type='hidden' name='method' value='donation'/>
+<input type='hidden' name='encrypted' value='J7zyx/kM+cXn49AmZ9o+xQ=='/>
+<input type='hidden' name='type' value='2'/>
+<input type='image' name='submit' src='https://www.moip.com.br/imgs/buttons/bt_doar_c04_e03.gif' alt='YAPC::Brasil 2012' border='0' />
+</form>
+	</div>
         
 	</div>
 
