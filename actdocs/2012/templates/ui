@@ -100,6 +100,7 @@
 
         <div class="clear"></div>
 
+	<div class="title"><t><pt>Doe agora</pt><en>Donate now</en></t></div>
 	<div> 
 <form method='post' action='https://www.moip.com.br/Process.do'>
 <input type='hidden' name='method' value='donation'/>
