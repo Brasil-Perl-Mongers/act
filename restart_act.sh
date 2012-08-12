@@ -19,7 +19,7 @@ ACTHOME=/data/sites/yapcbrasil.org.br/Act \
     --host 10.0.0.6 \
     --workers 3 \
     --user=www-data \
+    --error-log /var/log/starman/yapcbrasil_error_log.log \
     /data/sites/yapcbrasil.org.br/Act/production.psgi
 
-# --error-log /var/log/nginx/starman_yapcbrasil_error_log.log \
 
