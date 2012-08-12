@@ -338,14 +338,21 @@ sub possible_duplicates {
     my ($self) = @_;
     my %seen = ( $self->user_id => 1 );
     my @twins;
-    
+   
+    open my $fh, '>>', '/tmp/debug.act' or die "cannot open debug file: $!";
     for my $attr (qw( login email nick_name full_name last_name )) {
-        push @twins, grep { !$seen{ $_->user_id }++ }
-            map {@$_}
-            Act::User->get_items( $attr => map { s/([.*(){}^$?])/\\$1/g; $_ }
-                $self->$attr() )
-            if $self->$attr();
+        print $fh "---\nattr:$attr\n";
+        eval {
+            push @twins, grep { !$seen{ $_->user_id }++ }
+                map {@$_}
+                Act::User->get_items( $attr => map { s/([.*(){}^$?])/\\$1/g; $_ }
+                    $self->$attr() )
+                if $self->$attr();
+        };
+        print $fh $@ . "\n" if $@;
     }
+    close $fh;
+
     $_->most_recent_participation() for @twins;
 
     @twins = sort { $a->user_id <=> $b->user_id } @twins;
