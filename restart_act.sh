@@ -10,6 +10,16 @@ source /data/tools/perl5/etc/bashrc
 rm -rf /data/sites/yapcbrasil.org.br/Act/var
 
 # iniciando act
-ACTHOME=/data/sites/yapcbrasil.org.br/Act plackup -I /data/sites/yapcbrasil.org.br/Act/lib  -s Starman --daemonize --port 8091 --host 10.0.0.6 --workers 3 --user=www-data /data/sites/yapcbrasil.org.br/Act/production.psgi
 
+ACTHOME=/data/sites/yapcbrasil.org.br/Act \
+    plackup -I/data/sites/yapcbrasil.org.br/Act/lib  \
+    -s Starman \
+    --daemonize \
+    --port 8091 \
+    --host 10.0.0.6 \
+    --workers 3 \
+    --user=www-data \
+    /data/sites/yapcbrasil.org.br/Act/production.psgi
+
+# --error-log /var/log/nginx/starman_yapcbrasil_error_log.log \
 
