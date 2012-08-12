@@ -15,7 +15,7 @@ use Act::Middleware::Auth;
 
 my $form = Act::Form->new(
   required => [qw(newpassword1 newpassword2)],
-  optional => [qw(oldpassword)],
+  #optional => [qw(oldpassword)],
   filters => {
      newpassword1 => sub { shift },
      newpassword2 => sub { shift },
