@@ -91,6 +91,11 @@ _gaq.push(['_trackPageview']);
         <div class="patrocinador platinum">
             <a href="http://www.estantevirtual.com.br" target="_blank"><img src="/2012/images/patrocinadores/logo-ev.png" border="0"></a>
         </div>
+       <div class="clear"></div>
+
+        <div class="patrocinador gold">
+            <a href="http://www.enlightenedperl.org"><img src="http://www.enlightenedperl.org/public/resources/images/sqbut01.png"></a>
+        </div>
 
         <div class="clear"></div>
 
