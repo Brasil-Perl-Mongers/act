@@ -94,7 +94,7 @@ _gaq.push(['_trackPageview']);
        <div class="clear"></div>
 
         <div class="patrocinador gold">
-            <a href="http://www.enlightenedperl.org"><img src="/2012/images/patrocinadores/logo-epo.png"></a>
+            <a href="http://www.enlightenedperl.org"><img src="/2012/images/patrocinadores/logo-epo.png" style="width: 100px;"></a>
         </div>
 
         <div class="clear"></div>
