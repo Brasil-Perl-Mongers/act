@@ -23,4 +23,3 @@ ACTHOME=/data/sites/yapcbrasil.org.br/Act-github-devel \
 
 #--error-log /var/log/starman/yapcbrasil_error_log.log \
  
-
