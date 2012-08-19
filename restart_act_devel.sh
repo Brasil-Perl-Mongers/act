@@ -7,7 +7,7 @@ source /data/tools/perl5/etc/bashrc
 /bin/fuser 8092/tcp -k
 
 # apagando cache
-rm -rf /data/sites/yapcbrasil.org.br/Act/var
+rm -rf /data/sites/yapcbrasil.org.br/Act-devel/var
 
 # iniciando act
 
