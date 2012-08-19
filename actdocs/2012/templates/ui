@@ -50,7 +50,7 @@ _gaq.push(['_trackPageview']);
     	<div id="logo"><a href="/2012"><img src="/2012/images/logo.png" border="0" /></a></div>
     	<div id="menu">
         	<ul class="menu">
-            	<li class="item"><a href="/2012/newtalk"><t><pt>Submeta uma Palestra!</pt><en>Submit a Talk!</en></t></a></li>
+            	<li class="item"><a href="/2012/newtalk"><t><pt>Envie Palestra!</pt><en>Submit a Talk!</en></t></a></li>
             	<li class="item"><a href="/2012/about/index.html"><t><pt>Sobre</pt><en>About</en></t></a></li>
             	<li class="item"><a href="/2012/about/tracks.html"><t><pt>Trilhas</pt><en>Tracks</en></t></a></li>
             	<li class="item"><a href="/2012/about/general.html"><t><pt>Local</pt><en>Venue</en></t></a></li>
@@ -60,7 +60,10 @@ _gaq.push(['_trackPageview']);
         </div>
     	<div id="social">
     [% FOREACH lang = global.languages %]
-       <a href="[% lang.uri %]" class="social_link"><img src="/2012/images/[% lang.name %].png" /></a>
+       <a href="[% lang.uri %]" class="social_link" [% IF lang == 'English' -%] alt="View in English"><img src="/2012/images/en.png" />
+                                                    [%- ELSE %-] alt="Ver em Português"><img src="/2012/images/pt.png" />
+                                                    [%- END -%]
+       </a>
     [% END %]
 		[% IF global.request.user %]
 			<a href="/2012/logout" class="social_link">Logout</a>
