@@ -61,7 +61,7 @@ _gaq.push(['_trackPageview']);
     	<div id="social">
     [% FOREACH lang = global.languages %]
        <a href="[% lang.uri %]" class="social_link" [% IF lang == 'English' -%] alt="View in English"><img src="/2012/images/en.png" />
-                                                    [%- ELSE %-] alt="Ver em Português"><img src="/2012/images/pt.png" />
+                                                    [%- ELSE -%] alt="Ver em Português"><img src="/2012/images/pt.png" />
                                                     [%- END -%]
        </a>
     [% END %]
