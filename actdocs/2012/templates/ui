@@ -43,6 +43,9 @@
             </ul>
         </div>
     	<div id="social">
+    [% FOREACH lang = global.languages %]
+       <a href="[% lang.uri %]" class="social_link"><img src="/2012/images/[% lang.name %].png" /></a>
+    [% END %]
 		[% IF global.request.user %]
 			<a href="/2012/logout" class="social_link">Logout</a>
 		[% ELSE %]
