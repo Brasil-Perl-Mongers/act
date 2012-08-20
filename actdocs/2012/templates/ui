@@ -86,11 +86,12 @@ _gaq.push(['_trackPageview']);
 		[% content %]
 	</div>
 
-	<div id="content-side">
+	<div id="menu-side">
 	<div class="menu">
 	     [% PROCESS menu %]
 	</div>
-	<div class="clear"></div>
+	</div>
+	<div id="content-side">
     	<div class="title"><t><pt>Patrocinadores</pt><en>Sponsors</en></t></div>
         <div class="patrocinador diamond">
             <a href="http://www.w3c.br/" target="_blank"><img style="width: 210px;"src="/2012/images/patrocinadores/logo-w3c-brasil.jpg" border="0"></a>
