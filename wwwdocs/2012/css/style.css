@@ -183,6 +183,19 @@ a:hover{
 	margin-top: -27px;
 }
 
+#menu-side{
+	margin-top: 20px;
+	float: right;
+	width: 300px;
+	background-color: #e6e6e6;
+	margin-right: 25px;
+	overflow: hidden;
+	padding: 10px;
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+}
+
 #content-side{
 	margin-top: 20px;
 	float: right;
