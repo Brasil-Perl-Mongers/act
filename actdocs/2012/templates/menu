@@ -14,20 +14,10 @@ Wiki<br>
 [% PROCESS menus/wiki %]
 </div>
 <div id="menu-footer">
-{{Talk}}<br>
 [% PROCESS menus/talks %]
-</div>
-<div id="menu-footer">
-{{Event}}
 [% PROCESS menus/events %]
-</div>
-<div id="menu-footer">
 [% PROCESS menus/treasurer %]
-</div>
-<div id="menu-footer">
 [% PROCESS menus/admin %]
-</div>
-<div id="menu-footer">
 [% PROCESS menus/act_confs %]
 </div>
 [% END %]
