@@ -10,7 +10,7 @@
 [% PROCESS menus/news %]
 </div>
 <div id="menu-footer">
-<br>
+Wiki<br>
 [% PROCESS menus/wiki %]
 </div>
 <div id="menu-footer">
