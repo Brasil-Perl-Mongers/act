@@ -269,16 +269,16 @@ a:hover{
 }
 
 #content-side .bronze {
-	width: 125px;
+	width: 76px;
 	height: 90px;	
 }
 
 #content-side .apoio-left {
-	width: 90px;
+	width: 76px;
 	height: 45px;
 }
 #content-side .apoio-right {
-	width: 90px;
+	width: 76px;
 	height: 45px;
 }
 
@@ -294,24 +294,24 @@ a:hover{
 
 #content-side .gold img {
         margin: auto;
-	width: 80px;
+	width: 70px;
 }
 
 #content-side .silver img {
         margin: auto;
-	width: 80px;
+	width: 70px;
 }
 
 #content-side .apoio-left img,
 #content-side .apoio-right img {
         margin: auto;
-	width: 80px;
+	width: 70px;
 }
 
 
 #content-side .bronze img {
         margin: auto;
-	width: 80px;
+	width: 70px;
 }
 
 a.linkmais{
