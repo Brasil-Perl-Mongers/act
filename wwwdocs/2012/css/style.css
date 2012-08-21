@@ -238,6 +238,8 @@ p .title2 {
 
 #content-side .patrocinador {
 	float: left;
+        vertical-align: middle;
+        display: table-cell;
 	overflow: hidden;
 	text-align: center;
 	background-color: #fff;
