@@ -6,15 +6,12 @@
 [% PROCESS menus/users %]
 </div>
 <div id="menu-footer">
-{{News}}<br>
-[% PROCESS menus/news %]
-</div>
-<div id="menu-footer">
-Wiki<br>
-[% PROCESS menus/wiki %]
-</div>
-<div id="menu-footer">
+{{Talk}}
 [% PROCESS menus/talks %]
+</div>
+<div id="menu-footer">
+[% PROCESS menus/news %]
+[% PROCESS menus/wiki %]
 [% PROCESS menus/events %]
 [% PROCESS menus/treasurer %]
 [% PROCESS menus/admin %]
