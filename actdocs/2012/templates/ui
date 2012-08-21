@@ -103,7 +103,7 @@ _gaq.push(['_trackPageview']);
             <a href="http://www.estantevirtual.com.br" target="_blank"><img title="Estante Virtual" src="/2012/images/patrocinadores/logo-ev.png" border="0"></a>
         </div>
 	<div class="patrocinador silver" style="width: 200px; height: 60px;"><a href="http://www.aware.com.br" target="_blank"><img style="width: 115px; height: 50px;" title="Aware" src="/2012/images/patrocinadores/logo_aware.jpg" border="0"></a></div>
-        <div class="patrocinador gold"><a href="http://www.enlightenedperl.org"><img style="margin: 5px 0px;" title="Enlightenedperl" src="/2012/images/patrocinadores/logo-epo.png" ></a></div>
+        <div class="patrocinador gold" style="heigt: 130px;"><a href="http://www.enlightenedperl.org"><img style="max-height: 120px;" title="Enlightenedperl" src="/2012/images/patrocinadores/logo-epo.png" ></a></div>
 	<div class="patrocinador bronze">
             <a title="Fila - Sistema de Atendimento"  href="http://www.softwarepublico.gov.br/ver-comunidade?community_id=11809545" target="_blank"><img alt="Fila - Sistema de Atendimento" title="Fila - Sistema de Atendimento" src="/2012/images/patrocinadores/logo-fila.jpg" border="0"></a>
     	</div>
