@@ -103,30 +103,21 @@ _gaq.push(['_trackPageview']);
             <a href="http://www.estantevirtual.com.br" target="_blank"><img src="/2012/images/patrocinadores/logo-ev.png" border="0"></a>
         </div>
        <div class="clear"></div>
-
         <div class="patrocinador gold">
             <a href="http://www.enlightenedperl.org"><img src="/2012/images/patrocinadores/logo-epo.png" style="width: 100px;"></a>
         </div>
-
-        <div class="clear"></div>
-
 	<div class="patrocinador silver">
             <a href="http://www.aware.com.br" target="_blank"><img src="/2012/images/patrocinadores/logo_aware.jpg" border="0"></a>
         </div>
- 
-        <div class="clear"></div>
- 
-<div class="patrocinador bronze">
+	<div class="patrocinador bronze">
             <a title="Fila - Sistema de Atendimento"  href="http://www.softwarepublico.gov.br/ver-comunidade?community_id=11809545" target="_blank"><img alt="Fila - Sistema de Atendimento" style="height: 60px; width: 85px;" src="/2012/images/patrocinadores/logo-fila.jpg" border="0"></a>
-    </div>
- 
-<div class="patrocinador bronze">
+    	</div>
+	<div class="patrocinador bronze">
             <a title="Dyn - Dynamic Network Services"  href="http://www.dyn.com" target="_blank"><img alt="Dyn - Dynamic Network Services" style="height: 60px;" src="/2012/images/patrocinadores/logo_dyn.jpg" border="0"></a>
-    </div>
- 
-<div class="patrocinador bronze">
+    	</div>
+	<div class="patrocinador bronze">
             <a title="b-datum"  href="http://www.b-datum.com" target="_blank"><img alt="b-datum" style="height: 60px;" src="/2012/images/patrocinadores/logo_bdatum.jpg" border="0"></a>
-    </div>
+    	</div>
 	<div class="clear"></div>
 
     	<div class="title"><t><pt>Apoio</pt><en>Partners</en></t></div>
