@@ -181,6 +181,9 @@ a:hover{
 	overflow: hidden;
 	width: 600px;
 	margin-top: -27px;
+	min-height: 1000px; 
+        height: auto !important; 
+        height: 1000px; 
 }
 
 #menu-side{
