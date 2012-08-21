@@ -339,7 +339,7 @@ a.linkmais{
 	float: left;
 	text-align: left;
 	padding-right: 25px;
-	width: 340px;	
+	width: 320px;	
 }
 
 #footer .title {
@@ -350,9 +350,10 @@ a.linkmais{
 
 #footer .menu {
 	float: left;
+	min-width: 650;
+	width: auto;
 	padding-left: 15px;
 	padding-top: 5px;
-	overflow: hidden;
 	border-left: 1px solid #ccc;
 }
 
