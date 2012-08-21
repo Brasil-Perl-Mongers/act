@@ -177,9 +177,9 @@ a:hover{
 
 #content{
 	float: left;
-	margin-left: 25px;
+	margin-left: 20px;
 	overflow: hidden;
-	width: 600px;
+	width: 450px;
 	margin-top: -27px;
 	min-height: 1000px; 
         height: auto !important; 
@@ -202,9 +202,9 @@ a:hover{
 #content-side{
 	margin-top: 20px;
 	float: right;
-	width: 300px;
+	width: 215px;
 	background-color: #e6e6e6;
-	margin-right: 25px;
+	margin-right: 20px;
 	overflow: hidden;
 	padding: 10px;
 	border-radius:10px;
@@ -252,66 +252,66 @@ a:hover{
 }
 
 #content-side .diamond {
-	width: 280px;
-	height: 180px;
+	width: 195px;
+	height: 125px;
 }
 #content-side .platinum{
-	width: 280px;
-	height: 130px;
+	width: 195px;
+	height: 90px;
 }
 #content-side .gold {
-	width: 280px;
-	height:130px;
+	width: 195px;
+	height: 90px;
 }
 #content-side .silver {
-	width: 280px;
-	height: 65px;
+	width: 195px;
+	height: 45px;
 }
 
 #content-side .bronze {
 	width: 125px;
-	height: 65px;	
+	height: 90px;	
 }
 
 #content-side .apoio-left {
-	width: 125px;
-	height: 65px;
+	width: 90px;
+	height: 45px;
 }
 #content-side .apoio-right {
-	width: 125px;
-	height: 65px;
+	width: 90px;
+	height: 45px;
 }
 
 #content-side .diamond img {
         margin: auto;
-	width: 270px;
+	width: 190px;
 }
 
 #content-side .platinum img {
         margin: auto;
-	width: 270px;
+	width: 190px;
 }
 
 #content-side .gold img {
         margin: auto;
-	width: 115px;
+	width: 80px;
 }
 
 #content-side .silver img {
         margin: auto;
-	width: 115px;
+	width: 80px;
 }
 
 #content-side .apoio-left img,
 #content-side .apoio-right img {
         margin: auto;
-	width: 115px;
+	width: 80px;
 }
 
 
 #content-side .bronze img {
         margin: auto;
-	width: 115px;
+	width: 80px;
 }
 
 a.linkmais{
@@ -338,8 +338,8 @@ a.linkmais{
 #footer #copy {
 	float: left;
 	text-align: left;
-	padding: 25px;
-	width: 320px;	
+	padding-right: 20px;
+	width: 250px;	
 }
 
 #footer .title {
