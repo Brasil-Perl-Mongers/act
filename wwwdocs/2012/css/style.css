@@ -338,7 +338,7 @@ a.linkmais{
 #footer #copy {
 	float: left;
 	text-align: left;
-	padding-right: 25px;
+	padding: 25px;
 	width: 320px;	
 }
 
