@@ -10,9 +10,12 @@
 [% PROCESS menus/talks %]
 </div>
 <div id="menu-footer">
+{{News}}<br>
 [% PROCESS menus/news %]
 [% PROCESS menus/wiki %]
 [% PROCESS menus/events %]
+</div>
+<div id="menu-footer">
 [% PROCESS menus/treasurer %]
 [% PROCESS menus/admin %]
 [% PROCESS menus/act_confs %]
