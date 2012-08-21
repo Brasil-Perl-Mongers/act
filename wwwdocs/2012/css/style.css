@@ -350,11 +350,10 @@ a.linkmais{
 
 #footer .menu {
 	float: left;
-	min-width: 650;
-	width: auto;
+	width: 100%;
 	padding-left: 15px;
 	padding-top: 5px;
-	border-left: 1px solid #ccc;
+	border-top: 1px solid #ccc;
 }
 
 #menu-footer {
