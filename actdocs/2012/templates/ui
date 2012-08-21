@@ -77,8 +77,10 @@ _gaq.push(['_trackPageview']);
     	<div id="saopaulo"><img src="/2012/images/saopaulo.png" border="0" /></div>
     	<div id="data"><t><pt>19 e 20 de Outubro</pt><en>October 19th and 20th</en></t></div>
     </div>
+    <div class="title2">
     <p class="title2"><t><pt>A revolução dos dados</pt><en>The revolution of data</en></t></p>
-   
+   </div>
+
 	<div id="menu-side">
 	<div class="menu">
 	     [% PROCESS menu %]

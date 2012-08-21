@@ -192,7 +192,8 @@ a:hover{
 	margin: 0;
 }
 
-p .title2{
+div .title2,
+p .title2 {
 	font-size: 24pt;	
 	font-weight: bolder;
 	margin: 0;
@@ -213,15 +214,15 @@ p .title2{
 }
 
 #menu-side{
-	margin: 10px;
-	padding: 10px;
-	border-radius:10px;
+	margin:  5px;
+	padding: 5px;
+	border-radius: 5px;
 	width: 220px;
 	float: left;
 	background-color: #e6e6e6;
 	overflow: hidden;
-	-moz-border-radius:10px;
-	-webkit-border-radius:10px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
 }
 
 #content-side{
@@ -262,58 +263,58 @@ p .title2{
 
 #content-side .platinum {
 	width:   200px;
-	height:  90px;
+	height:   80px;
 }
 #content-side .platinum img {
         margin: auto;
 	max-width:  190px;
-        max-height:  80px;
+        max-height:  70px;
 }
 
 #content-side .gold {
-	width:   90px;
-	height:  90px;
+	width:   80px;
+	height:  80px;
 }
 
 #content-side .gold img {
         margin: auto;
-	max-width:   80px;
-        max-height:  80px;
+	max-width:   70px;
+        max-height:  70px;
 }
 
 #content-side .silver {
-	width:   90px;
-	height:  60px;
+	width:   80px;
+	height:  80px;
 }
 
 #content-side .silver img {
         margin: auto;
-	max-width:  80px;
-        max-height: 50px;
+	max-width:  70px;
+        max-height: 70px;
 }
 
 #content-side .bronze {
-	width:  60px;
-	height: 60px;	
+	width:  80px;
+	height: 80px;	
 }
 
 #content-side .bronze img {
         margin: auto;
-	max-width:  50px;
-        max-height: 50px;
+	max-width:  70px;
+        max-height: 70px;
 }
 
 #content-side .apoio-left, 
 #content-side .apoio-right {
-	width:  60px;
-	height: 60px;
+	width:  80px;
+	height: 80px;
 }
 
 #content-side .apoio-left img,
 #content-side .apoio-right img {
         margin: auto;
-	max-width:  50px;
-        max-height: 50px;
+	max-width:  70px;
+        max-height: 70px;
 }
 
 a.linkmais{
