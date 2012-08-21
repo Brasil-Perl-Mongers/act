@@ -263,58 +263,59 @@ p .title2 {
 
 #content-side .platinum {
 	width:   200px;
-	height:   80px;
+	height:   90px;
 }
+
 #content-side .platinum img {
         margin: auto;
 	max-width:  190px;
-        max-height:  70px;
+        max-height:  80px;
 }
 
 #content-side .gold {
-	width:   80px;
-	height:  80px;
+	width:    90px;
+	height:   90px;
 }
 
 #content-side .gold img {
         margin: auto;
-	max-width:   70px;
-        max-height:  70px;
+	max-width:   190px;
+        max-height:   80px;
 }
 
 #content-side .silver {
-	width:   80px;
-	height:  80px;
+	width:   90px;
+	height:  90px;
 }
 
 #content-side .silver img {
         margin: auto;
-	max-width:  70px;
-        max-height: 70px;
+	max-width:  80px;
+        max-height: 80px;
 }
 
 #content-side .bronze {
-	width:  80px;
-	height: 80px;	
+	width:  90px;
+	height: 60px;	
 }
 
 #content-side .bronze img {
         margin: auto;
-	max-width:  70px;
-        max-height: 70px;
+	max-width:  80px;
+        max-height: 50px;
 }
 
 #content-side .apoio-left, 
 #content-side .apoio-right {
-	width:  80px;
-	height: 80px;
+	width:  90px;
+	height: 90px;
 }
 
 #content-side .apoio-left img,
 #content-side .apoio-right img {
         margin: auto;
-	max-width:  70px;
-        max-height: 70px;
+	max-width:  80px;
+        max-height: 50px;
 }
 
 a.linkmais{
