@@ -316,15 +316,14 @@ p .title2 {
 #content-side .apoio-right {
         vertical-align: middle;
         display: table-cell;
-
-	width:  90px;
+	width:  200px;
 	height: 60px;
 }
 
 #content-side .apoio-left img,
 #content-side .apoio-right img {
         margin: auto;
-	max-width:  80px;
+	max-width:  190px;
         max-height: 50px;
 }
 
