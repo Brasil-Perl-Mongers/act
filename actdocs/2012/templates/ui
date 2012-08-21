@@ -102,7 +102,7 @@ _gaq.push(['_trackPageview']);
         <div class="patrocinador gold" style="height: 140px;"><a href="http://www.enlightenedperl.org"><img style="margin-top: 15px; max-height: 130px;" title="Enlightenedperl" src="/2012/images/patrocinadores/logo-epo.png" ></a></div>
 	<div class="patrocinador bronze"><a title="Fila - Sistema de Atendimento"  href="http://www.softwarepublico.gov.br/ver-comunidade?community_id=11809545" target="_blank"><img alt="Fila - Sistema de Atendimento" title="Fila - Sistema de Atendimento" src="/2012/images/patrocinadores/logo-fila.jpg" border="0"></a></div>
 	<div class="patrocinador bronze"><a title="Dyn - Dynamic Network Services"  href="http://www.dyn.com" target="_blank"><img style="margin: 10px 0px;" title="Dyn" alt="Dyn - Dynamic Network Services" src="/2012/images/patrocinadores/logo_dyn.jpg" border="0"></a></div>
-	<div class="patrocinador bronze"><a title="b-datum"  href="http://www.b-datum.com" target="_blank"><img style="margin: 5px 0px;" title="b-datum" alt="b-datum" src="/2012/images/patrocinadores/logo_bdatum.jpg" border="0"></a></div>
+	<div class="patrocinador bronze" style="height: 30px; width: 200px"><a title="b-datum" href="http://www.b-datum.com" target="_blank"><img style="max-height: 20px; max-width: 190px; margin: 5px 0px;" title="b-datum" alt="b-datum" src="/2012/images/patrocinadores/logo_bdatum.jpg" border="0"></a></div>
 	<div class="clear"></div>
     	<div class="title"><t><pt>Apoio</pt><en>Partners</en></t></div>
         <div class="patrocinador apoio-left">
