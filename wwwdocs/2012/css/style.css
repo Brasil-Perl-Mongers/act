@@ -228,7 +228,7 @@ p .title2 {
 	margin:  10px;
 	padding: 10px;
 	float: right;
-	width: 230px;
+	width: 220px;
 	background-color: #e6e6e6;
 	overflow: hidden;
 	border-radius: 5px;
@@ -250,7 +250,6 @@ p .title2 {
 }
 
 #content-side .diamond {
-        margin: auto;
 	width:  190px;
 	height: 190px;
 }
@@ -262,7 +261,6 @@ p .title2 {
 }
 
 #content-side .platinum {
-        margin: auto;
 	width:   190px;
 	height:   90px;
 }
