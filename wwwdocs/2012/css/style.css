@@ -316,7 +316,7 @@ a.linkmais{
 	padding-left: 5px;
 }
 
-#footer{
+#footer {
 	margin-top: 20px;
 	clear: both;
 	background-color: #e6e6e6;	
@@ -326,40 +326,42 @@ a.linkmais{
 	overflow: hidden;
 }
 
-#footer img{
+#footer img {
 	float: left;
 	padding-top: 4px;
 	padding-right: 10px;
 }
 
-#footer #copy{
+#footer #copy {
 	float: left;
 	text-align: left;
 	padding-right: 25px;
 	width: 250px;	
 }
 
-#footer .title{
+#footer .title {
 	font-size: 14pt;	
 	font-family: "trebuchet ms", tahoma;
 	font-weight: bolder;
 }
-#footer .menu{
+
+#footer .menu {
 	float: left;
 	padding-left: 15px;
 	padding-top: 5px;
 	overflow: hidden;
 	border-left: 1px solid #ccc;
 }
-#menu-footer{
+
+#menu-footer {
 	overflow: hidden;
 	width: 140px;
 	float: left;
 	text-align: left;
-	margin-right: 8px;
+	margin: 0px;
 }
 
 #menu-footer a {
-	font-size: 12pt;	
+	font-size: 10pt;	
 	padding: 0 15px;
 }
