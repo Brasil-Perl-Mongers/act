@@ -260,7 +260,6 @@ p .title2 {
 }
 
 #content-side .diamond img {
-        margin: auto;
 	max-width: 190px;
         max-height: 190px;
 }
@@ -268,13 +267,11 @@ p .title2 {
 #content-side .platinum {
         vertical-align: middle;
         display: table-cell;
-
 	width:   200px;
 	height:   90px;
 }
 
 #content-side .platinum img {
-        margin: auto;
 	max-width:  190px;
         max-height:  80px;
 }
@@ -282,13 +279,11 @@ p .title2 {
 #content-side .gold {
         vertical-align: middle;
         display: table-cell;
-
 	width:    90px;
 	height:   90px;
 }
 
 #content-side .gold img {
-        margin: auto;
 	max-width:    80px;
         max-height:   80px;
 }
@@ -296,13 +291,11 @@ p .title2 {
 #content-side .silver {
         vertical-align: middle;
         display: table-cell;
-
 	width:   90px;
 	height:  90px;
 }
 
 #content-side .silver img {
-        margin: auto;
 	max-width:  80px;
         max-height: 80px;
 }
@@ -310,13 +303,11 @@ p .title2 {
 #content-side .bronze {
         vertical-align: middle;
         display: table-cell;
-
 	width:  90px;
 	height: 60px;	
 }
 
 #content-side .bronze img {
-        margin: auto;
 	max-width:  80px;
         max-height: 50px;
 }
