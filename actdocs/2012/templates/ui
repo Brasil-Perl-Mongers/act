@@ -94,7 +94,7 @@ _gaq.push(['_trackPageview']);
 	<div id="content-side">
     	<div class="title"><t><pt>Patrocinadores</pt><en>Sponsors</en></t></div>
         <div class="patrocinador diamond">
-            <a href="http://www.w3c.br/" target="_blank"><img title="W3C" style="width: 210px;"src="/2012/images/patrocinadores/logo-w3c-brasil.jpg" border="0"></a>
+            <a href="http://www.w3c.br/" target="_blank"><img title="W3C" style="margin: 10px 0px;" src="/2012/images/patrocinadores/logo-w3c-brasil.jpg" border="0"></a>
         </div>
         <div class="patrocinador platinum">
             <a href="http://duckduckgo.com/" target="_blank"><img title="DuckDuckGo" src="/2012/images/patrocinadores/logo-duckduckgo.png" border="0"></a>
@@ -103,19 +103,19 @@ _gaq.push(['_trackPageview']);
             <a href="http://www.estantevirtual.com.br" target="_blank"><img title="Estante Virtual" src="/2012/images/patrocinadores/logo-ev.png" border="0"></a>
         </div>
         <div class="patrocinador gold">
-            <a href="http://www.enlightenedperl.org"><img title="Enlightenedperl" src="/2012/images/patrocinadores/logo-epo.png" ></a>
+            <a href="http://www.enlightenedperl.org"><img style="10px 0px;" title="Enlightenedperl" src="/2012/images/patrocinadores/logo-epo.png" ></a>
         </div>
 	<div class="patrocinador silver">
-            <a href="http://www.aware.com.br" target="_blank"><img title="Aware" src="/2012/images/patrocinadores/logo_aware.jpg" border="0"></a>
+            <a href="http://www.aware.com.br" target="_blank"><img style="15px 0px;" title="Aware" src="/2012/images/patrocinadores/logo_aware.jpg" border="0"></a>
         </div>
 	<div class="patrocinador bronze">
             <a title="Fila - Sistema de Atendimento"  href="http://www.softwarepublico.gov.br/ver-comunidade?community_id=11809545" target="_blank"><img alt="Fila - Sistema de Atendimento" title="Fila - Sistema de Atendimento" src="/2012/images/patrocinadores/logo-fila.jpg" border="0"></a>
     	</div>
 	<div class="patrocinador bronze">
-            <a title="Dyn - Dynamic Network Services"  href="http://www.dyn.com" target="_blank"><img title="Dyn" alt="Dyn - Dynamic Network Services" src="/2012/images/patrocinadores/logo_dyn.jpg" border="0"></a>
+            <a title="Dyn - Dynamic Network Services"  href="http://www.dyn.com" target="_blank"><img style="margin: 10px 0px;" title="Dyn" alt="Dyn - Dynamic Network Services" src="/2012/images/patrocinadores/logo_dyn.jpg" border="0"></a>
     	</div>
 	<div class="patrocinador bronze">
-            <a title="b-datum"  href="http://www.b-datum.com" target="_blank"><img title="b-datum" alt="b-datum" src="/2012/images/patrocinadores/logo_bdatum.jpg" border="0"></a>
+            <a title="b-datum"  href="http://www.b-datum.com" target="_blank"><img style="10px 0px;" title="b-datum" alt="b-datum" src="/2012/images/patrocinadores/logo_bdatum.jpg" border="0"></a>
     	</div>
 	<div class="clear"></div>
     	<div class="title"><t><pt>Apoio</pt><en>Partners</en></t></div>
