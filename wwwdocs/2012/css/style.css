@@ -225,15 +225,15 @@ p .title2{
 }
 
 #content-side{
-	margin: 10px;
-	padding: 0px;
+	margin:  5px;
+	padding: 5px;
 	float: right;
 	width: 220px;
 	background-color: #e6e6e6;
 	overflow: hidden;
-	border-radius:10px;
-	-moz-border-radius:10px;
-	-webkit-border-radius:10px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
 }
 
 #content-side .patrocinador {
@@ -262,58 +262,58 @@ p .title2{
 
 #content-side .platinum {
 	width:   200px;
-	height:  100px;
+	height:  90px;
 }
 #content-side .platinum img {
         margin: auto;
 	max-width:  190px;
-        max-height:  90px;
+        max-height:  80px;
 }
 
 #content-side .gold {
-	width:   100px;
-	height:  100px;
+	width:   90px;
+	height:  90px;
 }
 
 #content-side .gold img {
         margin: auto;
-	max-width:   90px;
-        max-height:  90px;
+	max-width:   80px;
+        max-height:  80px;
 }
 
 #content-side .silver {
-	width:  100px;
-	height:  70px;
+	width:   90px;
+	height:  60px;
 }
 
 #content-side .silver img {
         margin: auto;
-	max-width: 90px;
-        max-height: 60px;
+	max-width:  80px;
+        max-height: 50px;
 }
 
 #content-side .bronze {
-	width:  70px;
-	height: 70px;	
+	width:  60px;
+	height: 60px;	
 }
 
 #content-side .bronze img {
         margin: auto;
-	max-width: 60px;
-        max-height: 60px;
+	max-width:  50px;
+        max-height: 50px;
 }
 
 #content-side .apoio-left, 
 #content-side .apoio-right {
-	width:  70px;
-	height: 70px;
+	width:  60px;
+	height: 60px;
 }
 
 #content-side .apoio-left img,
 #content-side .apoio-right img {
         margin: auto;
-	max-width:  60px;
-        max-height: 60px;
+	max-width:  50px;
+        max-height: 50px;
 }
 
 a.linkmais{
