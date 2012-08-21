@@ -353,12 +353,13 @@ a.linkmais{
 }
 #menu-footer{
 	overflow: hidden;
+	width: 140px;
 	float: left;
 	text-align: left;
 	margin-right: 8px;
 }
 
-#menu-footer a{
-	font-size: 9pt;	
+#menu-footer a {
+	font-size: 12pt;	
 	padding: 0 15px;
 }
