@@ -89,7 +89,7 @@
   <td align="right">{{Title}}</td>
   <td>&nbsp;</td>
   <td>
-    <input type="text" name="title" value="[% title %]" size="51" maxlength="100" />
+    <input type="text" name="title" value="[% title %]" size="31" maxlength="100" />
   </td>
 </tr>
 [% IF tracks.size != 0 %]
@@ -116,7 +116,7 @@
  {{Tags}}</td>
   <td>&nbsp;</td>
   <td>
-    <input type="text" name="tags" value="[% tags %]" size="51" maxlength="100" />
+    <input type="text" name="tags" value="[% tags %]" size="31" maxlength="100" />
   </td>
 </tr>
 [% IF global.config.talks_languages %]
@@ -144,14 +144,14 @@
   <td align="right">{{Abstract URL}}</td>
   <td>&nbsp;</td>
   <td>
-    <input type="text" name="url_abstract" value="[% url_abstract %]" size="51" maxlength="256" />
+    <input type="text" name="url_abstract" value="[% url_abstract %]" size="31" maxlength="256" />
   </td>
 </tr>
 <tr>
   <td align="right">{{Talk URL}}</td>
   <td>&nbsp;</td>
   <td>
-    <input type="text" name="url_talk" value="[% url_talk %]" size="51" maxlength="256" />
+    <input type="text" name="url_talk" value="[% url_talk %]" size="31" maxlength="256" />
   </td>
 </tr>
 <tr>
