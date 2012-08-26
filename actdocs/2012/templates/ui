@@ -136,8 +136,8 @@ _gaq.push(['_trackPageview']);
     	<div id="copy">
         	<img src="/2012/images/logo_footer.png" border="0">
         	<span class="title">YAPC::Brasil</span><br />
-            <t><pt>Conferência internacional realizada pela comunidade Perl brasileira com o apoio da comunidade Perl internacional. A edição 2012 é realizada pela <a href="http://sap-paulo.pm.org">São Paulo Perl Mongers</a></pt>
-               <en>International conference organized by the Brazillian Perl community with the support of the international Perl community. The 2012 edition is held by <a href="http://sap-paulo.pm.org">São Paulo Perl Mongers</a></en>
+            <t><pt>Conferência internacional realizada pela comunidade Perl brasileira com o apoio da comunidade Perl internacional.<br> A edição 2012 é realizada pela <a href="http://sap-paulo.pm.org">São Paulo Perl Mongers</a></pt>
+               <en>International conference organized by the Brazillian Perl community with the support of the international Perl community.<br> The 2012 edition is held by <a href="http://sap-paulo.pm.org">São Paulo Perl Mongers</a></en>
             </t>
         </div>
         <div class="menu">
