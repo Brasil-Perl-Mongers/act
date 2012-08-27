@@ -1,0 +1,103 @@
+[% INCLUDE js/mytalks.js %]
+<p>
+<b>{{By}}</b>
+[% user_info(user) %]
+
+[% IF global.request.user.is_talks_admin || global.request.user.user_id == user_id %]
+(<a href="[% make_uri('edittalk', 'talk_id', talk_id) %]">{{edit}}</a>)
+[% END %]
+
+<dl class="dl-horizontal">
+
+[% IF user.pm_group %]
+  <dt>{{from}}</dt>
+  <dd>
+  [% IF user.pm_group_url %]
+    <a href="[% user.pm_group_url %]">[% user.pm_group %]</a>
+  [% ELSE %]
+    [% user.pm_group %]
+  [% END %]
+  </dd>
+[% END %]
+<br />
+
+[% IF lightning %]
+  <dt>{{Lightning talk}}</dt>
+  <dd></dd>
+[% ELSE %]
+  <dt>{{Date:}}</dt>
+  <dd>
+    [% IF datetime && ( global.config.talks_show_schedule || global.request.user.is_talks_admin ) %]<a href="[% make_uri( 'schedule?day=' _ date_format(datetime, 'date_iso') ) %]" >[% date_format(datetime, 'date_full') %]</a> [% date_format(datetime, 'time' ) ; ELSE %]
+    {{Not scheduled yet.}}[% END %]<br />
+  </dd>
+
+  <dt>{{Duration:}}</dt>
+  <dd>[% duration %] {{minutes}}</dd>
+
+[% END %]
+
+[% IF global.config.talks_levels %]
+  <dt>{{Target audience:}}</dt>
+  <dd>[% level %]</dd>
+[% END %]
+
+[% IF global.config.talks_languages %]
+  <dt>{{Language:}}</dt>
+  <dd>[% global.config.talks_languages.$lang %]</dd>
+[% END %]
+
+[% IF ( global.request.user.is_talks_admin || global.request.user.user_id == user_id) AND comment %]
+  <dt>{{Comment:}}</dt>
+  <dd>[% comment %]</dd>
+[% END %]
+
+</dl>
+
+[% showtags(tags, 'talks') %]
+
+</p>
+[% IF url_abstract || url_talk %]
+<p> {{You can find more information on the speaker's site:}}</p>
+ <dl>
+  [% IF url_abstract %]
+      <dt>{{Abstract:}}</dt>
+      <dd><a href="[% url_abstract %]">[% url_abstract %]</a></dd>
+  [% END %]
+  [% IF url_talk %]
+      <dt>{{Talk:}}</dt>
+      <dd><a href="[% url_talk %]">[% url_talk %]</a></dd>
+  [% END %]
+ </ul>
+[% END %]
+
+<hr />
+<p>
+[% expand(chunked_abstract) | html_line_break %]
+</p>
+
+[% IF attendees.size %]
+<b>{{Attended by:}}</b>
+<ul class="unstyled">
+[% FOREACH u IN attendees %]
+  <li><i class="icon-user"></i> [% user_info(u) %]</li>
+[% END %]
+</ul>
+[% END %]
+
+[% IF global.request.user.has_registered %]
+<form method="POST" action="[% make_uri('updatemytalks') %]" />
+<input type="checkbox"
+       name="mt-[% talk_id %]"
+       value="[% talk_id %]"
+       [% IF global.request.user.is_my_talk(talk_id) %]
+         title = "{{remove from personal schedule}}"
+         checked = "checked"
+       [% ELSE %]
+         title = "{{add to personal schedule}}"
+       [% END %]
+/>
+<span id="my-[% talk_id %]-text">{{add to personal schedule}}</span>
+<input type="hidden" name="talk_id" value="[% talk_id %]" />
+<input type="submit" class="mytalks_submit" value="{{Submit}}" />
+</form>
+[% END %]

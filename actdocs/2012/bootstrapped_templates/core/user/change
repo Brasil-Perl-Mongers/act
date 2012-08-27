@@ -1,0 +1,236 @@
+[% PROCESS error
+   msgs = {
+     ERR_FIRST_NAME         => loc("You must enter your first name"),
+     ERR_LAST_NAME          => loc("You must enter your last name"),
+     ERR_EMAIL              => loc("You must enter your email"),
+     ERR_COUNTRY            => loc("You must enter a country from the list"),
+     ERR_EMAIL_SYNTAX       => loc("Your email address looks bogus."),
+     ERR_NICK               => loc("You cannot be pseudonymous with a blank nickname"),
+     ERR_PMGROUP            => loc("The Perl monger group must end with <tt>.pm</tt>"),
+     ERR_PM_URL             => loc("The Perl monger group URL must start with http://"),
+     ERR_COMPANY_URL        => loc("The company URL must start with http://"),
+     ERR_WEBPAGE            => loc("Your web site URL must start with http://"),
+     ERR_MONKID             => loc("Your perlmonks id must be a number"),
+     ERR_NBFAMILY           => loc("Number of family members attending must be a number"),
+     ERR_TSHIRT             => loc("A valid T-shirt size is required."),
+     ERR_GPG_KEY_ID         => loc("Not a valid GPG key ID: 8 hexadecimal digits expected"),
+  }
+%]
+
+<form method="POST" action="[% global.request.r.uri %]">
+
+<span class="help-block">
+{{Salutation}}
+</span>
+
+[% FOREACH s = [1 .. salutations] %]
+<label class="radio inline">
+  <input type="radio" name="salutation" id="form-salutation" value="[% s %]"[% " checked" IF salutation == s %] /> 
+  [% loc("salutation_$s") %]
+</label>
+[% END %]
+
+<label for="form-first-name">{{First Name}}</label>
+<input type="text" name="first_name" id="form-first-name"  value="[% first_name %]" size="25" maxlength="60" />
+
+<label for="form-last-name">{{Last Name}}</label>
+<input type="text" name="last_name" id="form-last-name"  value="[% last_name %]" size="25" maxlength="60" />
+
+<label for="form-nick-name">{{Nickname}}</label>
+<input type="text" name="nick_name" id="form-nick-name"  value="[% nick_name %]" size="25" maxlength="60" />
+
+<span class="help-block">
+{{Stay pseudonymous}}
+</span>
+
+<label class="radio inline">
+  <input type="radio" name="pseudonymous" value="1" [% "checked" IF pseudonymous %] />
+  {{Yes}}
+</label>
+<label class="radio inline">
+  <input type="radio" name="pseudonymous" value="0" [% "checked" UNLESS pseudonymous %] /> 
+  {{No}}
+</label>
+
+<label for="form-email">{{Email}}</label>
+<input type="text" name="email" id="form-email"  value="[% email %]" size="25" maxlength="60" />
+
+<span class="help-block">
+{{Hide email}}
+</span>
+
+<label class="radio inline">
+  <input type="radio" name="email_hide" value="1" [% "checked" IF email_hide %] />
+  {{Yes}}
+</label>
+<label class="radio inline">
+  <input type="radio" name="email_hide" value="0" [% "checked" UNLESS email_hide %] />
+  {{No}}
+</label>
+
+<label for="form-nb-family">{{Coming with}}</label>
+<select name="nb_family" id="form-nb-family">
+         <option value="0"[% ' selected="selected"' UNLESS nb_family %]>0</option>
+         [% FOREACH c = [ 1..5 ] %]
+         <option value="[% c %]"[% ' selected="selected"' IF nb_family == c %]>[% c %]</option>
+         [% END %]
+         <option value="6"[% ' selected="selected"' IF nb_family AND nb_family >= 6 %]>{{6 or more}}</option>
+      </select>
+
+<span class="help-block">
+{{people (who will not attend the conference)}}
+</span>
+
+<label for="form-tshirt-size">{{T-shirt size}}</label>
+<select name="tshirt_size" id="form-tshirt-size">
+   [% UNLESS tshirt_size %]<option value="" selected="selected" />[% END %]
+   [% FOREACH t = [ 'XS', 'XS (W)', 'S', 'S (W)', 'M', 'M (W)',
+                    'L', 'L (W)', 'XL', 'XL (W)', 'XLT', 'XXL',
+                    'XXL (W)', 'XXLT', 'XXXL', '4XL', '5XL', '6XL' ] %]
+   <option value="[% t %]"[% ' selected="selected"' IF tshirt_size == t %]>[% t %]</option>
+   [% END %]
+</select>
+
+<label for="form-town">{{City}}</label>
+<input type="text" name="town" id="form-town"  value="[% town %]" size="25" maxlength="60" />
+
+<label for="form-country">{{Country}}</label>
+<select name="country" id="form-country">
+   [% FOREACH c = countries %]
+      <option value="[% c.iso %]"[% ' selected="selected"' IF country == c.iso %]>[% c.name %]</option>
+   [% END %]
+</select>
+
+<label for="form-address">{{Full address}}</label>
+<textarea name="address" id="form-address" cols="25" rows="5" >[% address | form_unescape %]</textarea>
+
+<label for="form-timezone">{{Timezone}}</label>
+<select name="timezone" id="form-timezone">
+   [% FOREACH tz = timezones %]
+      <option value="[% tz %]"[% ' selected="selected"' IF timezone == tz %]>[% tz %]</option>
+   [% END %]
+</select>
+
+<span class="help-block">
+  [%- IF web_page %]
+     <a href="[% web_page %]" >
+  [% END %]
+    {{Web page}}
+  [%- IF web_page %]
+     </a>
+  [% END %]
+</span>
+
+<input type="text" name="web_page"  value="[% web_page %]" size="40" maxlength="120" />
+<span class="help-block">
+  [%- IF pm_group_url %]
+    <a href="[% pm_group_url %]" >
+  [% END %]
+    {{Monger group}}
+  [%- IF pm_group_url %]
+     </a>
+  [% END %]
+</span>
+
+<input type="text" name="pm_group"  value="[% pm_group %]" size="40" maxlength="120" />
+
+<span class="help-block">
+{{(<em>City.pm</em>, city name in English, please)}}
+</span>
+
+<span class="help-block">
+  [%- IF pm_group_url %]
+     <a href="[% pm_group_url %]" >
+  [% END %]
+  {{Monger group URL}}
+  [%- IF pm_group_url %]
+     </a>
+  [% END %]
+</span>
+
+<input type="text" name="pm_group_url"  value="[% pm_group_url %]" size="40" maxlength="120" />
+
+<span class="help-block">
+  [%- IF company_url %]
+     <a href="[% company_url %]" >
+  [% END %]
+  {{Company}}
+  [%- IF company_url %]
+     </a>
+  [% END %]
+</span>
+
+<input type="text" name="company"  value="[% company %]" size="40" maxlength="120" /><br />
+
+<label for="form-vat">{{VAT Number}}</label>
+<input type="text" name="vat" id="form-vat" value="[% vat %]" size="25" maxlength="60" />
+
+<span class="help-block">
+  [%- IF company_url %]
+     <a href="[% company_url %]" >
+  [% END %]
+  {{Company URL}}
+  [%- IF company_url %]
+     </a>
+  [% END %]
+</span>
+
+<input type="text" name="company_url"  value="[% company_url %]" size="40" maxlength="120" />
+
+<span class="help-block">
+  [%- IF gpg_key_id %]
+     <a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x[% gpg_key_id %]">
+  [% END %]
+  {{GPG public key ID}}
+  [%- IF gpg_key_id %]
+     </a>
+  [% END %]
+</span>
+
+<span class="help-block inline">Ox</span>
+<input type="text" name="gpg_key_id" value="[% gpg_key_id %]" size="8" maxlength="8" />
+
+<span class="help-block">
+  [%- IF pause_id %]
+     <a href="http://search.cpan.org/author/[% pause_id %]/" >
+  [% END %]
+  Pause id
+  [%- IF pause_id %]
+     </a>
+  [% END %]
+</span>
+
+<input type="text" name="pause_id"  value="[% pause_id %]" size="25" maxlength="60" />
+
+<span class="help-block">
+  [%- IF monk_id %]
+     <a href="http://perlmonks.org/index.pl?node_id=[% monk_id %]" >
+  [% END %]
+  Perlmonks id
+  [%- IF monk_id %]
+     </a>
+  [% END %]
+</span>
+
+<input type="text" name="monk_id"  value="[% monk_id %]" size="25" maxlength="60" />
+
+<label for="form-im">{{IM}}</label>
+<input type="text" name="im" id="form-im" value="[% im %]" size="25" maxlength="60" />
+
+{{Bio}}
+
+[% FOREACH lang = global.config.languages.keys %]
+  [% global.config.languages.$lang.name|ucfirst %]
+  [% IF lang == 'en' %]
+    <span class="help-block">
+    {{(please fill at least this one)}}
+    </span>
+  [% END %]<br />
+  <textarea name="bio_[% lang %]" cols="40" rows="5">[% bio.$lang | form_unescape %]</textarea>
+[% END %]
+
+<div class="form-actions">
+  <button class="btn btn-primary" type="submit" name="join" value="{{Update info}}">{{Update info}}</button>
+</div>
+
+</form>

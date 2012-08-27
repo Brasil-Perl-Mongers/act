@@ -1,0 +1,5 @@
+[% WRAPPER ui title = loc('Logout') %]
+  [% WRAPPER alert type = 'success' %]
+    {{You have been logged out and the cookie deleted from your browser.}}
+  [% END %]
+[% END %]

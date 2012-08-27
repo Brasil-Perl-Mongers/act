@@ -1,0 +1,7 @@
+[% WRAPPER ui title = loc("Event removed") %]
+
+  [% WRAPPER alert_ui type='success' %]
+   [% loc('The event has been removed.', title) %]
+  [% END %]
+
+[% END %]

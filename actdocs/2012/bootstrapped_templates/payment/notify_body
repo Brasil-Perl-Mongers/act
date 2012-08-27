@@ -1,0 +1,16 @@
+[% global.request.user.first_name %] [% global.request.user.last_name %]
+
+[% loc("<conf> online payment",
+        global.conference.name,
+        order.order_id,
+        date_format(order.datetime, 'datetime_full'),
+        order.amount,
+        order.currency) %]
+
+[% IF order.items.size == 1 %]
+  [% order.items.0.name %]
+[% ELSE %]
+  [% FOREACH item IN order.items %]
+    [% item.name %]     [% item.amount %] [% order.currency %]
+  [% END %]
+[% END %]
