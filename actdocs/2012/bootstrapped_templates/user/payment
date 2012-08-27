@@ -1,0 +1,38 @@
+[% WRAPPER ui title = loc('Online payment') %]
+
+<table class="table table-condensed table-hover">
+<tr>
+   <th align="left">
+      {{Name}}
+   </th>
+   <td>
+      [% global.request.user.first_name %] [% global.request.user.last_name %]
+   </td>
+</tr>
+<tr>
+   <th align="left">{{Order number}}</th>
+   <td>[% order.order_id %]</td>
+</tr>
+[% FOREACH i IN order.items %]
+<tr>
+    <th align="left">&nbsp;&nbsp;[% i.name %]</th>
+    <td>[% i.amount %] [% order.currency %]</td>
+</tr>
+[% END %]
+<tr>
+   <th align="left">{{Amount}}</th>
+   <td>[% order.amount %] [% order.currency %]</td>
+</tr>
+<tr>
+   <td colspan="2" align="center">
+     [% form %]
+   </td>
+</tr>
+</table>
+
+<p>
+ {{Please note that everything regarding your bank account and credit card number}}
+</p>
+
+[% file = "core/bank/${global.config.payment_type}" ; PROCESS $file %]
+[% END %]

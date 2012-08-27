@@ -1,0 +1,39 @@
+<form method="POST" action="[% global.request.r.uri %]">
+
+<label>{{Login}}</label>
+<input type="text" name="login" value="[% login %]" size="25" maxlength="60" />
+<label>{{First Name}}</label>
+<input type="text" name="first_name" value="[% first_name %]" size="25" maxlength="256" />
+<label>{{Last Name}}</label>
+<input type="text" name="last_name" value="[% last_name %]" size="25" maxlength="256" />
+<label>{{Email}}</label>
+<input type="text" name="email" value="[% email %]" size="25" maxlength="256" />
+<input type="hidden" name="ignore_duplicates" value="[% ignore_duplicates %]" />
+<label>{{Country}}</label>
+    <select name="country">
+      [% country = global.config.general_default_country UNLESS country %]
+      [% IF topten.size %]
+        [% FOREACH c = topten %]
+          <option value="[% c.iso %]"[% ' selected="selected"' IF country == c.iso %]>[% c.name %]</option>
+          [% IF country == c.iso; country = ''; END %]
+        [% END %]
+        <option value="" disabled="disabled">------------------------------</option>
+      [% END %]
+      [% FOREACH c = countries %]
+        <option value="[% c.iso %]"[% ' selected="selected"' IF country == c.iso %]>[% c.name %]</option>
+      [% END %]
+    </select>
+<label>{{T-Shirt}}</label>
+   <select name="tshirt">
+    [% FOREACH t = ['', 'XS', 'XS (W)', 'S', 'S (W)', 'M', 'M (W)',
+                        'L', 'L (W)', 'XL', 'XL (W)', 'XLT', 'XXL',
+                        'XXL (W)', 'XXLT', 'XXXL', '4XL', '5XL', '6XL'  ] %]
+      <option value="[% t %]"[% ' selected="selected"' IF t == tshirt %]>[% t %]</option>
+   [% END %]
+  </select>
+
+<div class="form-actions">
+  <button class="btn btn-primary" type="submit" name="join" value="{{Join!}}" />{{Join!}}</button>
+</div>
+
+</form>

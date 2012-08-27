@@ -1,0 +1,41 @@
+[% WRAPPER ui title = loc("Log in") %]
+
+<form method="POST" action="[% action %]">
+<input type="hidden" name="destination" value="[% destination %]">
+
+[% IF error;
+     WRAPPER error_ui;
+       loc('Incorrect login or password');
+     END;
+   END
+%]
+   <label for="form-credential-0">{{Login}}</label>
+   <input type="text" name="login" id="form-credential-0" size="25" maxlength="60" />
+   <label for="form-credential-1">{{Password}}</label>
+   <input type="password" name="password" id="form-credential-1" size="25" maxlength="60" />
+   <label class="checkbox" for="form-credential-2">{{Remember me on this computer}}
+     <input type="checkbox" name="remember_me" id="form-credential-2" />
+   </label>
+
+<div class="form-actions">
+   <button class="btn" type="submit" name="join" value="{{Submit}}">{{Submit}}</button>
+ </div>
+
+[% IF auth_methods.size > 0 -%]
+  <legend>Alternative Login Methods:</legend>
+  [% FOREACH method IN auth_methods -%]
+    [% method.render() -%]
+  [% END -%]
+[% END -%]
+
+</form>
+
+<p>[% loc('No account?', make_uri('register')) %]</p>
+
+<p>[% loc('Forgot your password?', make_uri('changepwd')) %]</p>
+
+<p>
+ [% loc('This site uses cookies to authenticate logged in users.', domain) %]
+</p>
+
+[% END %]

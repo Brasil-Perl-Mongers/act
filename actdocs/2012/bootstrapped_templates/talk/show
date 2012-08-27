@@ -1,0 +1,5 @@
+[% WRAPPER ui title = title %]
+
+[% PROCESS core/talk/show %]
+
+[% END %]

@@ -1,0 +1,22 @@
+[% USE date %]
+[% IF date.now > end_date %]
+<p>
+ {{Sorry, this conference is over.}}
+</p>
+[% ELSIF closed %]
+<p>
+ {{Sorry, registration for this conference has been closed.}}
+</p>
+[% ELSE %]
+
+<p>
+ [% loc('To register to the <name> conference', global.conference.name) %]
+</p>
+
+<form method="POST" action="[% global.request.r.uri %]">
+<div class="form-actions">
+  <button class="btn btn-primary" type="submit" name="join" value="{{Join}} [% global.conference.name %]">{{Join}} [% global.conference.name %]</button>
+</div>
+</form>
+
+[% END %]

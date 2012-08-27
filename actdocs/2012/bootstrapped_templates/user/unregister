@@ -1,0 +1,15 @@
+[% WRAPPER ui  title = loc('Un-Registration') %]
+
+<p>
+ [% loc('To unregister from <conference>,', global.conference.name) %]
+</p>
+
+<form method="POST" action="[% global.request.r.uri %]">
+
+<div class="form-actions">
+  <button class="btn btn-primary" type="submit" name="leave" value="[% loc('Unregister from <conference>', global.conference.name) %]">[% loc('Unregister from <conference>', global.conference.name) %]</button>
+</div>
+
+</form>
+
+[% END %]

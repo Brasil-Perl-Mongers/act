@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="[% global.request.language %]" xml:lang="[% global.request.language %]">
+
+<head>
+<!-- Document Metadata -->
+<meta http-equiv="Content-Language" content="[% global.request.language %]" />
+<!-- OpenId -->
+[% IF openid %]
+<link rel="openid.server" href="[% global.request.base_url %][% make_uri('openid') %]" />
+[% END %]
+<!-- Atom news feed -->
+<link rel="alternate" type="application/atom+xml" title="[% global.conference.name %]"
+      href="[% global.request.base_url %][% make_uri_info( 'atom', global.request.language ) %].xml" />
+[%- IF title -%]<title>[% title  %]</title>[%- END -%]
+
+<!-- CSS Stylesheets -->
+<!-- <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'style.css') %]" /> -->
+<!-- <link rel="stylesheet" type="text/css" href="/css/act-base.css" /> -->
+<!-- <link rel="stylesheet" type="text/css" href="/css/schedule.css" /> -->
+
+<!-- Favorite icon -->
+<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+
+<link href="/BootstrapConf/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/BootstrapConf/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- debugging -->
+<style>
+  .sponsors {
+    background-color: #eee;
+  }
+
+  .show-grid [class*="span"] {
+  background-color: #eee;
+  text-align: center;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  min-height: 40px;
+  line-height: 40px;
+}
+.show-grid:hover [class*="span"] {
+  background: #ddd;
+}
+.show-grid .show-grid {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.show-grid .show-grid [class*="span"] {
+  background-color: #ccc;
+}
+</style>
+
+
+</head>
+
+<body>
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="span9">
+          <h1>YAPC::Brasil 2012</h1>
+          <ul class="nav nav-pills pull-left">
+            <li><a href="/2012/wiki"><t><pt>Wiki</pt><en>Wiki</en></t></a></li>
+            <li><a href="/2012/about/index.html"><t><pt>Sobre</pt><en>About</en></t></a></li>
+            <li><a href="/2012/about/tracks.html"><t><pt>Trilhas</pt><en>Tracks</en></t></a></li>
+            <li><a href="/2012/about/general.html"><t><pt>Local</pt><en>Venue</en></t></a></li>
+            <li><a href="/2012/about/sponsorship.html"><t><pt>Patrocine!</pt><en>Be a sponsor!</en></t></a></li>
+            <li><a href="/2012/about/expedient.html"><t><pt>Contato</pt><en>Contact</en></t></a></li>
+          </ul>
+        </div>
+
+        <div class="span3">
+          <ul class="nav nav-pills pull-right">
+
+            [% FOREACH lang = global.languages %]
+              <li>
+                <a href="[% lang.uri %]" class="social_link" 
+                  [% IF lang.name == 'English' -%] alt="View in English">
+                    <img src="http://www.yapcbrasil.org.br/2012/images/en.png" />
+                  [%- ELSE -%] alt="Ver em Português">
+                    <img src="http://www.yapcbrasil.org.br/2012/images/pt.png" />
+                  [%- END -%]
+                </a>
+              </li>
+            [% END %]
+
+            [% IF global.request.user %]
+              <li><a href="/2012/logout" class="social_link">Logout</a></li>
+            [% ELSE %]
+              <li><a href="/2012/main" class="social_link">Login</a></li>
+              <li><a href="/2012/register" class="social_link"><t><pt>Cadastre-se</pt><en>Register</en></t></a></li>
+            [% END %]
+            <li><a href="https://twitter.com/#!/yapcbrasil" class="twitter" target="_blank"></a></li>
+            <li><a href="/2012/atom/pt.xml" class="rss"></a></li>
+          </ul><br>
+          <img src="http://www.yapcbrasil.org.br/2012/images/saopaulo.png" border="0"><br>
+          October 19th and 20th<br>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="span12">
+          <h2><t><pt>A revolução dos dados</pt><en>The revolution of data</en></t></h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span2">
+          <div id="menu" class="sidebar-nav well well-small">
+            [% PROCESS menu %]
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span6">
+            [% content %]
+        </div><!--/span-->
+
+      <div class="sponsors span4">
+              <div class="title"><t><pt>Patrocinadores</pt><en>Sponsors</en></t></div>
+
+              <ul class="thumbnails">
+                <li class="span4">
+                  <a class="thumbnail" href="http://www.w3c.br/" target="_blank">
+                    <img title="W3C" src="http://www.yapcbrasil.org.br/2012/images/patrocinadores/logo-w3c-brasil.jpg">
+                  </a>
+                </li>
+                <li class="span4">
+                  <a class="thumbnail" href="http://duckduckgo.com/" target="_blank"><img title="DuckDuckGo" src="http://www.yapcbrasil.org.br/2012/images/patrocinadores/logo-duckduckgo.png"></a>
+                </li>
+
+                <li class="span4">
+                  <a class="thumbnail" href="http://www.estantevirtual.com.br" target="_blank"><img title="Estante Virtual" src="http://www.yapcbrasil.org.br/2012/images/patrocinadores/logo-ev.png"></a>
+                </li>
+                <li class="span3">
+                  <a class="thumbnail" href="http://www.aware.com.br" target="_blank"><img title="Aware" src="http://www.yapcbrasil.org.br/2012/images/patrocinadores/logo_aware.jpg"></a>
+                </li>
+                <li class="span3">
+                  <a class="thumbnail" href="http://www.enlightenedperl.org"><img title="Enlightenedperl" src="http://www.yapcbrasil.org.br/2012/images/patrocinadores/logo-epo.png"></a>
+                </li>
+                <li class="span2">
+                  <a class="thumbnail" title="Fila - Sistema de Atendimento"  href="http://www.softwarepublico.gov.br/ver-comunidade?community_id=11809545" target="_blank"><img alt="Fila - Sistema de Atendimento" title="Fila - Sistema de Atendimento" src="http://www.yapcbrasil.org.br/2012/images/patrocinadores/logo-fila.jpg"></a>
+                </li>
+                <li class="span2">
+                  <a class="thumbnail" title="Dyn - Dynamic Network Services"  href="http://www.dyn.com" target="_blank"><img title="Dyn" alt="Dyn - Dynamic Network Services" src="http://www.yapcbrasil.org.br/2012/images/patrocinadores/logo_dyn.jpg"></a>
+                </li>
+                <li class="span2">
+                  <a class="thumbnail" title="b-datum" href="http://www.b-datum.com" target="_blank"><img title="b-datum" alt="b-datum" src="http://www.yapcbrasil.org.br/2012/images/patrocinadores/logo_bdatum.jpg"></a>
+                </li>
+              </ul>
+        </div><!--/span-->
+      </div><!--/row-->
+    </div><!--/.fluid-container-->
+
+
+<!-- JavaScript sugar -->
+    <script type="text/javascript" src="/BootstrapConf/jquery-1.8.0.min.js"></script>
+    <script src="/BootstrapConf/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="/BoostrapConf/bootstrap/js/bootstrap-transition.js"></script>
+    <script src="/BoostrapConf/bootstrap/js/bootstrap-alert.js"></script>
+    <script src="/BoostrapConf/bootstrap/js/bootstrap-modal.js"></script>
+    <script src="/BoostrapConf/bootstrap/js/bootstrap-dropdown.js"></script>
+    <script src="/BoostrapConf/bootstrap/js/bootstrap-scrollspy.js"></script>
+    <script src="/BoostrapConf/bootstrap/js/bootstrap-tab.js"></script>
+    <script src="/BoostrapConf/bootstrap/js/bootstrap-tooltip.js"></script>
+    <script src="/BoostrapConf/bootstrap/js/bootstrap-popover.js"></script>
+    <script src="/BoostrapConf/bootstrap/js/bootstrap-button.js"></script>
+    <script src="/BoostrapConf/bootstrap/js/bootstrap-collapse.js"></script>
+    <script src="/BoostrapConf/bootstrap/js/bootstrap-carousel.js"></script>
+    <script src="/BoostrapConf/bootstrap/js/bootstrap-typeahead.js"></script>
+
+<script type="text/javascript" src="/js/act.js"></script>
+
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-34025848-1']);
+_gaq.push(['_setDomainName', 'yapcbrasil.org.br']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+
+</body>
+</html>

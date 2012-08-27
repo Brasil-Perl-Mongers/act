@@ -1,0 +1,36 @@
+[% WRAPPER ui title = loc("Create/Edit a track") %]
+
+[% PROCESS error
+   msgs = {
+     ERR_TITLE  => loc("You must enter a title for the track"),
+  }
+%]
+
+<form method="POST" action="[% global.request.r.uri %]">
+
+[% IF return_url %]
+<input type="hidden" name="return_url" value="[% return_url %]" />
+[% END %]
+
+[% IF track_id %]
+<input type="hidden" name="track_id" value="[% track_id %]" />
+
+<label class="checkbox">
+<input type="checkbox" name="delete" />
+{{Delete this track}}
+</label>
+
+[% END %]
+
+  <label>{{Title}}</label>
+  <input type="text" name="title" value="[% title %]" size="51" maxlength="100" />
+  <label>{{Description}}</label>
+  <textarea name="description" cols="50" rows="10">[% description | form_unescape %]</textarea>
+
+<div class="form-actions">
+  <button class="btn btn-primary" type="submit" name="submit" value="{{Submit this track}}">{{Submit this track}}</button>
+</div>
+
+</form>
+
+[% END %]
