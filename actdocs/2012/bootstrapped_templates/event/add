@@ -1,0 +1,77 @@
+[% WRAPPER ui title = loc("Submit/Edit a non-talk event") %]
+
+[% PROCESS error
+   msgs = {
+     ERR_TITLE          => loc("You must enter a title for the event"),
+     ERR_ABSTRACT       => loc("You must enter a short description for the event"),
+     ERR_DURATION       => loc("Please choose a duration"),
+     ERR_DATE           => loc("The supplied date is invalid"),
+     ERR_TIME           => loc("The supplied time is invalid"),
+     ERR_DATERANGE      => loc("The date/time is out of range"),
+     ERR_URL_ABSTRACT   => loc("Event URL is not a valid URL"),
+     ERR_ROOM           => loc("Incorrect room submitted"),
+  }
+%]
+
+<form method="POST" action="[% global.request.r.uri %]">
+
+[% IF return_url %]
+<input type="hidden" name="return_url" value="[% return_url %]" />
+[% END %]
+
+[% IF event_id %]
+<input type="hidden" name="event_id" value="[% event_id %]" />
+
+<span class="help-block">
+  {{View}} <a href="[% make_uri_info('event', event_id) %]" >[% title %]</a>
+</span>
+
+<label class="inline checkbox" for="delete">
+  <input type="checkbox" name="delete" id="delete" />
+  {{Delete this event}}
+</label>
+[% END %]
+
+<label for="form-title">{{Title}}</label>
+    <input type="text" name="title" id="form-title" value="[% title %]" size="51" maxlength="100" />
+
+  <label for="form-date">{{Date}}</label>
+
+   <select name="date" id="form-date">
+     <option value=""[% ' selected="selected"' UNLESS datetime %] />
+   [% FOREACH d=dates %]
+     <option value="[% d.ymd %]"[% ' selected="selected"' IF datetime.ymd == d.ymd %]>[% d.ymd %]</option>
+   [% END %]
+    </select>
+
+   <label for="form-time">{{Time}}</label>
+    <input type="text" name="time" id="form-time" value="[% datetime.strftime('%H:%M') %]" size="5" maxlength="5" />
+
+   <label for="form-room">{{Room}}</label>
+    <select name="room" id="form-room">
+     <option value=""[% ' selected="selected"' UNLESS room %] />
+    [% FOREACH r = rooms.keys.sort %]
+     <option value="[% r %]"[% ' selected="selected"' IF room == r %]>[% rooms.$r %]</option>
+    [% END %]
+    </select>
+
+<dl>
+  <dt>{{Abstract}}</dt>
+  <dd>{{(plain text)}}</dd>
+</dl>
+<textarea name="abstract" cols="50" rows="10">[% abstract | form_unescape %]</textarea>
+
+<label for="form-url-abstract">{{External URL}}</label>
+
+<input type="text" name="url_abstract" id="form-url-abstract" value="[% url_abstract %]" size="51" maxlength="256" />
+<label for="form-duration">{{Duration}}</label>
+    <input name="duration" id="form-duration" value="[% duration %]" size="3" />
+    <span class="help-block inline"> {{minutes}} </span>
+
+<div class="form-actions">
+  <button class="btn btn-primary" type="submit" name="submit" value="{{Submit this event}}">{{Submit this event}}</button>
+</div>
+
+</form>
+
+[% END %]

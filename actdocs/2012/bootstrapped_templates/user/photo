@@ -1,0 +1,35 @@
+[% WRAPPER ui title = loc("Your photo") %]
+[% IF error;
+     WRAPPER error_ui;
+       loc("Image couldn't be read. Please upload your picture in one of the following formats:");
+       formats.join(', ');
+     END;
+   END
+%]
+
+<form method="POST" enctype="multipart/form-data">
+
+  <ul class="thumbnails">
+    <li class="span 3">
+      <div class="thumbnail">
+        [%- IF global.request.user.photo_name %]
+          <img src="[% photo_uri %]" border="0">
+        [%- ELSE %]
+           {{No photo}}
+        [% END %]
+      </div>
+    </li>
+  </ul>
+
+<label>{{This photo will probably end up on the conference who's who,}}</label>
+<input type="file" name="photo" size="40" />
+
+<div class="form-actions">
+[%- IF global.request.user.photo_name %]
+   <button class="btn" type="submit" name="delete" value="{{Delete Photo}}">{{Delete Photo}}</button>
+[% END %]
+  <button class="btn btn-primary" type="submit" name="update" value="{{Update Photo}}">{{Update Photo}}</button>
+</div>
+</form>
+
+[% END %]

@@ -1,0 +1,20 @@
+[% WRAPPER ui title = loc("Associate with an existing account") -%]
+
+[% IF error;
+     WRAPPER error_ui;
+       loc('Incorrect login or password');
+     END;
+   END
+%]
+
+<form method='POST'>
+{{Would you like to associate this authentication method with an existing account?}}
+<label for='username'>{{User}}:</label>
+<input type='text' name='username' id='username' />
+<label for='password'>{{Password}}:</label>
+<input type='password' name='password' id='password' />
+<button class="btn" type='submit' name='skip'>{{Skip this step}}</button>
+<button class="btn" type='submit' name='associate'>{{Associate}}</button>
+</form>
+
+[% END %]
