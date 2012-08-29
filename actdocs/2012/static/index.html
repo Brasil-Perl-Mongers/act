@@ -3,21 +3,25 @@
 <div style="text-align:center;margin: 0px; padding:10px;border-radius:5px;width:440px;background-color:#e6e6e6;overflow:hidden;-moz-border-radius: 5px;-webkit-border-radius: 5px;" >
 <t><pt>Última chamada para palestras! <a href="http://yapcbrasil.org.br/2012/newtalk?language=pt"><br>Submeta sua palestra agora!</a></pt>
 <en>Last call for talks! <a href="http://yapcbrasil.org.br/2012/newtalk?language=en"><br>Submit your talk now!</a></en>
+<es> &iexcl; &Uacute;ltima llamada para charlas! <a href="http://yapcbrasil.org.br/2012/newtalk?language=es"><br>&iexcl;Env&iacute;a tu charla ahora!</es>
 </t>
 </div>
 
 <h1><t>
 <pt>Bem-vindo!</pt>
 <en>Welcome!</en>
+<es>&iexcl;Bienvenido!</es>
 </t></h1>
 
 <p><t>
 <pt>Bem-vindo ao site oficial do YAPC::Brasil 2012. O evento acontecer&aacute; nos dias 19 e 20 de outubro, no <a href="/2012/about/general.html">Centro de Conven&ccedil;&otilde;es Frei Caneca, S&atilde;o Paulo, SP</a>. Esperamos voc&ecirc; l&aacute;!</pt>
 <en>Welcome to the official YAPC::Brasil 2012 website. The event will be held on October 19th and 20th, at the <a href="/2012/about/general.html">Frei Caneca Convention Center, Sao Paulo, SP</a>. We are waiting for you!</en>
+<es>Bienvenido al sitio oficial de YAPC::Brasil 2012. Este a&ntilde;o el evento se realizar&aacute; los d&iacute;as 19 y 20 de Octubre en el <a href="/2012/about/general.html">Centro de Convenciones Frei Caneca, Sao Paulo, SP</a>. &iexcl;Te estamos esperando!</es>
 </t></p>
 <p><t>
 <pt>No YAPC::Brasil voc&ecirc; participar&aacute; de oficinas, palestras e debates sobre o estado da arte das práticas e tecnologias voltadas para captura, armazenamento, busca, compartilhamento, análise, e visualizaçãe grandes quantidades de dados.</pt>
 <en>At the conference you'll take part in workshops, talks and debates on state of the art practices and technologies for capture, storage, search, share, analysis and visualization of data.</en>
+<es>En YAPC::Brasil podr&aacute;s participar de talleres, charlas y debates sobre el estado del arte de pr&aacute;cticas y tecnolog&iacute;as utilizadas para capturar, almacenar, buscar, compartir, analizar, y visualizar grandes vol&uacute;menes de datos.</es>
 </t></p>
 
 [% news = global.news(3);
@@ -31,7 +35,7 @@
 [% FOREACH item = news %]
 <div class="news-entry">
  <h3 class="news-header">
-  <span class="news-date"><t><pt>[% date_format(item.datetime, '%d/%m/%Y') %]</pt><en>[% date_format(item.datetime, '%b %d, %Y') %]</en></t></span>
+  <span class="news-date"><t><pt>[% date_format(item.datetime, '%d/%m/%Y') %]</pt><en>[% date_format(item.datetime, '%b %d, %Y') %]</en><es>[% date_format(item.datetime, '%d/%m/%Y') %]</es></t></span>
   <span class="news-title">[% item.title %]</span>
  </h3>
  <div class="news-text">
@@ -42,7 +46,7 @@
 
 [% IF more %]
 <p>
- <a href="[% make_uri('news') %]" class="news-link"><t><pt>posts anteriores</pt><en>previous posts</en></t></a>
+ <a href="[% make_uri('news') %]" class="news-link"><t><pt>posts anteriores</pt><en>previous posts</en><es>posts anteriores</es></t></a>
 </p>
 [% END %]
 
