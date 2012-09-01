@@ -1,1 +1,1 @@
-[% content %]<br />
+<li>[% content %]</li>
