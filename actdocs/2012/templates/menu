@@ -1,23 +1,13 @@
+<ul class="nav nav-list">
 [% FILTER collapse %]
-<div id="menu-footer">
 [% PROCESS menus/user %]
-</div>
-<div id="menu-footer">
 [% PROCESS menus/users %]
-</div>
-<div id="menu-footer">
-{{Talk}}<br>
-[% PROCESS menus/talks %]
-</div>
-<div id="menu-footer">
-{{News}}<br>
 [% PROCESS menus/news %]
 [% PROCESS menus/wiki %]
+[% PROCESS menus/talks %]
 [% PROCESS menus/events %]
-</div>
-<div id="menu-footer">
 [% PROCESS menus/treasurer %]
 [% PROCESS menus/admin %]
 [% PROCESS menus/act_confs %]
-</div>
 [% END %]
+</ul>

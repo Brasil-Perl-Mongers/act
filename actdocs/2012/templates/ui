@@ -15,15 +15,366 @@
 [%- IF title -%]<title>[% title  %]</title>[%- END -%]
 
 <!-- CSS Stylesheets -->
-<link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'style.css') %]" />
-<link rel="stylesheet" type="text/css" href="/css/schedule.css" />
+<!-- <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'style.css') %]" /> -->
+<!-- <link rel="stylesheet" type="text/css" href="/css/act-base.css" /> -->
+<!-- <link rel="stylesheet" type="text/css" href="/css/schedule.css" /> -->
 
-<meta http-equiv="X-UA-Compatible" content="IE=9" />
-<meta name="description" content="">
-<meta name="keywords" content="">
+<!-- Favorite icon -->
+<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+
+<link href="/2012/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+<link href="/2012/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- debugging -->
+<style>
+
+  #header-logo {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+  }
+
+#footer img {
+  float: left;
+  padding-top: 4px;
+  padding-right: 10px;
+}
+#footer {
+  border-bottom-right-radius:15px;
+  -moz-border-bottom-right-radius:15px;
+  -webkit-border-bottom-right-radius: 15px;
+  border-bottom-left-radius:15px;
+  -moz-border-bottom-left-radius:15px;
+  -webkit-border-bottom-left-radius: 15px;
+}
+#footer #copy {
+  float: left;
+  text-align: left;
+  padding-right: 20px;
+  width: 100%;
+}
+
+#footer .title {
+  font-size: 14pt;
+  font-family: "trebuchet ms", tahoma;
+  font-weight: bolder;
+}
+
+#footer {
+background-color: #E6E6E6;
+font-size: 10pt;
+padding: 20px;
+text-align: center;
+overflow: hidden;
+}
+
+
+
+  .logos {
+    background-color: #eee;
+  }
+
+  .logos li.span6 img,
+  .logos li.span5 img,
+  .logos li.span4 img,
+  .logos li.span3 img,
+  .logos li.span2 img {
+    width: auto;
+  }
+
+  /* diamond sponsors */
+  .logos li.span6 a.thumbnail,
+  .logos li.span5 a.thumbnail,
+  .logos li.span4 a.thumbnail,
+  .logos li.span3 a.thumbnail,
+  .logos li.span2 a.thumbnail {
+    border: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+
+  /* diamond sponsors */
+  .logos li.span6 img {
+    height: 230px;
+  }
+
+  /* platinum sponsors */
+  .logos li.span5 img {
+    height: 170px;
+  }
+  
+  /* silver sponsors */
+  .logos li.span4 img {
+    height: 120px;
+  }
+
+  /* gold sponsors */
+  .logos li.span3 img {
+    height: 100px;
+  }
+
+  /* bronze sponsors */
+  .logos li.span2 img {
+    height: 70px;
+  }
+
+body {
+  background: #0A0A0A url('http://www.yapcbrasil.org.br/2012/images/bg_body.gif') repeat-x top left;
+  padding-top: 1Em;
+  font-family: "TexGyreAdventor", "trebuchet ms", verdana;
+}
+
+.cidade p {
+  font-family: "trebuchet ms", "TexGyreAdventor";
+  font-style: italic;
+  color: #8F0000;
+  font-size: 16pt;
+  padding: 5px 5px;
+}
+
+#social_link_twitter, #social_link_rss {
+  width: 27px;
+  height: 27px;
+  padding: 0px;
+  background: url(http://www.yapcbrasil.org.br/2012/images/social_tile.png);
+  text-indent: -9999;
+  margin-left: 3px;
+  padding-top: 0px;
+  padding-bottom:0px;
+  margin-top:2px;
+  margin-bottom:2px;
+}
+#social_link_twitter{
+  background-position: left;
+}
+#social_link_rss{
+  background-position: right;
+  margin-right: 8px;
+}
+
+
+.container {
+  margin: 20px auto;
+  background: #FFF;
+  border-radius:15px;
+  -moz-border-radius:15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius-topleft: 60px;
+  -webkit-border-top-left-radius: 60px;
+  border-top-left-radius-:60px;
+  -moz-border-radius-topleft:60px;
+  -webkit-border-top-left-radius:60px;
+  box-shadow: 0px 0px 20px #000;
+  -moz-box-shadow: 0px 0px 20px #000;
+  -webkit-box-shadow: 0px 0px 20px #0000;
+}
+
+.tema {
+  -webkit-font-smoothing: antialiased;
+  font-family: "TexGyreAdventor", "trebuchet ms", "verdana";
+  font-size: 16pt;
+  font-weight: bolder;
+  color: white;
+  background-color: #8F0000;
+  line-height: 10pt;
+  
+}
+
+.tema p {
+  font-size: 24pt;
+  font-weight: bolder;
+  margin: 10px;
+  color: white;
+  background-color: #8F0000;
+  padding: 0px;
+  line-height: 22pt;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.logo-title {
+  font-family: "TexGyreAdventor", "trebuchet ms", verdana;
+  color: #666;
+  -webkit-font-smoothing: antialiased;
+  font-size: 12pt;
+  font-style: italic;
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="span12">
+          <div id="header-logo"><a href="/2012/" title="YAPC::Brasil 2012"><img src="/2012/images/logo.png" border="0" alt="YAPC::Brasil 2012"></a></div>
+          <ul class="nav nav-pills pull-left">
+            <li><a href="/2012/about/index.html"><t><pt>Sobre</pt><en>About</en></t></a></li>
+            <li><a href="/2012/wiki"><t><pt>Wiki</pt><en>Wiki</en></t></a></li>
+            <li><a href="/2012/about/tracks.html"><t><pt>Trilhas</pt><en>Tracks</en></t></a></li>
+            <li><a href="/2012/about/general.html"><t><pt>Local</pt><en>Venue</en></t></a></li>
+
+            <!-- menu para talks -->
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <t><pt>Programação</pt><en>Talks</en></t>
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                [% PROCESS menus/talks %]
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Conference <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                [% PROCESS menus/users %]
+                [% PROCESS menus/treasurer %]
+                [% PROCESS menus/admin %]
+                [% PROCESS menus/act_confs %]
+              </ul>
+            </li>
+
+            <li><a href="/2012/about/sponsorship.html"><t><pt>Patrocine!</pt><en>Be a sponsor!</en></t></a></li>
+            <li><a href="/2012/about/expedient.html"><t><pt>Contato</pt><en>Contact</en></t></a></li>
+
+          </ul>
+        </div>
+
+        <div class="span6">
+          <ul class="nav nav-pills pull-right">
+            [% FOREACH lang = global.languages %]
+              <li>
+                <a href="[% lang.uri %]" class="social_link" 
+                  [% IF lang.name == 'English' -%] alt="View in English">
+                    <img src="/2012/images/en.png" align="absmiddle"/>
+                  [%- ELSE -%] alt="Ver em Português">
+                    <img src="/2012/images/pt.png" align="absmiddle"/>
+                  [%- END -%]
+                </a>
+              </li>
+            [% END %]
+
+            [% IF global.request.user %]
+              <li><a href="/2012/logout" class="social_link">Logout</a></li>
+            [% ELSE %]
+              <li><a href="/2012/main" class="social_link">Login</a></li>
+              <li><a href="/2012/register" class="social_link"><t><pt>Cadastre-se</pt><en>Register</en></t></a></li>
+            [% END %]
+            <li><a id="social_link_twitter" href="https://twitter.com/#!/yapcbrasil" class="social social_link twitter" target="_blank"></a></li>
+            <li><a id="social_link_rss" href="/2012/atom/pt.xml" class="rss"></a></li>
+          </ul>
+          <img style="float:right; margin:0px 0px" src="/2012/images/saopaulo.png" border="0">
+          <div style="float:right" class="cidade">
+            <p><t><en>October 19th and 20th</en><pt>29 e 30 de Outubro</pt></t></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="span18 tema">
+          <p><t><pt>A revolução dos dados</pt><en>The revolution of data</en></t></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+          <div class="well well-small">
+            [% content %]
+          </div>
+        </div><!--/span-->
+
+      <div class="logos span6">
+              <div class="logo-title"><t><pt>Patrocinadores Diamond</pt><en>Diamond Sponsors</en></t></div>
+              <ul class="thumbnails">
+                <li class="span6">
+                  <a class="thumbnail" href="http://www.w3c.br/" target="_blank">
+                    <img title="W3C" src="/2012/images/patrocinadores/logo-w3c-brasil.jpg">
+                  </a>
+                </li>
+              </ul>
+              <div class="logo-title"><t><pt>Patrocinadores Platinum</pt><en>Platinum Sponsors</en></t></div>
+              <ul class="thumbnails">
+                <li class="span5 offset1">
+                  <a class="thumbnail" href="http://duckduckgo.com/" target="_blank"><img title="DuckDuckGo" src="/2012/images/patrocinadores/logo-duckduckgo.png"></a>
+                </li>
+                <li class="span5 offset1">
+                  <a class="thumbnail" href="http://www.estantevirtual.com.br" target="_blank"><img title="Estante Virtual" src="/2012/images/patrocinadores/logo-ev.png"></a>
+                </li>
+              </ul>
+              <div class="logo-title"><t><pt>Patrocinadores Prata</pt><en>Silver Sponsors</en></t></div>
+              <ul class="thumbnails">
+                <li class="span4 offset2">
+                  <a class="thumbnail" href="http://www.aware.com.br" target="_blank"><img title="Aware" src="/2012/images/patrocinadores/logo_aware.jpg"></a>
+                </li>
+              </ul>
+              <div class="logo-title"><t><pt>Patrocinadores Ouro</pt><en>Gold Sponsors</en></t></div>
+              <ul class="thumbnails">
+                <li class="span3">
+                  <a class="thumbnail" href="http://www.enlightenedperl.org"><img title="Enlightenedperl" src="/2012/images/patrocinadores/logo-epo.png"></a>
+                </li>
+              </ul>
+              <div class="logo-title"><t><pt>Patrocinadores Bronze</pt><en>Bronze Sponsors</en></t></div>
+              <ul class="thumbnails">
+                <li class="span3">
+                  <a class="thumbnail" title="Fila - Sistema de Atendimento"  href="http://www.softwarepublico.gov.br/ver-comunidade?community_id=11809545" target="_blank"><img alt="Fila - Sistema de Atendimento" title="Fila - Sistema de Atendimento" src="/2012/images/patrocinadores/logo-fila.jpg"></a>
+                </li>
+                <li class="span3">
+                  <a class="thumbnail" title="Dyn - Dynamic Network Services"  href="http://www.dyn.com" target="_blank"><img title="Dyn" alt="Dyn - Dynamic Network Services" src="/2012/images/patrocinadores/logo_dyn.jpg"></a>
+                </li>
+                <li class="span3">
+                  <a class="thumbnail" title="b-datum" href="http://www.b-datum.com" target="_blank"><img title="b-datum" alt="b-datum" src="/2012/images/patrocinadores/logo_bdatum.jpg"></a>
+                </li>
+              </ul>
+        </div><!--/logos span6 -->
+      </div><!--/row-->
+      <div class="row">
+        <div class="span18">
+
+          <div id="footer">
+              <div id="copy">
+                  <img src="/2012/images/logo_footer.png" border="0">
+                  <span class="title">YAPC::Brasil</span><br />
+                    <t><pt>Conferência internacional realizada pela comunidade Perl brasileira com o apoio da comunidade Perl internacional.<br> A edição 2012 é realizada pela <a href="http://sap-paulo.pm.org">São Paulo Perl Mongers</a></pt>
+                       <en>International conference organized by the Brazillian Perl community with the support of the international Perl community.<br> The 2012 edition is held by <a href="http://sap-paulo.pm.org">São Paulo Perl Mongers</a></en>
+                    </t>
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+      </div>
+    </div><!--/.fluid-container-->
+
 
 <!-- JavaScript sugar -->
-<script type="text/javascript" src="[%  make_uri_info('js', 'jquery-1.6.2.min.js') %]" ></script>
+    <script type="text/javascript" src="/2012/jquery-1.8.0.min.js"></script>
+    <script src="/2012/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="/2012/bootstrap/js/bootstrap-transition.js"></script>
+    <script src="/2012/bootstrap/js/bootstrap-alert.js"></script>
+    <script src="/2012/bootstrap/js/bootstrap-modal.js"></script>
+    <script src="/2012/bootstrap/js/bootstrap-dropdown.js"></script>
+    <script src="/2012/bootstrap/js/bootstrap-scrollspy.js"></script>
+    <script src="/2012/bootstrap/js/bootstrap-tab.js"></script>
+    <script src="/2012/bootstrap/js/bootstrap-tooltip.js"></script>
+    <script src="/2012/bootstrap/js/bootstrap-popover.js"></script>
+    <script src="/2012/bootstrap/js/bootstrap-button.js"></script>
+    <script src="/2012/bootstrap/js/bootstrap-collapse.js"></script>
+    <script src="/2012/bootstrap/js/bootstrap-carousel.js"></script>
+    <script src="/2012/bootstrap/js/bootstrap-typeahead.js"></script>
+
 <script type="text/javascript" src="/js/act.js"></script>
 
 <script type="text/javascript">
@@ -41,110 +392,5 @@ _gaq.push(['_trackPageview']);
 
 </script>
 
-
-</head>
-
-<BODY>
-<div id="wrapper">
-	<div id="top">
-    	<div id="logo"><a href="/2012"><img src="/2012/images/logo.png" border="0" /></a></div>
-    	<div id="menu">
-        	<ul class="menu">
-            	<li class="item"><a href="/2012/wiki"><t><pt>Wiki</pt><en>Wiki</en></t></a></li>
-            	<li class="item"><a href="/2012/about/index.html"><t><pt>Sobre</pt><en>About</en></t></a></li>
-            	<li class="item"><a href="/2012/about/tracks.html"><t><pt>Trilhas</pt><en>Tracks</en></t></a></li>
-            	<li class="item"><a href="/2012/about/general.html"><t><pt>Local</pt><en>Venue</en></t></a></li>
-		<li class="item"><a href="/2012/about/sponsorship.html"><t><pt>Patrocine!</pt><en>Be a sponsor!</en></t></a></li>
-            	<li class="item"><a href="/2012/about/expedient.html"><t><pt>Contato</pt><en>Contact</en></t></li>
-            </ul>
-        </div>
-    	<div id="social">
-    [% FOREACH lang = global.languages %]
-       <a href="[% lang.uri %]" class="social_link" [% IF lang.name == 'English' -%] alt="View in English"><img src="/2012/images/en.png" />
-                                                    [%- ELSE -%] alt="Ver em Português"><img src="/2012/images/pt.png" />
-                                                    [%- END -%]
-       </a>
-    [% END %]
-		[% IF global.request.user %]
-			<a href="/2012/logout" class="social_link">Logout</a>
-		[% ELSE %]
-			<a href="/2012/main" class="social_link">Login</a>
-			<a href="/2012/register" class="social_link"><t><pt>Cadastre-se</pt><en>Register</en></t></a>
-		[% END %]
-		<a href="https://twitter.com/#!/yapcbrasil" class="twitter" target="_blank"></a>
-        <a href="/2012/atom/pt.xml" class="rss"></a>
-	</div>
-    	<div id="saopaulo"><img src="/2012/images/saopaulo.png" border="0" /></div>
-    	<div id="data"><t><pt>19 e 20 de Outubro</pt><en>October 19th and 20th</en></t></div>
-    </div>
-    <div class="title2">
-    <p class="title2"><t><pt>A revolução dos dados</pt><en>The revolution of data</en></t></p>
-   </div>
-
-	<div id="menu-side">
-	<div class="menu">
-	     [% PROCESS menu %]
-	</div>
-	</div>
- 
-	<div id="content">
-		
-		[% content %]
-	</div>
-	<div id="content-side">
-    	<div class="title"><t><pt>Patrocinadores</pt><en>Sponsors</en></t></div>
-        <div class="patrocinador diamond">
-            <a href="http://www.w3c.br/" target="_blank"><img title="W3C" style="margin: 10px 0px;" src="/2012/images/patrocinadores/logo-w3c-brasil.jpg" border="0"></a>
-        </div>
-        <div class="patrocinador platinum"><a href="http://duckduckgo.com/" target="_blank"><img title="DuckDuckGo" src="/2012/images/patrocinadores/logo-duckduckgo.png" border="0"></a></div>
-        <div class="patrocinador platinum"><a href="http://www.estantevirtual.com.br" target="_blank"><img title="Estante Virtual" src="/2012/images/patrocinadores/logo-ev.png" border="0"></a></div>
-	<div class="patrocinador silver" style="width: 200px; height: 60px;"><a href="http://www.aware.com.br" target="_blank"><img style="width: 115px; height: 50px;" title="Aware" src="/2012/images/patrocinadores/logo_aware.jpg" border="0"></a></div>
-        <div class="patrocinador gold" style="height: 140px;"><a href="http://www.enlightenedperl.org"><img style="margin-top: 15px; max-height: 130px;" title="Enlightenedperl" src="/2012/images/patrocinadores/logo-epo.png" ></a></div>
-	<div class="patrocinador bronze"><a title="Fila - Sistema de Atendimento"  href="http://www.softwarepublico.gov.br/ver-comunidade?community_id=11809545" target="_blank"><img alt="Fila - Sistema de Atendimento" title="Fila - Sistema de Atendimento" src="/2012/images/patrocinadores/logo-fila.jpg" border="0"></a></div>
-	<div class="patrocinador bronze"><a title="Dyn - Dynamic Network Services"  href="http://www.dyn.com" target="_blank"><img style="margin: 10px 0px;" title="Dyn" alt="Dyn - Dynamic Network Services" src="/2012/images/patrocinadores/logo_dyn.jpg" border="0"></a></div>
-	<div class="patrocinador bronze" style="height: 60px; width: 200px"><a title="b-datum" href="http://www.b-datum.com" target="_blank"><img style="max-height: 50px; max-width: 190px;" title="b-datum" alt="b-datum" src="/2012/images/patrocinadores/logo_bdatum.jpg" border="0"></a></div>
-	<div class="clear"></div>
-    	<div class="title"><t><pt>Apoio</pt><en>Partners</en></t></div>
-        <div class="patrocinador apoio-left">
-            <a href="http://cgi.br/" target="_blank"><img title="cgi.br" src="/2012/images/patrocinadores/logo-cgi.jpg" border="0"></a>
-		</div>
-        <div class="patrocinador apoio-right">
-            <a href="http://nic.br/" target="_blank"><img title="nic.br" src="/2012/images/patrocinadores/logo-nic.jpg" border="0"></a>
-	</div>
-        <div class="patrocinador apoio-left">
-            <a href="http://oreilly.com/" target="_blank"><img title="O'Reilly" src="/2012/images/patrocinadores/logo-oreilly.jpg" border="0"></a>
-		</div>
-        <div class="gap"></div>
-
-        <div class="clear"></div>
-
-	<div class="title"><t><pt>Doe agora</pt><en>Donate now</en></t></div>
-	<div> 
-<form method='post' action='https://www.moip.com.br/Process.do'>
-<input type='hidden' name='method' value='donation'/>
-<input type='hidden' name='encrypted' value='J7zyx/kM+cXn49AmZ9o+xQ=='/>
-<input type='hidden' name='type' value='2'/>
-<input type='image' name='submit' src='https://www.moip.com.br/imgs/buttons/bt_doar_c04_e03.gif' alt='YAPC::Brasil 2012' border='0' />
-</form>
-	</div>
-        
-	</div>
-
-    <div class="clear"></div>
-    
-	<div id="footer">
-    	<div id="copy">
-        	<img src="/2012/images/logo_footer.png" border="0">
-        	<span class="title">YAPC::Brasil</span><br />
-            <t><pt>Conferência internacional realizada pela comunidade Perl brasileira com o apoio da comunidade Perl internacional.<br> A edição 2012 é realizada pela <a href="http://sap-paulo.pm.org">São Paulo Perl Mongers</a></pt>
-               <en>International conference organized by the Brazillian Perl community with the support of the international Perl community.<br> The 2012 edition is held by <a href="http://sap-paulo.pm.org">São Paulo Perl Mongers</a></en>
-            </t>
-        </div>
-        <div class="menu">
-	     [% PROCESS menu %]
-	     </div>
-    </div>
-</div>
-</BODY>
+</body>
 </html>
-
