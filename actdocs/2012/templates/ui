@@ -32,6 +32,7 @@
 
     <!-- debugging -->
     <style>
+
       #header-logo {
       padding-top: 30px;
       padding-bottom: 20px;
@@ -74,52 +75,38 @@
       overflow: hidden;
       }
 
-      .logos {
-      background-color: #eee;
-      }
-
-      .logos li.span6 img,
-      .logos li.span5 img,
-      .logos li.span4 img,
-      .logos li.span3 img,
-      .logos li.span2 img {
-      width: auto;
-      }
-
-      /* diamond sponsors */
-      .logos li.span6 a.thumbnail,
-      .logos li.span5 a.thumbnail,
-      .logos li.span4 a.thumbnail,
-      .logos li.span3 a.thumbnail,
-      .logos li.span2 a.thumbnail {
+      #sponsor a {
       border: none;
-      -moz-box-shadow: none;
+      background-color: white;
+      display: block;
+      float: left;
       box-shadow: none;
+      -moz-box-shadow: none;
       }
 
-      /* diamond sponsors */
-      .logos li.span6 img {
-      height: 230px;
+      #diamond img {
+      max-height: 220px;
+      max-width: 330px;
       }
 
-      /* platinum sponsors */
-      .logos li.span5 img {
-      height: 170px;
+      #platinum img {
+      max-height: 220px;
+      max-width: 220px;
       }
       
-      /* silver sponsors */
-      .logos li.span4 img {
-      height: 120px;
+      #silver img {
+      max-width: 220px;
+      max-height: 120px;
       }
 
-      /* gold sponsors */
-      .logos li.span3 img {
-      height: 100px;
+      #gold img {
+      max-width: 120px;
+      max-height: 120px;
       }
 
-      /* bronze sponsors */
-      .logos li.span2 img {
-      height: 70px;
+      #bronze img {
+      max-width: 120px;
+      max-height: 60px;
       }
 
       body {
@@ -189,7 +176,7 @@
       font-weight: bolder;
       margin: 10px;
       color: white;
-      background-color: #8F0000;
+     background-color: #8F0000;
       padding: 0px;
       line-height: 22pt;
       border-radius: 5px;
