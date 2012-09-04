@@ -215,10 +215,9 @@
 	    <a href="/2012/" title="YAPC::Brasil 2012"><img src="/2012/images/logo.png" border="0" alt="YAPC::Brasil 2012" /></a>
 	  </div>
 	  <ul class="nav nav-pills pull-left">
-	    <li class="dropdown-toggle">
+	    <li class="dropdown">
 	      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-		<t><pt>Informações</pt><en>Information</en><es>Información</es></t><b class="caret"></b>
-	      </a>
+		<t><pt>Informações</pt><en>Information</en><es>Información</es></t><b class="caret"></b></a>
 		<ul class="dropdown-menu">						       
 		  <li><a href="/2012/wiki"><t><pt>Wiki</pt><en>Wiki</en></t></a></li>
 		  <li><a href="/2012/about/index.html"><t><pt>Sobre</pt><en>About</en></t></a></li>
