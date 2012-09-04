@@ -275,11 +275,9 @@
       </div>
       <div class="row">
 	<div class="span12">
-	  <div class="well well-small">
-	    [% content %]
-	  </div>
+	  [% content %]
 	</div><!--/span-->
-	<div id="sponsor" class="span6">
+	<div id="sponsor" class="well span6">
 	  <div id="diamond">
 	    <p><t><pt>Patrocinadores Diamond</pt><en>Diamond Sponsors</en></t></p>
 	    <a href="http://www.w3c.br/" target="_blank"><img title="W3C" src="/2012/images/patrocinadores/logo-w3c-brasil.jpg" /></a>
@@ -309,10 +307,8 @@
       <div class="row">
 	<div class="span18">	    
 	  <div id="footer">
-	    <div id="copy">
-	      <img src="/2012/images/logo_footer.png" border="0" />
-	      <span class="title">YAPC::Brasil</span>
-	    </div>
+	    <img src="/2012/images/logo_footer.png" border="0" /><br />
+	    YAPC::Brasil<br />
 	    <t>
 	      <pt>Conferência internacional realizada pela comunidade Perl brasileira com o apoio da comunidade Perl internacional.<br /> 
 		A edição 2012 é realizada pela <a href="http://sao-paulo.pm.org">São Paulo Perl Mongers</a></pt>
