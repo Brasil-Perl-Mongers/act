@@ -43,6 +43,7 @@
       padding-top: 4px;
       padding-right: 10px;
       }
+
       #footer {
       border-bottom-right-radius:15px;
       -moz-border-bottom-right-radius:15px;
@@ -51,6 +52,7 @@
       -moz-border-bottom-left-radius:15px;
       -webkit-border-bottom-left-radius: 15px;
       }
+
       #footer #copy {
       float: left;
       text-align: left;
@@ -146,9 +148,11 @@
       margin-top:2px;
       margin-bottom:2px;
       }
+
       #social_link_twitter{
       background-position: left;
       }
+
       #social_link_rss{
       background-position: right;
       margin-right: 8px;
@@ -178,7 +182,6 @@
       color: white;
       background-color: #8F0000;
       line-height: 10pt;
-      
       }
 
       .tema p {
@@ -274,10 +277,12 @@
 	</div>
       </div>
       <div class="row">
+
 	<div class="span12">
 	  [% content %]
-	</div><!--/span-->
-	<div id="sponsor" class="well span6">
+	</div>
+
+	<div id="sponsor" class="span6">
 	  <div id="diamond">
 	    <p><t><pt>Patrocinadores Diamond</pt><en>Diamond Sponsors</en></t></p>
 	    <a href="http://www.w3c.br/" target="_blank"><img title="W3C" src="/2012/images/patrocinadores/logo-w3c-brasil.jpg" /></a>
@@ -302,7 +307,8 @@
 	    <a title="b-datum" href="http://www.b-datum.com" target="_blank"><img title="b-datum" alt="b-datum" src="/2012/images/patrocinadores/logo_bdatum.jpg" /></a>
 	  </div>
 	</div>
-      </div><!--/row-->	
+
+      </div>
 
       <div class="row">
 	<div class="span18">	    
