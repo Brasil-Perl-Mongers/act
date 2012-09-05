@@ -86,6 +86,7 @@
       heigth: auto;
       clear: both;
       text-align: center;
+      overflow: hidden;
       }
 
       #sponsor p {
