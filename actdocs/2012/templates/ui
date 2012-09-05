@@ -81,7 +81,9 @@
       #silver div,
       #bronze div,
       #support div {
+      float: left;
       width: 100%;
+      heigth: auto;
       clear: both;
       text-align: center;
       }
