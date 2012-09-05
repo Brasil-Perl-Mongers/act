@@ -75,12 +75,17 @@
       overflow: hidden;
       }
       
+      #sponsor div {
+      overflow: hidden;
+      }
+
       #diamont div,
       #platinum div,
       #gold div,
       #silver div,
       #bronze div,
       #support div {
+      display: block;
       float: left;
       width: 100%;
       heigth: auto;
