@@ -206,7 +206,7 @@
       font-weight: bolder;
       margin: 10px;
       color: white;
-     background-color: #8F0000;
+      background-color: #8F0000;
       padding: 0px;
       line-height: 22pt;
       border-radius: 5px;
@@ -220,6 +220,14 @@
       -webkit-font-smoothing: antialiased;
       font-size: 12pt;
       font-style: italic;
+      }
+
+      .content {
+      font-family: "TexGyreAdventor", "trebuchet ms", verdana;
+      color: #666;
+      -webkit-font-smoothing: antialiased;
+      margin: 10px;
+      padding: 10px;
       }
 
     </style>
@@ -302,7 +310,9 @@
       <div class="row">
 
 	<div class="span12">
-	  [% content %]
+	  <div class="content">
+	    [% content %]
+	  </div>
 	</div>
 
 	<div id="sponsor" class="span6">
