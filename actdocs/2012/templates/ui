@@ -248,6 +248,9 @@
 	    <a href="/2012/" title="YAPC::Brasil 2012"><img src="/2012/images/logo.png" border="0" alt="YAPC::Brasil 2012" /></a>
 	  </div>
 	  <ul class="nav nav-pills pull-left">
+	    <li>
+	      <a title="Inscrição" href="/2012/inscricao.html">Inscrição</a>
+	    </li>
 	    <li class="dropdown">
 	      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
 		<t><pt>Informações</pt><en>Information</en><es>Información</es></t><b class="caret"></b></a>
