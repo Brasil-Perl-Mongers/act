@@ -111,7 +111,7 @@
 
       #silver a,
       #bronze a,
-      #support {
+      #support a {
       width: 50%;
       text-align: center;
       }
