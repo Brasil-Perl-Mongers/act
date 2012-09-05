@@ -102,7 +102,6 @@
       -moz-box-shadow: none;
       }
 
-
       #diamond a {
       width: 100%;
       height: 320px;
@@ -137,32 +136,32 @@
       #diamond img {
       max-height: 300px;
       max-width: 300px;
-      margin: 10px;
+      margin: 10px auto;
       }
 
       #platinum img {
       max-height: 200px;
       max-width:  300px;
-      margin: 10px;
+      margin: 10px auto;
       }
       
       #gold img {
       max-height: 100px;
       max-width:  300px;
-      margin: 10px;
+      margin: 10px auto;
       }
 
       #silver img,
       #support img {
       max-width: 150px;
       max-height: 100px;
-      margin: 10px;
+      margin: 10px auto;
       }
 
       #bronze img {
       max-width: 150px;
       max-height: 50px;
-      margin: 10px;
+      margin: 10px auto;
       }
 
       body {
