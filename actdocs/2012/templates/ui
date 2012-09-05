@@ -119,27 +119,32 @@
       #diamond img {
       max-height: 220px;
       max-width: 330px;
+      margin: 10px;
       }
 
       #platinum img {
       max-height: 220px;
       max-width: 220px;
+      margin: 10px;
       }
       
       #gold img {
       max-width: 220px;
       max-height: 120px;
+      margin: 10px;
       }
 
       #silver img,
       #support img {
       max-width: 120px;
       max-height: 120px;
+      margin: 10px;
       }
 
       #bronze img {
       max-width: 120px;
       max-height: 60px;
+      margin: 10px;
       }
 
       body {
@@ -350,9 +355,9 @@
       <div class="row">
 	<div class="span18">	    
 	  <div id="footer">
-	    <center><img src="/2012/images/logo_footer.png" border="0" /></center>
-	    <br />
-	    YAPC::Brasil
+	    <div id="copy">
+	    <img src="/2012/images/logo_footer.png" border="0" />
+	    <span class="title">YAPC::Brasil</span>
 	    <br />
 	    <t>
 	      <pt>Conferência internacional realizada pela comunidade Perl brasileira com o apoio da comunidade Perl internacional.<br /> 
@@ -360,6 +365,7 @@
 	      <en>International conference organized by the Brazillian Perl community with the support of the international Perl community.<br />
 		The 2012 edition is held by <a href="http://sao-paulo.pm.org">São Paulo Perl Mongers</a></en>
 	    </t>
+	    </div>
 	  </div>
 	</div>
       </div>
