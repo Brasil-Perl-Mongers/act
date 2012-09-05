@@ -21,11 +21,11 @@ body, td, div, input, textarea{
 	-webkit-font-smoothing: antialiased;
 }
 
-body{
+body {
 	background: #0a0a0a url('../images/bg_body.gif') repeat-x top left;	
-	margin: 0;
-	padding: 0;
-	*text-align: center;
+	margin: 0.5em;
+	padding: 0.5em;
+	text-align: center;
 }
 
 a, a:visited{

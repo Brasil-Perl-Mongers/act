@@ -141,8 +141,8 @@
 
       body {
       background: #0A0A0A url('http://www.yapcbrasil.org.br/2012/images/bg_body.gif') repeat-x top left;
-      padding: 1em;
-      font-family: "TexGyreAdventor", "trebuchet ms", verdana;
+      padding: 0.5em;
+      font-family: "TexGyreAdventor", "Trebuchet MS", Verdana;
       }
 
       .cidade p {
