@@ -79,7 +79,8 @@
       #platinum div,
       #gold div,
       #silver div,
-      #bronze div {
+      #bronze div,
+      #support div {
       width: 100%;
       clear: both;
       text-align: center;
@@ -109,7 +110,7 @@
       }
 
       #silver a,
-      #bronze a.
+      #bronze a,
       #support {
       width: 50%;
       text-align: center;
