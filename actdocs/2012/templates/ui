@@ -109,7 +109,8 @@
       }
 
       #silver a,
-      #bronze a {
+      #bronze a.
+      #support {
       width: 50%;
       text-align: center;
       }
@@ -129,7 +130,8 @@
       max-height: 120px;
       }
 
-      #silver img {
+      #silver img,
+      #support img {
       max-width: 120px;
       max-height: 120px;
       }
