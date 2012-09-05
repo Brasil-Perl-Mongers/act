@@ -85,7 +85,7 @@
       #silver div,
       #bronze div,
       #support div {
-      display: block;
+      display: table;
       float: left;
       width: 100%;
       heigth: auto;
@@ -104,7 +104,8 @@
       #sponsor a {
       border: none;
       background-color: white;
-      display: block;
+      display: table-cell;
+      vertical-align: middle;
       float: left;
       box-shadow: none;
       -moz-box-shadow: none;
