@@ -62,9 +62,9 @@
      <option value="[% d.ymd %]"[% ' selected="selected"' IF datetime.ymd == d.ymd %]>[% d.ymd %]</option>
    [% END %]
     </select>
-   {{Time}}
+<label>{{Time}}</label>
     <input type="text" name="time" value="[% datetime.strftime('%H:%M') %]" size="5" maxlength="5" />
-   {{Room}}
+<label>{{Room}}</label>
     <select name="room">
      <option value=""[% ' selected="selected"' UNLESS room %] />
     [% FOREACH r = rooms.keys.sort %]
