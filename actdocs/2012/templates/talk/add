@@ -148,6 +148,7 @@
        [% FOREACH levelname = global.config.talks_levels_names %]
          <option value="[% loop.count %]"[% ' selected="selected"' IF level == loop.count %]>[% levelname %]</option>
        [% END %]
+  </select>
 [% END %]
 
 <label>{{Comments}}</label>
