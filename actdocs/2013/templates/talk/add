@@ -1,0 +1,186 @@
+[% WRAPPER ui title = loc("Submit/Edit a talk") %]
+
+<script type="text/javascript">
+	$( function(){
+		$('#record_talk_ok').change( function() {
+			if ( this.checked )
+				$('#opt_out_reason_row').hide();
+			else
+				$('#opt_out_reason_row').show();
+		});
+	});
+</script>
+
+[% PROCESS error
+   msgs = {
+     ERR_USER           => loc("You must specify a user"),
+     ERR_TITLE          => loc("You must enter a title for the talk"),
+     ERR_ABSTRACT       => loc("You must provide an abstract"),
+     ERR_DATE           => loc("The supplied date is invalid"),
+     ERR_TIME           => loc("The supplied time is invalid"),
+     ERR_DATERANGE      => loc("The date/time is out of range"),
+     ERR_DURATION       => loc("Please choose a duration"),
+     ERR_URL_ABSTRACT   => loc("Abstract URL is not a valid URL"),
+     ERR_URL_TALK       => loc("Talk URL is not a valid URL"),
+     ERR_ROOM           => loc("Incorrect room submitted"),
+     ERR_LEVEL          => loc("Please choose a target audience"),
+     ERR_LANG           => loc("Incorrect language"),
+  }
+%]
+
+<form method="POST" action="[% global.request.r.uri %]">
+
+[% IF return_url %]
+<input type="hidden" name="return_url" value="[% return_url %]" />
+[% END %]
+
+[% IF talk_id %]
+<input type="hidden" name="talk_id" value="[% talk_id %]" />
+<p> {{View}} <a href="[% make_uri_info('talk', talk_id) %]" >[% title %]</a> </p>
+
+<label class="checkbox">
+  <input type="checkbox" name="delete" />
+  {{Delete this talk}}
+</label>
+[% END %]
+
+[% IF global.request.user.is_talks_admin %]
+<label>{{User}}</label>
+    <select name="user_id">
+    [% uid = user_id ? user_id : global.request.user.user_id %]
+    [% FOREACH u=users %]
+      <option value="[% u.user_id %]"[% ' selected="selected"' IF u.user_id == uid %]>
+        [% u.first_name %] [% u.last_name %]
+      </option>
+    [% END %]
+    </select>
+
+<label>{{Date}}</label>
+   <select name="date">
+     <option value=""[% ' selected="selected"' UNLESS datetime %] />
+   [% FOREACH d=dates %]
+     <option value="[% d.ymd %]"[% ' selected="selected"' IF datetime.ymd == d.ymd %]>[% d.ymd %]</option>
+   [% END %]
+    </select>
+<label>{{Time}}</label>
+    <input type="text" name="time" value="[% datetime.strftime('%H:%M') %]" size="5" maxlength="5" />
+<label>{{Room}}</label>
+    <select name="room">
+     <option value=""[% ' selected="selected"' UNLESS room %] />
+    [% FOREACH r = rooms.keys.sort %]
+     <option value="[% r %]"[% ' selected="selected"' IF room == r %]>[% rooms.$r %]</option>
+    [% END %]
+    </select>
+[% END %]
+
+<label>{{Title}}</label>
+<input type="text" name="title" value="[% title %]" size="51" maxlength="100" />
+
+[% IF tracks.size != 0 %]
+  [% IF global.request.user.is_talks_admin %]
+  <label>{{Track}}</label>
+   <select name="track_id">
+     <option value=""[% ' selected="selected"' UNLESS track_id %] />
+   [% FOREACH t=tracks %]
+     <option value="[% t.track_id %]"[% ' selected="selected"' IF t.track_id == track_id %]>[% t.title %]</option>
+   [% END %]
+   </select>
+  [% ELSE %]
+   <input type="hidden" name="track_id" value="[% track_id %]" />
+  [% END %]
+[% END %]
+
+
+<label>{{Tags}}</label>
+<input type="text" name="tags" value="[% tags %]" size="51" maxlength="100" />
+
+[% IF global.config.talks_languages %]
+<label>{{Language}}</label>
+<select name="lang" size="1">
+        <option value=""[% ' selected="selected"' UNLESS lang %] />
+      [% FOREACH lg = global.config.talks_languages.keys.sort %]
+        <option value="[% lg %]"[% ' selected="selected"' IF lang==lg %]>[% global.config.talks_languages.$lg %]</option>
+      [% END %]
+  </select>
+[% END %]
+
+  <legend>{{Abstract}}</legend>
+
+  <label>{{(plain text)}}</label>
+  <textarea name="abstract" cols="50" rows="10">[% abstract | form_unescape %]</textarea>
+  <label>{{Abstract URL}}</label>
+  <input type="text" name="url_abstract" value="[% url_abstract %]" size="51" maxlength="256" />
+  <label>{{Talk URL}}</label>
+  <input type="text" name="url_talk" value="[% url_talk %]" size="51" maxlength="256" />
+  <label>{{Duration}}</label>
+  [% IF global.request.user.is_talks_admin %]
+    [% loc("Standard durations for <confname> are:", global.conference.name) %]
+    <span class="help-block">
+      <b>[% global.config.talks_durations.keys.nsort.join('</b>, <b>') %]</b> {{minutes}}
+    </span>
+    <input name="duration" value="[% duration == 'lightning' ? '' : duration %]" size="3" />
+    <input type="checkbox" name="is_lightning"[% ' checked' IF duration=='lightning' %] />
+    <span class="help-block">{{Lightning talk}}</span>
+  [% ELSE %]
+    [% IF talk_id %]
+      [% IF duration == 'lightning' %]
+        {{Lightning talk}}
+      [% ELSE %]
+        [% duration %] {{minutes}}
+      [% END %]
+    [% ELSE %]
+      <select name="duration">
+       <option value=""[% ' selected="selected"' UNLESS duration %] />
+       <option value="lightning"[% ' selected="selected"' IF lightning %]>
+          {{Lightning talk}}
+       </option>
+       [% FOREACH d = global.config.talks_durations.keys.nsort %]
+       <option value="[% d %]"[% ' selected="selected"' IF d == duration %]>[% d %] {{minutes}}</option>
+       [% END %]
+       {{If the proposed durations do not quite fit your talk, please}}
+     [% END %]
+   [% END %]
+    </select>
+
+[% IF global.config.talks_levels %]
+<label>{{Target audience}}</label>
+  <select name="level">
+       [% FOREACH levelname = global.config.talks_levels_names %]
+         <option value="[% loop.count %]"[% ' selected="selected"' IF level == loop.count %]>[% levelname %]</option>
+       [% END %]
+  </select>
+[% END %]
+
+<label>{{Comments}}</label>
+    <span class="help-block">{{The comment field is used for communicating information about}}</span>
+    <textarea name="comment" cols="50" rows="3">[% comment | form_unescape %]</textarea>
+
+  <label>{{Status}}</label>
+    [% IF global.request.user.is_talks_admin %]
+    <input type="checkbox" name="accepted"[% ' checked' IF accepted %] />
+    {{accepted}}<br />
+    <input type="checkbox" name="confirmed"[% ' checked' IF confirmed %] />
+    {{confirmed}}<br />
+    [% ELSE %]
+      [% IF accepted %]
+        {{Accepted}}<br />
+        <input type="checkbox" name="confirmed"[% ' checked' IF confirmed %] />
+        {{confirmed}}<br />
+      [% ELSE %]
+        {{Pending}}
+      [% END %]
+    [% END %]
+  <label>{{May we record your talk?}}</label>
+  <input type="checkbox" id="record_talk_ok" name="record_talk_ok" [% 'checked' UNLESS opt_out_reason %]/>
+<div id="opt_out_reason_row" [% UNLESS opt_out_reason %]style="display: none"[% END %]>
+  <label>{{Aww, why not?}}</label>
+  <input type="text" name="opt_out_reason" size="51" maxlength="100" value='[% opt_out_reason %]'/>
+</div>
+
+<div class="form-actions">
+  <button class="btn btn-primary" type="submit" name="submit" value="{{Submit this talk}}">{{Submit this talk}}</button>
+</div>
+
+</form>
+
+[% END %]

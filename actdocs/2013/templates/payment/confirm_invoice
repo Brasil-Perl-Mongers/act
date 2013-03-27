@@ -1,0 +1,31 @@
+[% WRAPPER ui title = loc('Invoice') %]
+
+[% PROCESS error
+   msgs = {
+     ERR_FIRST_NAME => loc("You must enter your first name"),
+     ERR_LAST_NAME  => loc("You must enter your last name"),
+     ERR_ADDRESS    => loc("Establishing your invoice requires your address."),
+  }
+%]
+
+<form method="POST" action="[% make_uri('invoice') %]">
+<input type="hidden" name="order_id" value="[% order_id %]">
+
+ <span class="help-block">
+   {{Please make sure the billing information is correct.}}
+ </span>
+
+<label for="form-first-name">{{First Name}}</label>
+<input type="text" name="first_name" id="form-first-name"  value="[% first_name %]" size="25" maxlength="60" />
+<label for="form-last-name">{{Last Name}}</label>
+<input type="text" name="last_name" id="form-last-name"  value="[% last_name %]" size="25" maxlength="60" />
+<label for="form-address">{{Full address}}</label>
+<textarea name="address" id="form-address" cols="25" rows="5" >[% address | form_unescape %]</textarea>
+<label for="form-company">{{Company}}</label>
+<input type="text" name="company" id="form-company"  value="[% company %]" size="40" maxlength="120" /><br />
+<label for="form-vat">{{VAT Number}}</label>
+<input type="text" name="vat" id="form-vat" value="[% vat %]" size="25" maxlength="60" />
+<input type="submit" name="ok" value="{{I confirm}}" />
+</form>
+
+[% END %]

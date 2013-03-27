@@ -1,0 +1,5 @@
+[% FOREACH err_id = errors %]
+  [% WRAPPER error_ui %]
+  [% msgs.$err_id %]
+  [% END %]
+[% END %]

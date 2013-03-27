@@ -1,0 +1,4 @@
+[% WRAPPER ui title = loc("Wiki help") %]
+
+{{<wiki help text>}}
+[% END %]

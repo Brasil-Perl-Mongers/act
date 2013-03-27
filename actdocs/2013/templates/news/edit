@@ -1,0 +1,80 @@
+[% WRAPPER ui title = loc("Edit a news item") %]
+
+[% IF preview;
+     FOREACH lang = global.config.languages.keys;
+       IF global.config.languages.keys.size > 1 %]
+         <h2>[% global.config.languages.$lang.name %]</h2>
+       [% END %]
+       <div class="newsbox wall-small wall">
+         [% preview.$lang %]
+       </div>
+     [% END;
+END %]
+
+[% msgs = {
+     ERR_TITLE          => loc("You must enter a title"),
+     ERR_TEXT           => loc("You must enter some text"),
+     ERR_DATE           => loc("The supplied date is invalid"),
+     ERR_TIME           => loc("The supplied time is invalid"),
+  };
+  FOREACH err = errors;
+    WRAPPER error_ui;
+      msgs.${err.list.0};
+      IF err.list.1;
+        ' ('; global.config.languages.${err.list.1}.name; ')';
+      END;
+    END;
+  END;
+%]
+
+<form method="POST" action="[% global.request.r.uri %]">
+[% IF news_id %]
+<input type="hidden" name="news_id" value="[% news_id %]" />
+
+<label class="checkbox" for="form-delete">
+  <input type="checkbox" name="delete" id="form-delete" />
+  {{Delete this item}}
+</label>
+
+[% END %]
+
+<label for="form-date">{{Date}}</label>
+<input type="text" name="date" id="form-date" value="[% date %]" size="10" maxlength="10" />
+
+<label for="form-time">{{Time}}</label>
+<input type="text" name="time" id="form-time" value="[% time %]" size="5" maxlength="5" />
+
+<span class="help-block">{{Published}}</span>
+<label class="radio inline">
+  <input type="radio" name="published" value="1" [% "checked" IF published %] /> 
+  {{Yes}}
+  </label>
+<label class="radio inline">
+  <input type="radio" name="published" value="0" [% "checked" UNLESS published %] />
+  {{No}}
+</label>
+
+[% FOREACH lang = global.config.languages.keys;
+     IF global.config.languages.keys.size > 1 %]
+      <legend>[% global.config.languages.$lang.name %]</legend>
+[% END %]
+
+<label for="form-title">{{Title}}</label>
+<input type="text" name="title_[% lang %]" id="form-title" value="[% items.$lang.title %]" size="51" maxlength="100" />
+<span class="help-block">
+  {{Text}}
+</span>
+
+<span class="help-block small">{{Use HTML to format text. Text between newlines will be turned into paragraphs}}</span>
+<textarea name="text_[% lang %]" cols="60" rows="10">[% items.$lang.text | form_unescape %]</textarea>
+
+[% END %]
+
+<div class="form-actions">
+  <button class="btn" type="submit" name="preview" value="{{Preview}}">{{Preview}}</button>
+  <button class="btn btn-primary" type="submit" name="save" value="{{Save}}">{{Save}}</button>
+</div>
+
+</form>
+
+[% END %]

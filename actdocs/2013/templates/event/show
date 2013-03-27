@@ -1,0 +1,24 @@
+[% WRAPPER ui title = title %]
+
+[% IF global.request.user.is_talks_admin %]
+  (<a class="btn" href="[% make_uri('editevent', 'event_id', event_id) %]">{{edit}}</a>)
+[% END %]
+
+<dl>
+  <dt>{{Date:}}</dt>
+  <dd>[% IF datetime ; date_format(datetime, 'datetime_full') ; ELSE %]
+  {{Not scheduled yet.}}[% END %]</dd>
+
+  <dt>{{Duration:}}</dt><dd> [% duration %] {{minutes}}</dd>
+
+  [% IF url_abstract %]
+    <dt>{{You can find more information on the following site:}}</dt>
+    <dd><a href="[% url_abstract %]">[% url_abstract %]</a></dd>
+  [% END %]
+
+  <dt>{{Abstract}}</dt>
+  <dd>[% expand(chunked_abstract) | html_line_break %]</dd>
+
+</dl>
+
+[%END %]
