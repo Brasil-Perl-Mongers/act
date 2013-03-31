@@ -322,9 +322,10 @@
 		[% PROCESS menus/act_confs %]
 	      </ul>
 	    </li>
--->
+
 	  </ul>
 	</div>
+-->
 	<div class="span6">
 	  <ul class="nav nav-pills pull-right">
 	    [% FOREACH lang = global.languages %]
