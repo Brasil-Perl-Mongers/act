@@ -271,7 +271,7 @@
       <div class="row">
         <div class="span12">
 	  <div id="header-logo">
-	    <a href="/2013/" title="YAPC::Brasil 2013"><img src="/2013/images/logo.png" border="0" alt="YAPC::Brasil 2013" /></a>
+	    <a href="/2013/" title="YAPC::Brasil 2013"><img src="/2013/images/logo2.png" border="0" alt="YAPC::Brasil 2013" /></a>
 	  </div>
 	  <ul class="nav nav-pills pull-left">
 	    <li>
@@ -332,7 +332,7 @@
 	    <li><a id="social_link_twitter" href="https://twitter.com/#!/yapcbrasil" class="social social_link twitter" target="_blank"></a></li>
 	    <li><a id="social_link_rss" href="/2013/atom/pt.xml" class="rss"></a></li>
 	  </ul>
-	  <img style="float:right; margin:0px 0px" src="/2013/images/saopaulo.png" border="0" />
+	  <img style="float:right; margin:0px 0px" src="/2013/images/logo5.png" border="0" />
 	  <div style="float:right" class="cidade">
 	    <p><t><en>October 19th and 20th</en><pt>19 e 20 de Outubro</pt></t></p>
 	  </div>
