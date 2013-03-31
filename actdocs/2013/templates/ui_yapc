@@ -47,7 +47,7 @@ _gaq.push(['_trackPageview']);
 <BODY>
 <div id="wrapper">
 	<div id="top">
-    	<div id="logo"><a href="/2012"><img src="/2012/images/logo.png" border="0" /></a></div>
+    	<div id="logo"><a href="/2013"><img src="/2013/images/logo.png" border="0" /></a></div>
     	<div id="menu">
         	<ul class="menu">
             	<li class="item"><a href="/2013/wiki"><t><pt>Wiki</pt><en>Wiki</en></t></a></li>
@@ -60,21 +60,21 @@ _gaq.push(['_trackPageview']);
         </div>
     	<div id="social">
     [% FOREACH lang = global.languages %]
-       <a href="[% lang.uri %]" class="social_link" [% IF lang.name == 'English' -%] alt="View in English"><img src="/2012/images/en.png" />
-                                                    [%- ELSE -%] alt="Ver em Português"><img src="/2012/images/pt.png" />
+       <a href="[% lang.uri %]" class="social_link" [% IF lang.name == 'English' -%] alt="View in English"><img src="/2013/images/en.png" />
+                                                    [%- ELSE -%] alt="Ver em Português"><img src="/2013/images/pt.png" />
                                                     [%- END -%]
        </a>
     [% END %]
 		[% IF global.request.user %]
-			<a href="/2012/logout" class="social_link">Logout</a>
+			<a href="/2013/logout" class="social_link">Logout</a>
 		[% ELSE %]
-			<a href="/2012/main" class="social_link">Login</a>
-			<a href="/2012/register" class="social_link"><t><pt>Cadastre-se</pt><en>Register</en></t></a>
+			<a href="/2013/main" class="social_link">Login</a>
+			<a href="/2013/register" class="social_link"><t><pt>Cadastre-se</pt><en>Register</en></t></a>
 		[% END %]
 		<a href="https://twitter.com/#!/yapcbrasil" class="twitter" target="_blank"></a>
-        <a href="/2012/atom/pt.xml" class="rss"></a>
+        <a href="/2013/atom/pt.xml" class="rss"></a>
 	</div>
-    	<div id="saopaulo"><img src="/2012/images/saopaulo.png" border="0" /></div>
+    	<div id="saopaulo"><img src="/2013/images/saopaulo.png" border="0" /></div>
     	<div id="data"><t><pt>19 e 20 de Outubro</pt><en>October 19th and 20th</en></t></div>
     </div>
     <div class="title2">
@@ -94,25 +94,25 @@ _gaq.push(['_trackPageview']);
 	<div id="content-side">
     	<div class="title"><t><pt>Patrocinadores</pt><en>Sponsors</en></t></div>
         <div class="patrocinador diamond">
-            <a href="http://www.w3c.br/" target="_blank"><img title="W3C" style="margin: 10px 0px;" src="/2012/images/patrocinadores/logo-w3c-brasil.jpg" border="0"></a>
+            <a href="http://www.w3c.br/" target="_blank"><img title="W3C" style="margin: 10px 0px;" src="/2013/images/patrocinadores/logo-w3c-brasil.jpg" border="0"></a>
         </div>
-        <div class="patrocinador platinum"><a href="http://duckduckgo.com/" target="_blank"><img title="DuckDuckGo" src="/2012/images/patrocinadores/logo-duckduckgo.png" border="0"></a></div>
-        <div class="patrocinador platinum"><a href="http://www.estantevirtual.com.br" target="_blank"><img title="Estante Virtual" src="/2012/images/patrocinadores/logo-ev.png" border="0"></a></div>
-	<div class="patrocinador silver" style="width: 200px; height: 60px;"><a href="http://www.aware.com.br" target="_blank"><img style="width: 115px; height: 50px;" title="Aware" src="/2012/images/patrocinadores/logo_aware.jpg" border="0"></a></div>
-        <div class="patrocinador gold" style="height: 140px;"><a href="http://www.enlightenedperl.org"><img style="margin-top: 15px; max-height: 130px;" title="Enlightenedperl" src="/2012/images/patrocinadores/logo-epo.png" ></a></div>
-	<div class="patrocinador bronze"><a title="Fila - Sistema de Atendimento"  href="http://www.softwarepublico.gov.br/ver-comunidade?community_id=11809545" target="_blank"><img alt="Fila - Sistema de Atendimento" title="Fila - Sistema de Atendimento" src="/2012/images/patrocinadores/logo-fila.jpg" border="0"></a></div>
-	<div class="patrocinador bronze"><a title="Dyn - Dynamic Network Services"  href="http://www.dyn.com" target="_blank"><img style="margin: 10px 0px;" title="Dyn" alt="Dyn - Dynamic Network Services" src="/2012/images/patrocinadores/logo_dyn.jpg" border="0"></a></div>
-	<div class="patrocinador bronze" style="height: 60px; width: 200px"><a title="b-datum" href="http://www.b-datum.com" target="_blank"><img style="max-height: 50px; max-width: 190px;" title="b-datum" alt="b-datum" src="/2012/images/patrocinadores/logo_bdatum.jpg" border="0"></a></div>
+        <div class="patrocinador platinum"><a href="http://duckduckgo.com/" target="_blank"><img title="DuckDuckGo" src="/2013/images/patrocinadores/logo-duckduckgo.png" border="0"></a></div>
+        <div class="patrocinador platinum"><a href="http://www.estantevirtual.com.br" target="_blank"><img title="Estante Virtual" src="/2013/images/patrocinadores/logo-ev.png" border="0"></a></div>
+	<div class="patrocinador silver" style="width: 200px; height: 60px;"><a href="http://www.aware.com.br" target="_blank"><img style="width: 115px; height: 50px;" title="Aware" src="/2013/images/patrocinadores/logo_aware.jpg" border="0"></a></div>
+        <div class="patrocinador gold" style="height: 140px;"><a href="http://www.enlightenedperl.org"><img style="margin-top: 15px; max-height: 130px;" title="Enlightenedperl" src="/2013/images/patrocinadores/logo-epo.png" ></a></div>
+	<div class="patrocinador bronze"><a title="Fila - Sistema de Atendimento"  href="http://www.softwarepublico.gov.br/ver-comunidade?community_id=11809545" target="_blank"><img alt="Fila - Sistema de Atendimento" title="Fila - Sistema de Atendimento" src="/2013/images/patrocinadores/logo-fila.jpg" border="0"></a></div>
+	<div class="patrocinador bronze"><a title="Dyn - Dynamic Network Services"  href="http://www.dyn.com" target="_blank"><img style="margin: 10px 0px;" title="Dyn" alt="Dyn - Dynamic Network Services" src="/2013/images/patrocinadores/logo_dyn.jpg" border="0"></a></div>
+	<div class="patrocinador bronze" style="height: 60px; width: 200px"><a title="b-datum" href="http://www.b-datum.com" target="_blank"><img style="max-height: 50px; max-width: 190px;" title="b-datum" alt="b-datum" src="/2013/images/patrocinadores/logo_bdatum.jpg" border="0"></a></div>
 	<div class="clear"></div>
     	<div class="title"><t><pt>Apoio</pt><en>Partners</en></t></div>
         <div class="patrocinador apoio-left">
-            <a href="http://cgi.br/" target="_blank"><img title="cgi.br" src="/2012/images/patrocinadores/logo-cgi.jpg" border="0"></a>
+            <a href="http://cgi.br/" target="_blank"><img title="cgi.br" src="/2013/images/patrocinadores/logo-cgi.jpg" border="0"></a>
 		</div>
         <div class="patrocinador apoio-right">
-            <a href="http://nic.br/" target="_blank"><img title="nic.br" src="/2012/images/patrocinadores/logo-nic.jpg" border="0"></a>
+            <a href="http://nic.br/" target="_blank"><img title="nic.br" src="/2013/images/patrocinadores/logo-nic.jpg" border="0"></a>
 	</div>
         <div class="patrocinador apoio-left">
-            <a href="http://oreilly.com/" target="_blank"><img title="O'Reilly" src="/2012/images/patrocinadores/logo-oreilly.jpg" border="0"></a>
+            <a href="http://oreilly.com/" target="_blank"><img title="O'Reilly" src="/2013/images/patrocinadores/logo-oreilly.jpg" border="0"></a>
 		</div>
         <div class="gap"></div>
 
@@ -124,7 +124,7 @@ _gaq.push(['_trackPageview']);
 <input type='hidden' name='method' value='donation'/>
 <input type='hidden' name='encrypted' value='J7zyx/kM+cXn49AmZ9o+xQ=='/>
 <input type='hidden' name='type' value='2'/>
-<input type='image' name='submit' src='https://www.moip.com.br/imgs/buttons/bt_doar_c04_e03.gif' alt='YAPC::Brasil 2012' border='0' />
+<input type='image' name='submit' src='https://www.moip.com.br/imgs/buttons/bt_doar_c04_e03.gif' alt='YAPC::Brasil 2013' border='0' />
 </form>
 	</div>
         
@@ -134,10 +134,10 @@ _gaq.push(['_trackPageview']);
     
 	<div id="footer">
     	<div id="copy">
-        	<img src="/2012/images/logo_footer.png" border="0">
+        	<img src="/2013/images/logo_footer.png" border="0">
         	<span class="title">YAPC::Brasil</span><br />
-            <t><pt>Conferência internacional realizada pela comunidade Perl brasileira com o apoio da comunidade Perl internacional.<br> A edição 2012 é realizada pela <a href="http://sap-paulo.pm.org">São Paulo Perl Mongers</a></pt>
-               <en>International conference organized by the Brazillian Perl community with the support of the international Perl community.<br> The 2012 edition is held by <a href="http://sap-paulo.pm.org">São Paulo Perl Mongers</a></en>
+            <t><pt>Conferência internacional realizada pela comunidade Perl brasileira com o apoio da comunidade Perl internacional.<br> A edição 2013 é realizada pela <a href="http://sap-paulo.pm.org">São Paulo Perl Mongers</a></pt>
+               <en>International conference organized by the Brazillian Perl community with the support of the international Perl community.<br> The 2013 edition is held by <a href="http://sap-paulo.pm.org">São Paulo Perl Mongers</a></en>
             </t>
         </div>
         <div class="menu">
