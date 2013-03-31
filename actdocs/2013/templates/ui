@@ -277,9 +277,13 @@
 	    <li>
 	      <a title="Inscrição" href="/2013/inscricao.html">Inscrição</a>
 	    </li>
+	    <li>
+     	      <a href="/2013/about/general.html"><t><pt>Local</pt><en>Venue</en></t></a>
+	    </li>
+<!--
 	    <li class="dropdown">
 	      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-		<t><pt>Informações</pt><en>Information</en><es>Información</es></t><b class="caret"></b></a>
+		<t><pt>Informações</pt><en>Information</en></t><b class="caret"></b></a>
 		<ul class="dropdown-menu">						       
 		  <li><a href="/2013/wiki"><t><pt>Wiki</pt><en>Wiki</en></t></a></li>
 		  <li><a href="/2013/about/index.html"><t><pt>Sobre</pt><en>About</en></t></a></li>
@@ -289,6 +293,7 @@
 		  <li><a href="/2013/about/expedient.html"><t><pt>Contato</pt><en>Contact</en></t></a></li>
 		</ul>
 	    </li>
+-->
 		<!-- menu para talks -->
 	    <li class="dropdown">
 	      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
