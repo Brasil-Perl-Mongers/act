@@ -272,7 +272,8 @@
         <div class="span12">
 	  <div id="header-logo">
 	    <a href="/2013/" title="YAPC::Brasil 2013"><img src="/2013/images/logo2.png" border="0" alt="YAPC::Brasil 2013" /></a>
-	  </div>
+	  
+	</div>
 	  <ul class="nav nav-pills pull-left">
 	    <li>
 	      <a title="Inscrição" href="/2013/inscricao.html">Inscrição</a>
@@ -286,46 +287,9 @@
 	    <li>
               <a href="/2013/contato.html"><t><pt>Contato</pt><en>Contact</en></t></a>
             </li>
-<!--
-	    <li class="dropdown">
-	      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-		<t><pt>Informações</pt><en>Information</en></t><b class="caret"></b></a>
-		<ul class="dropdown-menu">						       
-		  <li><a href="/2013/wiki"><t><pt>Wiki</pt><en>Wiki</en></t></a></li>
-		  <li><a href="/2013/about/index.html"><t><pt>Sobre</pt><en>About</en></t></a></li>
-		  <li><a href="/2013/about/tracks.html"><t><pt>Trilhas</pt><en>Tracks</en></t></a></li>
-		  <li><a href="/2013/about/general.html"><t><pt>Local</pt><en>Venue</en></t></a></li>
-		  <li><a href="/2013/about/sponsorship.html"><t><pt>Patrocine!</pt><en>Be a sponsor!</en></t></a></li>
-		  <li><a href="/2013/about/expedient.html"><t><pt>Contato</pt><en>Contact</en></t></a></li>
-		</ul>
-	    </li>
--->
-		<!-- menu para talks -->
-<!--
-	    <li class="dropdown">
-	      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-		<t><pt>Programação</pt><en>Talks</en></t>
-		<b class="caret"></b>
-	      </a>
-	      <ul class="dropdown-menu">
-		[% PROCESS menus/talks %]
-	      </ul>
-	    </li>
--->
-<!--
-	    <li class="dropdown">
-	      <a class="dropdown-toggle" data-toggle="dropdown" href="#"><t><pt>Conferência</pt><en>Conference</en></t><b class="caret"></b></a>
-	      <ul class="dropdown-menu">
-		[% PROCESS menus/users %]
-		[% PROCESS menus/treasurer %]
-		[% PROCESS menus/admin %]
-		[% PROCESS menus/act_confs %]
-	      </ul>
-	    </li>
-
 	  </ul>
 	</div>
--->
+
 	<div class="span6">
 	  <ul class="nav nav-pills pull-right">
 	    [% FOREACH lang = global.languages %]
