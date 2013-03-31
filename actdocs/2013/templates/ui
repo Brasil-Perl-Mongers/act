@@ -301,6 +301,7 @@
 	    </li>
 -->
 		<!-- menu para talks -->
+<!--
 	    <li class="dropdown">
 	      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
 		<t><pt>Programação</pt><en>Talks</en></t>
@@ -310,6 +311,8 @@
 		[% PROCESS menus/talks %]
 	      </ul>
 	    </li>
+-->
+<!--
 	    <li class="dropdown">
 	      <a class="dropdown-toggle" data-toggle="dropdown" href="#"><t><pt>Conferência</pt><en>Conference</en></t><b class="caret"></b></a>
 	      <ul class="dropdown-menu">
@@ -319,6 +322,7 @@
 		[% PROCESS menus/act_confs %]
 	      </ul>
 	    </li>
+-->
 	  </ul>
 	</div>
 	<div class="span6">
