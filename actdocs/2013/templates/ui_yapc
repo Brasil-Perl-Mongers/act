@@ -50,12 +50,12 @@ _gaq.push(['_trackPageview']);
     	<div id="logo"><a href="/2012"><img src="/2012/images/logo.png" border="0" /></a></div>
     	<div id="menu">
         	<ul class="menu">
-            	<li class="item"><a href="/2012/wiki"><t><pt>Wiki</pt><en>Wiki</en></t></a></li>
-            	<li class="item"><a href="/2012/about/index.html"><t><pt>Sobre</pt><en>About</en></t></a></li>
-            	<li class="item"><a href="/2012/about/tracks.html"><t><pt>Trilhas</pt><en>Tracks</en></t></a></li>
-            	<li class="item"><a href="/2012/about/general.html"><t><pt>Local</pt><en>Venue</en></t></a></li>
-		<li class="item"><a href="/2012/about/sponsorship.html"><t><pt>Patrocine!</pt><en>Be a sponsor!</en></t></a></li>
-            	<li class="item"><a href="/2012/about/expedient.html"><t><pt>Contato</pt><en>Contact</en></t></li>
+            	<li class="item"><a href="/2013/wiki"><t><pt>Wiki</pt><en>Wiki</en></t></a></li>
+            	<li class="item"><a href="/2013/about/index.html"><t><pt>Sobre</pt><en>About</en></t></a></li>
+            	<li class="item"><a href="/2013/about/tracks.html"><t><pt>Trilhas</pt><en>Tracks</en></t></a></li>
+            	<li class="item"><a href="/2013/about/general.html"><t><pt>Local</pt><en>Venue</en></t></a></li>
+		<li class="item"><a href="/2013/about/sponsorship.html"><t><pt>Patrocine!</pt><en>Be a sponsor!</en></t></a></li>
+            	<li class="item"><a href="/2013/about/expedient.html"><t><pt>Contato</pt><en>Contact</en></t></li>
             </ul>
         </div>
     	<div id="social">
