@@ -47,7 +47,7 @@ _gaq.push(['_trackPageview']);
 <BODY>
 <div id="wrapper">
 	<div id="top">
-    	<div id="logo"><a href="/2013"><img src="/2013/images/logo.png" border="0" /></a></div>
+    	<div id="logo"><a href="/2013"><img src="/2013/images/logo2.png" border="0" /></a></div>
     	<div id="menu">
         	<ul class="menu">
             	<li class="item"><a href="/2013/wiki"><t><pt>Wiki</pt><en>Wiki</en></t></a></li>
@@ -74,7 +74,7 @@ _gaq.push(['_trackPageview']);
 		<a href="https://twitter.com/#!/yapcbrasil" class="twitter" target="_blank"></a>
         <a href="/2013/atom/pt.xml" class="rss"></a>
 	</div>
-    	<div id="saopaulo"><img src="/2013/images/saopaulo.png" border="0" /></div>
+    	<div id="saopaulo"><img src="/2013/images/logo5.png" border="0" /></div>
     	<div id="data"><t><pt>19 e 20 de Outubro</pt><en>October 19th and 20th</en></t></div>
     </div>
     <div class="title2">
@@ -136,8 +136,8 @@ _gaq.push(['_trackPageview']);
     	<div id="copy">
         	<img src="/2013/images/logo_footer.png" border="0">
         	<span class="title">YAPC::Brasil</span><br />
-            <t><pt>Conferência internacional realizada pela comunidade Perl brasileira com o apoio da comunidade Perl internacional.<br> A edição 2013 é realizada pela <a href="http://sap-paulo.pm.org">São Paulo Perl Mongers</a></pt>
-               <en>International conference organized by the Brazillian Perl community with the support of the international Perl community.<br> The 2013 edition is held by <a href="http://sap-paulo.pm.org">São Paulo Perl Mongers</a></en>
+            <t><pt>Conferência internacional realizada pela comunidade Perl brasileira com o apoio da comunidade Perl internacional.<br> A edição 2013 é realizada pela <a href="http://curitiba.pm.org">Curitiba Perl Mongers</a></pt>
+               <en>International conference organized by the Brazillian Perl community with the support of the international Perl community.<br> The 2013 edition is held by <a href="http://curitiba.pm.org">Curitiba Perl Mongers</a></en>
             </t>
         </div>
         <div class="menu">
