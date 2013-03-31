@@ -6,5 +6,41 @@
 [% inscricoes_encerradas = 0 %]
 
 <h1>Inscrição YAPC::Brasil 2013</h1>
+<p>Quem se inscreve no YAPC::Brasil 2013 tem direito a:</p>
+<ul>
+ <li><strong>Dois dias inteiros</strong> de palestras de altíssimo nível</li>
+ <li>Infraestrutura de qualidade em ambiente refrigerado</li>
+ <li>Dois coffee-breaks completos</li>
+ <li>Sorteio de livros e brindes</li>
+</ul>
+<h2>Normal</h2>
 
-<p> Em Breve! </p>
+<table class="investimento">
+<tr>
+ <th>Tipo</th><th>Investimento</th>
+[% UNLESS inscricoes_encerradas %]
+<th>Link</th>
+[% END %]
+</tr>
+<tr>
+<td>Inscri&ccedil;&atilde;o YAPC</td><td>De <s>R$ 200,00</s> por <b>R$ 160,00</b> (até 17 de outubro)</td>
+[% UNLESS inscricoes_encerradas %]
+<td width="50%">
+<!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+<form target="pagseguro" action="https://pagseguro.uol.com.br/v2/checkout/cart.html?action=add" method="post">
+<input type="hidden" name="receiverEmail" value="financeiro@yapcbrasil.org.br" />
+<input type="hidden" name="currency" value="BRL" />
+<input type="hidden" name="itemId" value="1" />
+<input type="hidden" name="itemDescription" value="YAPC::Brasil 2013" />
+<input type="hidden" name="itemQuantity" value="1" />
+<input type="hidden" name="itemAmount" value="160.00" />
+<input type="hidden" name="itemWeight" value="" />
+<input type="hidden" name="itemShippingCost" value="0.00" />
+<input type="image" src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/pagamentos/180x25-pagar.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+</form>
+<!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+</td>
+[% END %]
+</tr>
+
+[% END %]
