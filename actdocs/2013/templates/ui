@@ -275,20 +275,22 @@
 	  
 	</div>
 	  <ul class="nav nav-pills pull-left">
-	    <li>
-	      <a title="Inscrição" href="/2013/inscricao.html">Inscrição</a>
-	    </li>
-	    <li>
-     	      <a href="/2013/local.html"><t><pt>Local</pt><en>Venue</en></t></a>
-	    </li>
-            <li>
-	      <a href="/2013/patrocine.html"><t><pt>Patrocine</pt><en>Be a sponsor</en></t></a>
-            </li>
-	    <li>
-              <a href="/2013/contato.html"><t><pt>Contato</pt><en>Contact</en></t></a>
-            </li>
+	    <li><a title="Inscrição" href="/2013/inscricao.html">Inscrição</a></li>
+	    <li><a href="/2013/local.html"><t><pt>Local</pt><en>Venue</en></t></a></li>
+            <li><a href="/2013/patrocine.html"><t><pt>Patrocine</pt><en>Be a sponsor</en></t></a></li>
+	    <li><a href="/2013/contato.html"><t><pt>Contato</pt><en>Contact</en></t></a></li>
 	  </ul>
-	</div>
+          <!-- menu para talks -->
+	  <li class="dropdown">
+	     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+	     <t><pt>Programação</pt><en>Talks</en></t>
+		<b class="caret"></b>
+	     </a>
+	     <ul class="dropdown-menu">
+		[% PROCESS menus/talks %]
+	     </ul>
+	  </li>
+       </div>
 
 	<div class="span6">
 	  <ul class="nav nav-pills pull-right">
