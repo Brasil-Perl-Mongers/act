@@ -289,7 +289,14 @@
 		[% PROCESS menus/talks %]
 	     </ul>
 	  </li>
-	    <li><a href="/2013/curitiba.html"><t><pt>Programação Cultural</pt><en>Cultural Agenda</en></t></a></li>
+	    <li class="dropdown">
+	      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+		<t><pt>Programação Cultural</pt><en>Cultural Agenda</en></t><b class="caret"></b></a>
+		<ul class="dropdown-menu">						       
+		  <li><a href="/2012/wiki"><t><pt>Lugares para Visitar</pt><en>Places to Visit</en></t></a></li>
+		  <li><a href="/2012/about/index.html"><t><pt>Andando em Curitiba</pt><en>Walking in Curitiba</en></t></a></li>
+		</ul>
+	    </li>
 	</ul>
        </div>
 
