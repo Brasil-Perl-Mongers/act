@@ -293,7 +293,7 @@
 	      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
 		<t><pt>Programação Cultural</pt><en>Cultural Agenda</en></t><b class="caret"></b></a>
 		<ul class="dropdown-menu">						       
-		  <li><a href="/2013/about/curitiba"><t><pt>Lugares para Visitar</pt><en>Places to Visit</en></t></a></li>
+		  <li><a href="/2013/curitiba.html"><t><pt>Lugares para Visitar</pt><en>Places to Visit</en></t></a></li>
 		  <li><a href="#"><t><pt>Andando em Curitiba</pt><en>Walking in Curitiba</en></t></a></li>
 		</ul>
 	    </li>
